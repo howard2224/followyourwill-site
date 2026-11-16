@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="light" />
-    <link rel="icon" type="image/png" href="mark.png">
+    <link rel="icon" type="image/webp" href="mark.webp">
     <title>Gate Zero — Product Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -69,8 +69,8 @@
       .wordmark {
         font-family: "Cinzel", serif;
         font-weight: 700;
-        letter-spacing: 0.32em;
-        text-indent: 0.32em; /* optically re-centres tracked caps */
+        letter-spacing: 0.1em;
+        text-indent: 0.1em; /* optically re-centres the tracked wordmark */
         line-height: 1.2;
       }
       .lockup .rule { height: 2px; background: linear-gradient(90deg, var(--gold-soft), var(--gold), var(--gold-soft)); margin-top: 0.55rem; }
@@ -97,6 +97,7 @@
         color: var(--ink-deep);
       }
       .hero .cta { margin-top: 2.1rem; }
+      .hero .cta + p { background: var(--ivory); display: inline-block; padding: 0.55rem 1.1rem; }
       .hero figure { margin: 3.2rem auto 0; max-width: 62rem; }
 
       /* Gold-framed photographic panels */
@@ -280,8 +281,8 @@
         margin-top: 0.5rem;
         font-size: 0.95rem;
         font-weight: 600;
-        letter-spacing: 0.28em;
-        text-indent: 0.28em;
+        letter-spacing: 0.06em;
+        text-indent: 0.06em;
       }
       .tier.addon { grid-column: 1 / -1; }
       .open-decision {
@@ -349,6 +350,16 @@
         .step .disc { width: 3.4rem; height: 3.4rem; font-size: 1.25rem; }
         .hero { padding-top: 2.6rem; }
       }
+      @media (max-width: 640px) {
+        section.work { padding: 5rem 0; }
+        .sec-head { margin-bottom: 3.2rem; }
+        p { margin-bottom: 1.35em; }
+        section.work figure.framed { margin-top: 2.6rem; margin-bottom: 2.6rem; }
+        .step { padding: 2.2rem 0; }
+        .faq .qa { padding: 1.9rem 0; }
+        .divider { padding: 2.8rem 1.5rem; }
+        .divider .mark-grand { width: min(52vw, 30rem); }
+      }
       @media (prefers-reduced-motion: reduce) {
         html { scroll-behavior: auto; }
       }
@@ -366,9 +377,9 @@
 <body>
     <header class="hero">
       <div class="wrap">
-        <img class="mark-hero" src="mark.png" alt="The Gate Zero mark — a golden ring with a single point of white light at its centre" width="1024" height="1024" style="object-fit: contain" />
+        <img class="mark-hero" src="mark.webp" alt="The Gate Zero mark — a golden ring with a single point of white light at its centre" width="1024" height="1024" style="object-fit: contain" />
         <a href="/" style="text-decoration:none;color:inherit"><div class="lockup">
-          <div class="wordmark">GATE ZERO</div>
+          <div class="wordmark">Gate Zero</div>
           <div class="rule"></div>
         </div></a>
         <p class="one-line" style="margin-top:2.4rem">Still doing the office work at night, the follow-up that didn't go out, the quote that went quiet, the inbox still sitting there, on top of the work itself?</p>
@@ -388,7 +399,7 @@
         <div class="recognition-grid">
           <div>
             <div class="sec-head left">
-              <h2 id="evening-h">THE EVENING</h2>
+              <h2 id="evening-h">The evening</h2>
               <div class="rule"></div>
             </div>
             <p class="lead-in">In an owner-operated business, you are every department: the one who answers, quotes, follows up, does the work, and clears the inbox, all of it yourself, on top of the work itself.</p>
@@ -406,7 +417,7 @@
     <section class="work" aria-labelledby="get-h">
       <div class="wrap">
         <div class="sec-head">
-          <h2 id="get-h">WHAT YOU GET: THE TEAM IS THE PRODUCT</h2>
+          <h2 id="get-h">What you get: the team is the product</h2>
           <div class="rule"></div>
         </div>
         <div class="narrow">
@@ -416,11 +427,11 @@
           <p>And the front office is only where most owners start. Your team is composed around your whole company: marketing, sales follow-up, customer care, operations paperwork, books and admin, each seat a job in your business, built from your map, never a fixed roster. Which seats your first team carries is set in your Team Blueprint; more seats join as more of the company is built.</p>
         </div>
         <figure class="framed" style="margin-top:3rem">
-          <img src="artefact.png" alt="A Workflow Map page for a sample one-van repair shop, as declared on the page itself: six plain steps, and who does what at the foot — the who-line quoting all eight of the Seat picture&#x27;s seats exactly, operations paperwork included." width="1500" height="1960" />
+          <img src="artefact.webp" alt="A Workflow Map page for a sample one-van repair shop, as declared on the page itself: six plain steps, and who does what at the foot — the who-line quoting all eight of the Seat picture&#x27;s seats exactly, operations paperwork included." width="1500" height="1960" />
           <figcaption style="padding:0.9rem 0.4rem 0.3rem">A Workflow Map page — the sample business is declared on the page itself.</figcaption>
         </figure>
         <figure class="framed" style="margin-top:2.4rem">
-          <img src="seat.png" alt="A ring of seats at one table, seen from the owner&#x27;s side: all eight filled seats carry plain first names and the business&#x27;s own areas — admin and follow-up, customer care, sales follow-up, social media, operations paperwork, books and paperwork, writer, and digital assets and art — and the near seat stands empty, outlined in gold, labelled You. The picture&#x27;s closing line declares it a sample table, composed for one business." width="1920" height="1080" />
+          <img src="seat.webp" alt="A ring of seats at one table, seen from the owner&#x27;s side: all eight filled seats carry plain first names and the business&#x27;s own areas — admin and follow-up, customer care, sales follow-up, social media, operations paperwork, books and paperwork, writer, and digital assets and art — and the near seat stands empty, outlined in gold, labelled You. The picture&#x27;s closing line declares it a sample table, composed for one business." width="1920" height="1080" />
           <figcaption style="padding:0.9rem 0.4rem 0.3rem">One sample table, composed for one business. Yours is composed the same way: seats named for the jobs in your company, starting with the team your map puts first.</figcaption>
         </figure>
       </div>
@@ -429,7 +440,7 @@
     <section class="work" aria-labelledby="worker-h">
       <div class="wrap">
         <div class="sec-head">
-          <h2 id="worker-h">WORKER OR AGENT?</h2>
+          <h2 id="worker-h">Worker or agent?</h2>
           <div class="rule"></div>
         </div>
         <div class="narrow">
@@ -443,20 +454,20 @@
     </section>
 
     <div class="divider" aria-hidden="true">
-      <img class="mark-grand" src="mark.png" alt="The Gate Zero mark — a golden ring with a single point of white light at its centre" width="1024" height="1024" />
+      <img class="mark-grand" src="mark.webp" alt="The Gate Zero mark — a golden ring with a single point of white light at its centre" width="1024" height="1024" />
     </div>
 
     <section class="work" aria-labelledby="how-h">
       <div class="wrap">
         <div class="sec-head">
-          <h2 id="how-h">HOW IT WORKS</h2>
+          <h2 id="how-h">How it works</h2>
           <div class="rule"></div>
         </div>
         <div class="steps narrow" style="max-width:52rem">
           <div class="step">
             <div class="disc" aria-hidden="true">1</div>
             <div>
-              <h3>YOUR WORKFLOW MAP</h3>
+              <h3>Your Workflow Map</h3>
               <p>We map how your business actually runs: where the work comes in, where it waits, where it gets stuck. That map is your Workflow Map, yours whether or not you build with us. The $250 is credited in full toward any build.</p>
               <div class="gold-rule"></div>
             </div>
@@ -464,7 +475,7 @@
           <div class="step">
             <div class="disc" aria-hidden="true">2</div>
             <div>
-              <h3>TEAM BLUEPRINT</h3>
+              <h3>Team Blueprint</h3>
               <p>Your team is designed around that map: who does what, built around your own processes, and what you will still approve.</p>
               <div class="gold-rule"></div>
             </div>
@@ -472,7 +483,7 @@
           <div class="step">
             <div class="disc" aria-hidden="true">3</div>
             <div>
-              <h3>BUILD AND QUALITY TEST</h3>
+              <h3>Build and quality test</h3>
               <p>Your team is built for your business, connected to your own tools, and quality-tested before your team launches.</p>
               <div class="gold-rule"></div>
             </div>
@@ -480,7 +491,7 @@
           <div class="step">
             <div class="disc" aria-hidden="true">4</div>
             <div>
-              <h3>HANDOVER</h3>
+              <h3>Handover</h3>
               <p>You meet your team, and you're walked through your own part of it: how approvals reach you, and what your word does. That's the whole of the training, your chair, not a system to learn. Then the team starts.</p>
               <div class="gold-rule"></div>
             </div>
@@ -488,7 +499,7 @@
           <div class="step">
             <div class="disc" aria-hidden="true">5</div>
             <div>
-              <h3>THE TEAM WORKS; YOU APPROVE</h3>
+              <h3>The team works; you approve</h3>
               <p>The work goes out into your business under the edges you set. What can't be taken back waits for your word. And each month, your regular report shows you what the team has done.</p>
               <div class="gold-rule"></div>
             </div>
@@ -497,10 +508,14 @@
       </div>
     </section>
 
+    <div class="divider" aria-hidden="true">
+      <img class="mark-grand" src="mark.webp" alt="The Gate Zero mark — a golden ring with a single point of white light at its centre" width="1024" height="1024" />
+    </div>
+
     <section class="work" aria-labelledby="control-h">
       <div class="wrap">
         <div class="sec-head">
-          <h2 id="control-h">CONTROL</h2>
+          <h2 id="control-h">Control</h2>
           <div class="rule"></div>
         </div>
         <p class="control-lede">Human supervision isn't a limitation of this product. It is the product.</p>
@@ -509,10 +524,10 @@
         </div>
         <div class="control-panel narrow" style="max-width:54rem">
           <ul>
-              <li><strong>SENDING</strong><span>Anything your team sends, an email, a message, a quote, a follow-up, appears on your screen first.</span></li>
-              <li><strong>PUBLISHING</strong><span>Posts and review responses appear when you say so.</span></li>
-              <li><strong>SPENDING</strong><span>Any purchase, subscription, or payment waits for your yes.</span></li>
-              <li><strong>DELETING</strong><span>Nothing is deleted without your approval, ever.</span></li>
+              <li><strong>Sending</strong><span>Anything your team sends, an email, a message, a quote, a follow-up, appears on your screen first.</span></li>
+              <li><strong>Publishing</strong><span>Posts and review responses appear when you say so.</span></li>
+              <li><strong>Spending</strong><span>Any purchase, subscription, or payment waits for your yes.</span></li>
+              <li><strong>Deleting</strong><span>Nothing is deleted without your approval, ever.</span></li>
           </ul>
         </div>
         <div class="narrow" style="margin-top:2.2rem">
@@ -524,10 +539,14 @@
       </div>
     </section>
 
+    <div class="divider" aria-hidden="true">
+      <img class="mark-grand" src="mark.webp" alt="The Gate Zero mark — a golden ring with a single point of white light at its centre" width="1024" height="1024" />
+    </div>
+
     <section class="work" aria-labelledby="honesty-h">
       <div class="wrap">
         <div class="sec-head">
-          <h2 id="honesty-h">HONESTY</h2>
+          <h2 id="honesty-h">Honesty</h2>
           <div class="rule"></div>
         </div>
         <div class="narrow">
@@ -542,7 +561,7 @@
     <section class="work" aria-labelledby="proof-h">
       <div class="wrap">
         <div class="sec-head">
-          <h2 id="proof-h">PROOF WITHOUT PRETENDING</h2>
+          <h2 id="proof-h">Proof without pretending</h2>
           <div class="rule"></div>
         </div>
         <div class="proof">
@@ -556,7 +575,7 @@
       <div class="wrap">
         <div class="pricing-panel">
           <div class="sec-head" style="margin-bottom:1.6rem">
-            <h2 id="pricing-h" style="color:var(--ivory)">PRICING</h2>
+            <h2 id="pricing-h" style="color:var(--ivory)">Pricing</h2>
             <div class="rule"></div>
           </div>
           <div class="price-rows">
@@ -596,7 +615,7 @@
     <section class="work" aria-labelledby="fit-h">
       <div class="wrap">
         <div class="sec-head">
-          <h2 id="fit-h">FOR YOU / NOT FOR YOU</h2>
+          <h2 id="fit-h">For you / Not for you</h2>
           <div class="rule"></div>
         </div>
         <div class="narrow">
@@ -606,39 +625,43 @@
       </div>
     </section>
 
+    <div class="divider" aria-hidden="true">
+      <img class="mark-grand" src="mark.webp" alt="The Gate Zero mark — a golden ring with a single point of white light at its centre" width="1024" height="1024" />
+    </div>
+
     <section class="work" aria-labelledby="faq-h">
       <div class="wrap">
         <div class="sec-head">
-          <h2 id="faq-h">QUESTIONS</h2>
+          <h2 id="faq-h">Questions</h2>
           <div class="rule"></div>
         </div>
         <div class="faq">
           <div class="qa">
-            <h3>IS THIS SOFTWARE I INSTALL?</h3>
+            <h3>Is this software I install?</h3>
             <p>No. There is nothing to install, learn, or maintain. Your team is run on our side; you talk with your team, see its work, and approve what needs approving.</p>
           </div>
           <div class="qa">
-            <h3>WHO DECIDES WHAT GETS SENT TO MY CUSTOMERS?</h3>
+            <h3>Who decides what gets sent to my customers?</h3>
             <p>You do. The team works inside the edges you set; sending, publishing, spending and deleting wait for your approval.</p>
           </div>
           <div class="qa">
-            <h3>DO I OWN THE TEAM?</h3>
+            <h3>Do I own the team?</h3>
             <p>You license it. Your business accounts, data, content, and everything the team produces for you are yours, and they leave with you if you leave.</p>
           </div>
           <div class="qa">
-            <h3>WHAT DO YOU DO WITH MY DATA WHILE IT'S WITH YOU?</h3>
+            <h3>What do you do with my data while it's with you?</h3>
             <p>While your data is with us, we use it to do your work, and only your work. We never use it to train or improve a model, never use it for another client's work, and never sell it.</p>
           </div>
           <div class="qa">
-            <h3>WHAT HAPPENS IF I CANCEL?</h3>
+            <h3>What happens if I cancel?</h3>
             <p>You keep your data, your content, your accounts, and all the work delivered to you — permanently; if the subscription stops, the only thing that stops is the team reporting for work. Your data, content, accounts and work product are exported to you in the window the agreement sets out. We say it before you pay, not after.</p>
           </div>
           <div class="qa">
-            <h3>HOW GOOD IS THE TEAM I'LL GET?</h3>
+            <h3>How good is the team I'll get?</h3>
             <p>It depends on the AI underneath it, and we say so in writing: which AI your team runs on, and the level it is certified for, is named in your agreement. Gate Zero runs on the AI you already use — and before we say it runs on a new one, we prove it there first.</p>
           </div>
           <div class="qa">
-            <h3>WHAT DOES MY WORKFLOW MAP ACTUALLY GET ME?</h3>
+            <h3>What does my Workflow Map actually get me?</h3>
             <p>Your Workflow Map: a working picture of your business and where its work gets stuck, yours whether or not you build with us. If you do build, the full $250 is credited toward it.</p>
           </div>
         </div>
@@ -647,9 +670,9 @@
   </main>
 
   <footer class="close">
-      <img class="mark-close" src="mark.png" alt="The Gate Zero mark — a golden ring with a single point of white light at its centre" width="1024" height="1024" style="object-fit: contain" />
+      <img class="mark-close" src="mark.webp" alt="The Gate Zero mark — a golden ring with a single point of white light at its centre" width="1024" height="1024" style="object-fit: contain" />
       <div class="lockup">
-          <div class="wordmark">GATE ZERO</div>
+          <div class="wordmark">Gate Zero</div>
           <div class="rule"></div>
         </div>
       <p class="close-line">The only decision this page asks for is the first step.</p>
@@ -664,7 +687,7 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "IS THIS SOFTWARE I INSTALL?",
+      "name": "Is this software I install?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "No. There is nothing to install, learn, or maintain. Your team is run on our side; you talk with your team, see its work, and approve what needs approving."
@@ -672,7 +695,7 @@
     },
     {
       "@type": "Question",
-      "name": "WHO DECIDES WHAT GETS SENT TO MY CUSTOMERS?",
+      "name": "Who decides what gets sent to my customers?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "You do. The team works inside the edges you set; sending, publishing, spending and deleting wait for your approval."
@@ -680,7 +703,7 @@
     },
     {
       "@type": "Question",
-      "name": "DO I OWN THE TEAM?",
+      "name": "Do I own the team?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "You license it. Your business accounts, data, content, and everything the team produces for you are yours, and they leave with you if you leave."
@@ -688,7 +711,7 @@
     },
     {
       "@type": "Question",
-      "name": "WHAT DO YOU DO WITH MY DATA WHILE IT'S WITH YOU?",
+      "name": "What do you do with my data while it's with you?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "While your data is with us, we use it to do your work, and only your work. We never use it to train or improve a model, never use it for another client's work, and never sell it."
@@ -696,7 +719,7 @@
     },
     {
       "@type": "Question",
-      "name": "WHAT HAPPENS IF I CANCEL?",
+      "name": "What happens if I cancel?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "You keep your data, your content, your accounts, and all the work delivered to you — permanently; if the subscription stops, the only thing that stops is the team reporting for work. Your data, content, accounts and work product are exported to you in the window the agreement sets out. We say it before you pay, not after."
@@ -704,7 +727,7 @@
     },
     {
       "@type": "Question",
-      "name": "HOW GOOD IS THE TEAM I'LL GET?",
+      "name": "How good is the team I'll get?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "It depends on the AI underneath it, and we say so in writing: which AI your team runs on, and the level it is certified for, is named in your agreement. Gate Zero runs on the AI you already use — and before we say it runs on a new one, we prove it there first."
@@ -712,7 +735,7 @@
     },
     {
       "@type": "Question",
-      "name": "WHAT DOES MY WORKFLOW MAP ACTUALLY GET ME?",
+      "name": "What does my Workflow Map actually get me?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Your Workflow Map: a working picture of your business and where its work gets stuck, yours whether or not you build with us. If you do build, the full $250 is credited toward it."
