@@ -8,7 +8,7 @@
     <title>Gate Zero — Product Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
     <style>
       :root {
         --sky: #6EC1E8;
@@ -36,7 +36,7 @@
         -webkit-font-smoothing: antialiased;
       }
       img { display: block; max-width: 100%; }
-      h1, h2, h3 { font-family: "Cinzel", serif; font-weight: 600; line-height: 1.25; margin: 0; }
+      h1, h2, h3 { font-family: "Playfair Display", serif; font-weight: 600; line-height: 1.25; margin: 0; }
       p { margin: 0 0 1.15em; }
       p:last-child { margin-bottom: 0; }
       ul { margin: 0; padding: 0; list-style: none; }
@@ -67,7 +67,7 @@
       /* ---------- Wordmark lockup ---------- */
       .lockup { display: inline-block; text-align: center; }
       .wordmark {
-        font-family: "Cinzel", serif;
+        font-family: "Playfair Display", serif;
         font-weight: 700;
         letter-spacing: 0.1em;
         text-indent: 0.1em; /* optically re-centres the tracked wordmark */
@@ -85,10 +85,18 @@
       .hero .wordmark { font-size: clamp(1.35rem, 3.4vw, 1.9rem); color: var(--ink); }
       .hero h1 {
         font-size: clamp(2rem, 5.6vw, 3.4rem);
-        letter-spacing: 0.045em;
+        letter-spacing: 0.02em;
         max-width: 56rem;
         margin: 2.6rem auto 0;
         color: var(--ink);
+      }
+      .hero .promise-lead {
+        font-family: "Inter", system-ui, sans-serif;
+        font-size: 1.28rem;
+        line-height: 1.55;
+        color: var(--ink);
+        max-width: 44rem;
+        margin: 1.2rem auto 0;
       }
       .hero .one-line {
         max-width: 44rem;
@@ -111,7 +119,7 @@
       /* ---------- Sections ---------- */
       section.work { padding: 5rem 0; }
       .sec-head { text-align: center; margin-bottom: 2.8rem; }
-      .sec-head h2 { font-size: clamp(1.85rem, 4.6vw, 2.9rem); letter-spacing: 0.1em; }
+      .sec-head h2 { font-size: clamp(1.85rem, 4.6vw, 2.9rem); letter-spacing: 0.02em; }
       .sec-head .rule { width: 5.5rem; height: 2px; background: var(--gold); margin: 1.1rem auto 0; }
       .sec-head.left { text-align: left; }
       .sec-head.left .rule { margin-left: 0; }
@@ -136,9 +144,9 @@
         border-top: 3px solid var(--gold);
         padding: 1.6rem 1.7rem;
       }
-      .job h3 { font-size: 1.12rem; letter-spacing: 0.06em; margin-bottom: 0.55rem; }
+      .job h3 { font-size: 1.12rem; letter-spacing: 0.02em; margin-bottom: 0.55rem; }
       .job p { color: var(--text-soft); font-size: 1rem; }
-      .team-lead { font-family: "Cinzel", serif; font-size: 1.25rem; letter-spacing: 0.05em; text-align: center; }
+      .team-lead { font-family: "Playfair Display", serif; font-weight: 500; font-size: 1.25rem; letter-spacing: 0.05em; text-align: center; }
       .other-teams { color: var(--text-soft); font-style: italic; }
 
       /* What you receive */
@@ -149,7 +157,7 @@
         border-bottom: 2px solid var(--gold);
         padding: 0.95rem 1.3rem;
       }
-      .receive .item h3 { font-size: 1.05rem; letter-spacing: 0.06em; }
+      .receive .item h3 { font-size: 1.05rem; letter-spacing: 0.02em; }
       .receive .item p { padding: 1.1rem 1.3rem 1.3rem; color: var(--text-soft); font-size: 1rem; margin: 0; }
       .never-receive {
         border: 1px solid var(--line);
@@ -176,11 +184,11 @@
         background: var(--ink);
         border: 2px solid var(--gold);
         color: var(--ivory);
-        font-family: "Cinzel", serif;
+        font-family: "Playfair Display", serif;
         font-size: 1.55rem; font-weight: 600;
         display: flex; align-items: center; justify-content: center;
       }
-      .step h3 { font-size: 1.2rem; letter-spacing: 0.06em; margin-bottom: 0.4rem; padding-top: 0.4rem; }
+      .step h3 { font-size: 1.2rem; letter-spacing: 0.02em; margin-bottom: 0.4rem; padding-top: 0.4rem; }
       .step p { color: var(--text-soft); margin: 0; }
       .step .gold-rule { width: 3.5rem; height: 2px; background: var(--gold); margin-top: 0.9rem; }
       .path-intro { text-align: center; font-size: 1.125rem; margin-bottom: 1rem; }
@@ -191,7 +199,7 @@
         border-top: 3px solid var(--gold);
         padding: 2.2rem 2.4rem;
       }
-      .built-on h3 { font-size: 1.45rem; letter-spacing: 0.09em; text-align: center; margin-bottom: 1.2rem; }
+      .built-on h3 { font-size: 1.45rem; letter-spacing: 0.02em; text-align: center; margin-bottom: 1.2rem; }
       .built-on p { color: var(--text-soft); }
 
       /* You stay in control */
@@ -206,15 +214,15 @@
       .control-panel li { border-top: 1px solid rgba(247, 249, 250, 0.25); padding-top: 1rem; }
       .control-panel li strong {
         display: block;
-        font-family: "Cinzel", serif;
+        font-family: "Playfair Display", serif;
         font-weight: 600;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.02em;
         font-size: 1.05rem;
         margin-bottom: 0.3rem;
       }
       .control-panel li span { color: #DCE9F1; }
       .control-lede { text-align: center; font-size: 1.2rem; max-width: 42rem; margin: 0 auto; }
-      .control-lede strong { font-family: "Cinzel", serif; letter-spacing: 0.04em; }
+      .control-lede strong { font-family: "Playfair Display", serif; font-weight: 500; letter-spacing: 0.04em; }
       .control-close { text-align: center; margin-top: 2.2rem; color: var(--text-soft); }
 
       /* Nothing to maintain — the wall, on the sky field */
@@ -237,7 +245,8 @@
       /* Proof — kept at its scoped size */
       .proof { max-width: 44rem; margin: 0 auto; text-align: center; }
       .proof .fact {
-        font-family: "Cinzel", serif;
+        font-family: "Playfair Display", serif;
+        font-weight: 500;
         font-size: 1.3rem;
         letter-spacing: 0.05em;
         line-height: 1.55;
@@ -266,7 +275,7 @@
       }
       .price-rows { border-top: 1px solid rgba(247, 249, 250, 0.25); }
       .price-row { display: grid; grid-template-columns: 1fr 1.4fr; gap: 1rem 2.5rem; padding: 1.5rem 0; border-bottom: 1px solid rgba(247, 249, 250, 0.25); }
-      .price-row .figure { font-family: "Cinzel", serif; font-size: 1.45rem; font-weight: 600; letter-spacing: 0.04em; }
+      .price-row .figure { font-family: "Playfair Display", serif; font-size: 1.45rem; font-weight: 600; letter-spacing: 0.04em; }
       .price-row .what { font-weight: 600; margin-bottom: 0.25rem; }
       .price-row .detail { color: #DCE9F1; font-size: 1rem; }
       .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin: 1.2rem 0 0.6rem; }
@@ -275,7 +284,7 @@
         padding: 1.3rem 1.2rem;
         text-align: center;
       }
-      .tier .amount { font-family: "Cinzel", serif; font-size: 1.5rem; font-weight: 600; display: block; }
+      .tier .amount { font-family: "Playfair Display", serif; font-size: 1.5rem; font-weight: 600; display: block; }
       .tier .drafted {
         display: block;
         margin-top: 0.5rem;
@@ -298,7 +307,7 @@
       .fit .col { padding: 0 2.6rem; }
       .fit .col:first-child { border-right: 2px solid var(--gold); padding-left: 0; }
       .fit .col:last-child { padding-right: 0; }
-      .fit h3 { font-size: 1.2rem; letter-spacing: 0.07em; margin-bottom: 1.3rem; }
+      .fit h3 { font-size: 1.2rem; letter-spacing: 0.02em; margin-bottom: 1.3rem; }
       .fit li { padding: 0.9rem 0 0.9rem 1.4rem; position: relative; border-top: 1px solid var(--line); color: var(--text-soft); }
       .fit li:first-of-type { border-top: none; padding-top: 0.2rem; }
       .fit li::before { content: ""; position: absolute; left: 0; top: 1.45rem; width: 0.55rem; height: 2px; background: var(--gold); }
@@ -308,7 +317,7 @@
       .faq { max-width: 46rem; margin: 0 auto; }
       .faq .qa { padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
       .faq .qa:first-child { padding-top: 0; }
-      .faq h3 { font-size: 1.08rem; letter-spacing: 0.08em; margin-bottom: 0.5rem; }
+      .faq h3 { font-size: 1.08rem; letter-spacing: 0.02em; margin-bottom: 0.5rem; }
       .faq p { color: var(--text-soft); margin: 0; }
       .faq-cta { text-align: center; margin-top: 3rem; }
 
@@ -322,7 +331,8 @@
       .close .mark-close { width: 11rem; height: 11rem; margin: 0 auto 2rem; }
       .close .wordmark { font-size: clamp(1.5rem, 4vw, 2.1rem); color: var(--ivory); }
       .close .close-line {
-        font-family: "Cinzel", serif;
+        font-family: "Playfair Display", serif;
+        font-weight: 500;
         font-size: clamp(1.35rem, 3.6vw, 2rem);
         letter-spacing: 0.05em;
         line-height: 1.5;
@@ -383,7 +393,8 @@
           <div class="rule"></div>
         </div></a>
         <p class="one-line" style="margin-top:2.4rem">Still doing the office work at night, the follow-up that didn't go out, the quote that went quiet, the inbox still sitting there, on top of the work itself?</p>
-        <h1>Gate Zero gives an owner-operated business a working AI agent team, built for how that business actually runs, that handles the follow-up and office work the owner is doing himself at night — the owner approves anything that can't be taken back, and there is nothing to install, learn, or maintain.</h1>
+        <h1>A working AI agent team</h1>
+        <p class="promise-lead">Gate Zero gives an owner-operated business a working AI agent team, built for how that business actually runs, that handles the follow-up and office work the owner is doing himself at night — the owner approves anything that can't be taken back, and there is nothing to install, learn, or maintain.</p>
         <p class="one-line">You set the edges once, and the team works inside them. The decisions stay yours.</p>
         <a class="cta" href="/contact/">Start with your Workflow Map</a>
         <p>One sitting where we map how your business runs, and you keep the Workflow Map either way. $250, credited in full toward any build.</p>
