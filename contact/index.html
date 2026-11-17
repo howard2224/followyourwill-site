@@ -36,6 +36,16 @@
   .house-links a{color:inherit}
   a{display:inline-block;padding:.6rem .5rem;margin:-.6rem -.5rem}
   a{text-decoration:underline;text-underline-offset:3px}
+  form.contact{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:8px;padding:1.2rem 1.2rem 1.4rem;margin:2rem 0 0}
+  form.contact label{display:block;font-weight:600;margin:1rem 0 .35rem}
+  form.contact label:first-of-type{margin-top:0}
+  form.contact input,form.contact select,form.contact textarea{width:100%;font:inherit;color:var(--ink);background:#fff;border:1px solid #C9D8E2;border-radius:6px;padding:.65rem .8rem}
+  form.contact textarea{min-height:8rem;resize:vertical}
+  form.contact input:focus,form.contact select:focus,form.contact textarea:focus{outline:2px solid var(--sky-deep);outline-offset:1px;border-color:var(--sky-deep)}
+  form.contact button{font:inherit;font-weight:600;background:var(--sky-deep);color:var(--ivory);border:none;border-radius:6px;padding:.8rem 1.8rem;min-height:48px;margin-top:1.2rem;cursor:pointer}
+  form.contact button:hover{background:var(--ink)}
+  .form-error{color:var(--text-soft);font-weight:600;margin-top:1rem}
+  #form-ack{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:8px;padding:1.2rem;margin:2rem 0 0}
 </style>
 </head>
 <body>
@@ -44,20 +54,71 @@
   <div class="rule"></div>
 </header>
 <main>
-  <p class="lede">Every message to this address is read by a person, and answered by email. There is no form to fight and no ticket system: you write, we read, we write back.</p>
+  <p class="lede">Write to us at the address below. A person reads every message and answers by email.</p>
   <p class="address"><a href="mailto:will@followyourwill.com">will@followyourwill.com</a></p>
-  <h2>Three reasons to write</h2>
   <ul class="reasons">
-    <li><strong>Start your Workflow Map.</strong><span>One sitting where we map how your business runs, and you keep the Workflow Map either way. $250, credited in full toward any build. Write and tell us a little about your business, and we will set up the sitting.</span></li>
-    <li><strong>Ask a question first.</strong><span>How it works, what it costs, whether it fits a business like yours: ask in your own words before you decide anything. A straight question gets a straight answer.</span></li>
-    <li><strong>Already a customer, and something is stuck?</strong><span>Write to the same address and say what is stuck. Your message goes to a person, not a queue, and we will work it out with you by email.</span></li>
+    <li><strong>Start your Workflow Map.</strong><span>One sitting where we map how your business runs, and you keep the Workflow Map either way. $250, credited in full toward any build. Tell us a little about your business, and we will set up the sitting.</span></li>
+    <li><strong>Ask a question first.</strong><span>Ask in your own words: how it works, what it costs, whether it fits a business like yours. We answer in ours.</span></li>
+    <li><strong>Already a customer, and something is stuck?</strong><span>Write to the same address and say what is stuck. We will sort it out with you by email.</span></li>
   </ul>
-  <h2>What happens when you write</h2>
-  <p class="lede">A person reads your message and replies by email. That is the whole system, stated plainly: no automated reply pretending to be one of us, and no promise about how fast, because nobody here has set a reply time and we would rather tell you that than invent one.</p>
+  <h2>When you write</h2>
+  <p class="lede">A person reads your message and replies by email. We have not set a reply time, so we will not promise one here.</p>
+  <p class="lede">Prefer a form? Use this one. It goes to the same inbox as the address above.</p>
+  <form class="contact" id="contact-form" action="https://formsubmit.co/will@followyourwill.com" method="POST">
+    <input type="hidden" name="_next" value="https://followyourwill.com/contact/">
+    <input type="hidden" name="_subject" value="Website contact form">
+    <label for="cf-name">Your name</label>
+    <input type="text" id="cf-name" name="name" required>
+    <label for="cf-email">Your email address</label>
+    <input type="email" id="cf-email" name="email" required>
+    <label for="cf-about">What is this about?</label>
+    <select id="cf-about" name="about" required>
+      <option value="Start my Workflow Map">Start my Workflow Map</option>
+      <option value="A question">A question</option>
+      <option value="I am a customer and something is stuck">I am a customer and something is stuck</option>
+    </select>
+    <label for="cf-message">Your message</label>
+    <textarea id="cf-message" name="message" required></textarea>
+    <p>A person reads every message sent from this page and answers by email. No reply time is promised, because none has been set.</p>
+    <button type="submit">Send</button>
+    <p class="form-error" id="form-error" hidden>Your message did not send. Please email will@followyourwill.com instead.</p>
+  </form>
+  <div id="form-ack" hidden>
+    Got it. Your message is with us, and a person will read it and reply to your email address.
+  </div>
 </main>
 <footer>
   <nav class="house-links"><a href="/">Follow Your Will</a> · <a href="/clips/">Clips</a> · <a href="/gate-zero/">Gate Zero</a></nav>
   Contact · A Follow Your Will company
 </footer>
+<script>
+(function(){
+  var form = document.getElementById('contact-form');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var data = {
+      name: form.elements['name'].value,
+      email: form.elements['email'].value,
+      about: form.elements['about'].value,
+      message: form.elements['message'].value,
+      _subject: 'Website contact form'
+    };
+    fetch('https://formsubmit.co/ajax/will@followyourwill.com', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+      body: JSON.stringify(data)
+    }).then(function(r){
+      if (!r.ok) { throw new Error('send failed'); }
+      return r.json();
+    }).then(function(j){
+      if (!j || !(j.success === true || j.success === 'true')) { throw new Error('send not confirmed'); }
+      form.hidden = true;
+      document.getElementById('form-ack').hidden = false;
+    }).catch(function(){
+      document.getElementById('form-error').hidden = false;
+    });
+  });
+})();
+</script>
 </body>
 </html>
