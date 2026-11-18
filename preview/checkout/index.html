@@ -455,45 +455,33 @@
     <section id="pay-section" class="work" aria-labelledby="pay-h" style="padding-top:0">
       <div class="wrap">
         <div class="sec-head">
-          <h2 id="pay-h">Choose how to pay</h2>
+          <h2 id="pay-h">Payment</h2>
           <div class="rule"></div>
         </div>
         <!-- ============================================================
-             RAILS, as built in the rails spec (test mode).
-             Card and Stripe are two doors into the one Stripe rail:
-             both anchors below carry the one Stripe TEST Payment Link,
-             and the hosted page offers the card form and Link together.
-             GO-LIVE SWAP: the test link appears exactly twice on this
-             page (card door, Stripe door). Replace both occurrences
-             with the live Payment Link URL in one edit.
-             PayPal is a separate rail and is NOT built: its slot is a
-             named placeholder with no URL until the PayPal link exists.
-               data-rail="card"   : Stripe test Payment Link (card door)
-               data-rail="stripe" : Stripe test Payment Link (Link door)
-               data-rail="paypal" : SLOT_PAYPAL_URL, placeholder, no URL
+             RAILS, as built in the rails spec (test mode), presentation
+             per Rama's options ruling: the visible choices are the
+             choices as the buyer experiences them. There is ONE visible
+             choice today: pay by card, processed by Stripe, carrying
+             the one Stripe TEST Payment Link. The hosted page offers
+             the card form and Link together; there is no separate
+             visible Stripe choice and no separate visible card choice.
+             GO-LIVE SWAP: the test link appears exactly once on this
+             page. Replace it with the live Payment Link URL in one edit.
+               data-rail="card" : Stripe test Payment Link
+               SLOT_PAYPAL_URL  : PayPal slot, named placeholder only,
+                                  no URL. The PayPal choice is added to
+                                  the visible page only when this slot
+                                  holds a real link.
              ============================================================ -->
-        <div class="pay-options">
-          <div class="pay-option">
-            <h3>Credit card</h3>
-            <p>Pay with a regular credit or debit card.</p>
-            <!-- RAIL SLOT: card -->
-            <a class="cta" href="https://buy.stripe.com/test_14A5kF50Yabj2nL25oaMU00" data-rail="card">Pay $250</a>
-          </div>
-          <div class="pay-option">
-            <h3>Stripe</h3>
-            <p>The same Stripe checkout, paying with Link, Stripe's saved-payment wallet.</p>
-            <!-- RAIL SLOT: stripe -->
-            <a class="cta" href="https://buy.stripe.com/test_14A5kF50Yabj2nL25oaMU00" data-rail="stripe">Pay $250</a>
-          </div>
-          <div class="pay-option">
-            <h3>PayPal</h3>
-            <p>PayPal is not open yet.</p>
-            <!-- RAIL SLOT: paypal. SLOT_PAYPAL_URL stands here as a named
-                 placeholder with no URL until the PayPal link exists. -->
-            <span class="cta" data-rail="paypal" data-slot="SLOT_PAYPAL_URL" aria-disabled="true" style="opacity:.55;pointer-events:none">Coming soon</span>
-          </div>
+        <div class="narrow" style="text-align:center">
+          <p>Card payments are processed by Stripe on Stripe's hosted checkout page, which also offers Link.</p>
+          <p style="margin-top:1.4rem"><a class="cta" href="https://buy.stripe.com/test_14A5kF50Yabj2nL25oaMU00" data-rail="card">Pay by card, processed by Stripe</a></p>
         </div>
-        <p class="preview-note">Preview page. Card and Stripe payments run in Stripe test mode, and no real charge is made. PayPal is not open yet.</p>
+        <!-- SLOT_PAYPAL_URL: PayPal slot, named placeholder only, no URL.
+             No PayPal choice is rendered on this page. It is added to the
+             visible choices only when this slot holds a real link. -->
+        <p class="preview-note">Preview page. Card payments run in Stripe test mode, and no real charge is made.</p>
       </div>
     </section>
 
