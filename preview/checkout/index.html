@@ -526,6 +526,39 @@
         btn.style.opacity = "";
         btn.style.pointerEvents = "";
       }
+      // ---- Purchase notification to will@ (wired, unfired in preview) ----
+      // This arrival state is the canonical confirmation surface: Stripe's
+      // success redirect lands here, so the will@ notification ping lives
+      // here, ported from the staged confirmation page's design
+      // (confirmation/index.html, post-purchase-flow.md). It fires only on
+      // an arrival carrying a Stripe session_id (this block runs only when
+      // one is present), and a sessionStorage guard keyed on the session id
+      // stops a refresh from firing it twice.
+      // Honest limit, stated in the payload as well as here: this ping
+      // proves the buyer ARRIVED at this page carrying a paid-session
+      // reference. It does not by itself prove the payment settled. The
+      // session id it carries is the matching key Will uses against
+      // Stripe's own record, which is where the proof of payment lives.
+      try {
+        var guardKey = "gz-notify-fired:" + sid;
+        if (!sessionStorage.getItem(guardKey)) {
+          sessionStorage.setItem(guardKey, "1");
+          var payload = {
+            _subject: "Gate Zero checkout: buyer reached the confirmation page",
+            rail: "Stripe",
+            session_id: sid,
+            product: "Your Workflow Map",
+            amount: "$250",
+            arrived_at: new Date().toISOString(),
+            note: "Arrival notice only. This ping proves the buyer reached the confirmation page carrying a Stripe paid-session reference; it does not by itself prove the payment settled. Match session_id against Stripe's own record, which is where the proof of payment lives."
+          };
+          fetch("https://formsubmit.co/ajax/will@followyourwill.com", {
+            method: "POST",
+            headers: { "Content-Type": "application/json", "Accept": "application/json" },
+            body: JSON.stringify(payload)
+          }).catch(function () { /* the buyer's page must never fail over this */ });
+        }
+      } catch (e) { /* storage or network unavailable: the page must never fail over this */ }
     })();
   </script>
 </body>
