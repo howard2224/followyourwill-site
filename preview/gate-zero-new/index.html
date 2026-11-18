@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
     <style>
-      :root {
+:root {
         --sky: #6EC1E8;
         --sky-highlight: #CDEDF8;
         --sky-deep: #2E7CB0;
@@ -25,9 +25,9 @@
         --line: #D7E5ED;
         --text-soft: #33566E;
       }
-      * { box-sizing: border-box; }
-      html { scroll-behavior: smooth; }
-      body {
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
         margin: 0;
         background: var(--ivory);
         color: var(--ink);
@@ -36,17 +36,15 @@
         line-height: 1.7;
         -webkit-font-smoothing: antialiased;
       }
-      img { display: block; max-width: 100%; }
-      h1, h2, h3 { font-family: "Playfair Display", serif; font-weight: 600; line-height: 1.25; margin: 0; }
-      p { margin: 0 0 1.15em; }
-      p:last-child { margin-bottom: 0; }
-      ul { margin: 0; padding: 0; list-style: none; }
-
-      .wrap { max-width: 70rem; margin: 0 auto; padding: 0 1.5rem; }
-      .narrow { max-width: 46rem; margin: 0 auto; }
-
-      /* ---------- The one action ---------- */
-      .cta {
+img { display: block; max-width: 100%; }
+h1, h2, h3 { font-family: "Playfair Display", serif; font-weight: 600; line-height: 1.25; margin: 0; }
+p { margin: 0 0 1.15em; }
+p:last-child { margin-bottom: 0; }
+ul { margin: 0; padding: 0; list-style: none; }
+.wrap { max-width: 70rem; margin: 0 auto; padding: 0 1.5rem; }
+.narrow { max-width: 46rem; margin: 0 auto; }
+/* ---------- The one action ---------- */
+.cta {
         display: inline-block;
         min-height: 3rem;
         padding: 0.85rem 2.1rem;
@@ -60,127 +58,49 @@
         text-decoration: none;
         text-align: center;
       }
-      .cta:hover { background: var(--ink-deep); }
-      .cta:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
-      .cta.on-ink { background: var(--ivory); color: var(--ink); }
-      .cta.on-ink:hover { background: #FFFFFF; }
-
-      /* ---------- Wordmark lockup ---------- */
-      .lockup { display: inline-block; text-align: center; }
-      .wordmark {
+.cta:hover { background: var(--ink-deep); }
+.cta:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+.cta.on-ink { background: var(--ivory); color: var(--ink); }
+.cta.on-ink:hover { background: #FFFFFF; }
+/* ---------- Wordmark lockup ---------- */
+.lockup { display: inline-block; text-align: center; }
+.wordmark {
         font-family: "Playfair Display", serif;
         font-weight: 700;
         letter-spacing: 0.1em;
         text-indent: 0.1em; /* optically re-centres the tracked wordmark */
         line-height: 1.2;
       }
-      .lockup .rule { height: 2px; background: linear-gradient(90deg, var(--gold-soft), var(--gold), var(--gold-soft)); margin-top: 0.55rem; }
-
-      /* ---------- Hero ---------- */
-      .hero {
-        background: linear-gradient(180deg, var(--sky-highlight) 0%, var(--sky) 52%, var(--sky-deep) 100%);
-        text-align: center;
-        padding: 3.5rem 0 4.5rem;
-      }
-      .hero .mark-hero { width: 6.5rem; height: 6.5rem; margin: 0 auto 1.4rem; }
-      .hero .wordmark { font-size: clamp(1.35rem, 3.4vw, 1.9rem); color: var(--ink); }
-      .hero h1 {
-        font-size: clamp(2rem, 5.6vw, 3.4rem);
-        letter-spacing: 0.02em;
-        max-width: 56rem;
-        margin: 2.6rem auto 0;
-        color: var(--ink);
-      }
-      .hero .promise-lead {
-        font-family: "Inter", system-ui, sans-serif;
-        font-size: 1.28rem;
-        line-height: 1.55;
-        color: var(--ink);
-        max-width: 44rem;
-        margin: 1.2rem auto 0;
-      }
-      .hero .one-line {
-        max-width: 44rem;
-        margin: 1.5rem auto 0;
-        font-size: 1.125rem;
-        color: var(--ink-deep);
-      }
-      .hero .cta { margin-top: 2.1rem; }
-      .hero .cta + p { background: var(--ivory); display: inline-block; padding: 0.55rem 1.1rem; }
-      .hero figure { margin: 3.2rem auto 0; max-width: 62rem; }
-
-      /* Gold-framed photographic panels */
-      figure.framed {
+.lockup .rule { height: 2px; background: linear-gradient(90deg, var(--gold-soft), var(--gold), var(--gold-soft)); margin-top: 0.55rem; }
+/* Gold-framed photographic panels */
+figure.framed {
         background: linear-gradient(135deg, var(--gold-soft), var(--gold) 55%, var(--gold-soft));
         padding: 6px;
       }
-      figure.framed img { width: 100%; height: 100%; object-fit: cover; }
-      .hero figure.framed img { aspect-ratio: 16 / 9; }
-
-      /* ---------- Sections ---------- */
-      section.work { padding: 5rem 0; }
-      .sec-head { text-align: center; margin-bottom: 2.8rem; }
-      .sec-head h2 { font-size: clamp(1.85rem, 4.6vw, 2.9rem); letter-spacing: 0.02em; }
-      .sec-head .rule { width: 5.5rem; height: 2px; background: var(--gold); margin: 1.1rem auto 0; }
-      .sec-head.left { text-align: left; }
-      .sec-head.left .rule { margin-left: 0; }
-
-      /* Recognition */
-      .recognition-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
-      .recognition-grid figure.framed img { aspect-ratio: 3 / 2; }
-      .recognition-grid .lead-in { font-size: 1.125rem; }
-
-      /* What your team does */
-      .band-head {
-        background: var(--sky-tint);
-        border-bottom: 2px solid var(--gold);
-        padding: 2.6rem 1.5rem 2.2rem;
-        text-align: center;
-        margin: -5rem -0rem 3rem;
-      }
-      .jobs { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; margin: 2.2rem 0 2.6rem; }
-      .job {
-        background: var(--card);
-        border: 1px solid var(--line);
-        border-top: 3px solid var(--gold);
-        padding: 1.6rem 1.7rem;
-      }
-      .job h3 { font-size: 1.12rem; letter-spacing: 0.02em; margin-bottom: 0.55rem; }
-      .job p { color: var(--text-soft); font-size: 1rem; }
-      .team-lead { font-family: "Playfair Display", serif; font-weight: 500; font-size: 1.25rem; letter-spacing: 0.05em; text-align: center; }
-      .other-teams { color: var(--text-soft); font-style: italic; }
-
-      /* What you receive */
-      .receive { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; margin-bottom: 2.6rem; }
-      .receive .item { background: var(--card); border: 1px solid var(--line); }
-      .receive .item header {
-        background: var(--sky-tint);
-        border-bottom: 2px solid var(--gold);
-        padding: 0.95rem 1.3rem;
-      }
-      .receive .item h3 { font-size: 1.05rem; letter-spacing: 0.02em; }
-      .receive .item p { padding: 1.1rem 1.3rem 1.3rem; color: var(--text-soft); font-size: 1rem; margin: 0; }
-      .never-receive {
-        border: 1px solid var(--line);
-        border-left: 3px solid var(--gold);
-        background: var(--card);
-        padding: 1.5rem 1.8rem;
-      }
-
-      /* Sky-field divider — the monumental gate */
-      .divider {
+figure.framed img { width: 100%; height: 100%; object-fit: cover; }
+/* ---------- Sections ---------- */
+section.work { padding: 5rem 0; }
+.sec-head { text-align: center; margin-bottom: 2.8rem; }
+.sec-head h2 { font-size: clamp(1.85rem, 4.6vw, 2.9rem); letter-spacing: 0.02em; }
+.sec-head .rule { width: 5.5rem; height: 2px; background: var(--gold); margin: 1.1rem auto 0; }
+.sec-head.left { text-align: left; }
+.sec-head.left .rule { margin-left: 0; }
+/* Recognition */
+.recognition-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+.recognition-grid figure.framed img { aspect-ratio: 3 / 2; }
+.recognition-grid .lead-in { font-size: 1.125rem; }
+/* Sky-field divider — the monumental gate */
+.divider {
         background: linear-gradient(180deg, var(--sky-highlight) 0%, var(--sky) 55%, var(--sky-deep) 100%);
         padding: 4.5rem 1.5rem;
         text-align: center;
       }
-      .divider .mark-grand { width: min(68vw, 30rem); height: auto; margin: 0 auto; }
-      .divider.bare { padding: 2.2rem 1.5rem; }
-
-      /* How it works */
-      .steps { counter-reset: step; }
-      .step { display: grid; grid-template-columns: 4.6rem 1fr; gap: 1.6rem; padding: 1.7rem 0; border-bottom: 1px solid var(--line); }
-      .step:last-child { border-bottom: none; }
-      .step .disc {
+.divider .mark-grand { width: min(68vw, 30rem); height: auto; margin: 0 auto; }
+/* How it works */
+.steps { counter-reset: step; }
+.step { display: grid; grid-template-columns: 4.6rem 1fr; gap: 1.6rem; padding: 1.7rem 0; border-bottom: 1px solid var(--line); }
+.step:last-child { border-bottom: none; }
+.step .disc {
         width: 4.2rem; height: 4.2rem; border-radius: 50%;
         background: var(--ink);
         border: 2px solid var(--gold);
@@ -189,31 +109,20 @@
         font-size: 1.55rem; font-weight: 600;
         display: flex; align-items: center; justify-content: center;
       }
-      .step h3 { font-size: 1.2rem; letter-spacing: 0.02em; margin-bottom: 0.4rem; padding-top: 0.4rem; }
-      .step p { color: var(--text-soft); margin: 0; }
-      .step .gold-rule { width: 3.5rem; height: 2px; background: var(--gold); margin-top: 0.9rem; }
-      .path-intro { text-align: center; font-size: 1.125rem; margin-bottom: 1rem; }
-      .built-on {
-        margin-top: 3rem;
-        background: var(--sky-tint);
-        border: 1px solid var(--line);
-        border-top: 3px solid var(--gold);
-        padding: 2.2rem 2.4rem;
-      }
-      .built-on h3 { font-size: 1.45rem; letter-spacing: 0.02em; text-align: center; margin-bottom: 1.2rem; }
-      .built-on p { color: var(--text-soft); }
-
-      /* You stay in control */
-      .control-panel {
+.step h3 { font-size: 1.2rem; letter-spacing: 0.02em; margin-bottom: 0.4rem; padding-top: 0.4rem; }
+.step p { color: var(--text-soft); margin: 0; }
+.step .gold-rule { width: 3.5rem; height: 2px; background: var(--gold); margin-top: 0.9rem; }
+/* You stay in control */
+.control-panel {
         background: var(--ink);
         color: var(--ivory);
         border: 2px solid var(--gold);
         padding: 2.6rem 2.8rem;
         margin-top: 2.4rem;
       }
-      .control-panel ul { display: grid; grid-template-columns: 1fr 1fr; gap: 1.3rem 2.4rem; }
-      .control-panel li { border-top: 1px solid rgba(247, 249, 250, 0.25); padding-top: 1rem; }
-      .control-panel li strong {
+.control-panel ul { display: grid; grid-template-columns: 1fr 1fr; gap: 1.3rem 2.4rem; }
+.control-panel li { border-top: 1px solid rgba(247, 249, 250, 0.25); padding-top: 1rem; }
+.control-panel li strong {
         display: block;
         font-family: "Playfair Display", serif;
         font-weight: 600;
@@ -221,117 +130,41 @@
         font-size: 1.05rem;
         margin-bottom: 0.3rem;
       }
-      .control-panel li span { color: #DCE9F1; }
-      .control-lede { text-align: center; font-size: 1.2rem; max-width: 42rem; margin: 0 auto; }
-      .control-lede strong { font-family: "Playfair Display", serif; font-weight: 500; letter-spacing: 0.04em; }
-      .control-close { text-align: center; margin-top: 2.2rem; color: var(--text-soft); }
-
-      /* Nothing to maintain — the wall, on the sky field */
-      .wall {
-        background: linear-gradient(180deg, var(--sky-highlight) 0%, var(--sky) 55%, var(--sky-deep) 100%);
-        padding: 5rem 0;
-      }
-      .wall .sec-head h2 { color: var(--ink); }
-      .wall-panel {
-        background: var(--ink);
-        color: var(--ivory);
-        border: 2px solid var(--gold);
-        padding: 2.8rem 3rem;
-        max-width: 54rem;
-        margin: 0 auto;
-      }
-      .wall-panel p { color: #E8F0F5; }
-      .wall-panel strong { color: #FFFFFF; }
-
-      /* Proof — kept at its scoped size */
-      .proof { max-width: 44rem; margin: 0 auto; text-align: center; }
-      .proof .fact {
-        font-family: "Playfair Display", serif;
-        font-weight: 500;
-        font-size: 1.3rem;
-        letter-spacing: 0.05em;
-        line-height: 1.55;
-        margin-bottom: 1.6rem;
-      }
-      .proof p { color: var(--text-soft); }
-
-      /* Pricing — Gate Ink panel */
-      .pricing-panel {
+.control-panel li span { color: #DCE9F1; }
+.control-lede { text-align: center; font-size: 1.2rem; max-width: 42rem; margin: 0 auto; }
+.control-lede strong { font-family: "Playfair Display", serif; font-weight: 500; letter-spacing: 0.04em; }
+/* Proof — kept at its scoped size */
+.proof { max-width: 44rem; margin: 0 auto; text-align: center; }
+.proof p { color: var(--text-soft); }
+/* Pricing — Gate Ink panel */
+.pricing-panel {
         background: var(--ink);
         color: var(--ivory);
         border: 2px solid var(--gold);
         padding: 3rem 3.2rem;
       }
-      .pricing-panel .sec-head h2 { color: var(--ivory); }
-      .pricing-status {
-        text-align: center;
-        font-weight: 600;
-        letter-spacing: 0.06em;
-        font-size: 1rem;
-        color: var(--ivory);
-        border: 1px solid rgba(247, 249, 250, 0.4);
-        padding: 0.8rem 1rem;
-        margin: -0.8rem auto 2.6rem;
-        max-width: 44rem;
-      }
-      .price-rows { border-top: 1px solid rgba(247, 249, 250, 0.25); }
-      .price-row { display: grid; grid-template-columns: 1fr 1.4fr; gap: 1rem 2.5rem; padding: 1.5rem 0; border-bottom: 1px solid rgba(247, 249, 250, 0.25); }
-      .price-row .figure { font-family: "Playfair Display", serif; font-size: 1.45rem; font-weight: 600; letter-spacing: 0.04em; }
-      .price-row .what { font-weight: 600; margin-bottom: 0.25rem; }
-      .price-row .detail { color: #DCE9F1; font-size: 1rem; }
-      .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin: 1.2rem 0 0.6rem; }
-      .tier {
-        border: 1px solid rgba(247, 249, 250, 0.4);
-        padding: 1.3rem 1.2rem;
-        text-align: center;
-      }
-      .tier .amount { font-family: "Playfair Display", serif; font-size: 1.5rem; font-weight: 600; display: block; }
-      .tier .drafted {
-        display: block;
-        margin-top: 0.5rem;
-        font-size: 0.95rem;
-        font-weight: 600;
-        letter-spacing: 0.06em;
-        text-indent: 0.06em;
-      }
-      .tier.addon { grid-column: 1 / -1; }
-      .open-decision {
-        margin-top: 2.2rem;
-        border: 1px solid rgba(247, 249, 250, 0.4);
-        padding: 1.6rem 1.8rem;
-      }
-      .open-decision .what { font-weight: 600; margin-bottom: 0.4rem; }
-      .open-decision p { color: #DCE9F1; margin: 0; }
-
-      /* For you / not for you */
-      .fit { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
-      .fit .col { padding: 0 2.6rem; }
-      .fit .col:first-child { border-right: 2px solid var(--gold); padding-left: 0; }
-      .fit .col:last-child { padding-right: 0; }
-      .fit h3 { font-size: 1.2rem; letter-spacing: 0.02em; margin-bottom: 1.3rem; }
-      .fit li { padding: 0.9rem 0 0.9rem 1.4rem; position: relative; border-top: 1px solid var(--line); color: var(--text-soft); }
-      .fit li:first-of-type { border-top: none; padding-top: 0.2rem; }
-      .fit li::before { content: ""; position: absolute; left: 0; top: 1.45rem; width: 0.55rem; height: 2px; background: var(--gold); }
-      .fit li:first-of-type::before { top: 0.75rem; }
-
-      /* FAQ */
-      .faq { max-width: 46rem; margin: 0 auto; }
-      .faq .qa { padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
-      .faq .qa:first-child { padding-top: 0; }
-      .faq h3 { font-size: 1.08rem; letter-spacing: 0.02em; margin-bottom: 0.5rem; }
-      .faq p { color: var(--text-soft); margin: 0; }
-      .faq-cta { text-align: center; margin-top: 3rem; }
-
-      /* Final close */
-      .close {
+.pricing-panel .sec-head h2 { color: var(--ivory); }
+.price-rows { border-top: 1px solid rgba(247, 249, 250, 0.25); }
+.price-row { display: grid; grid-template-columns: 1fr 1.4fr; gap: 1rem 2.5rem; padding: 1.5rem 0; border-bottom: 1px solid rgba(247, 249, 250, 0.25); }
+.price-row .figure { font-family: "Playfair Display", serif; font-size: 1.45rem; font-weight: 600; letter-spacing: 0.04em; }
+.price-row .what { font-weight: 600; margin-bottom: 0.25rem; }
+.price-row .detail { color: #DCE9F1; font-size: 1rem; }
+/* FAQ */
+.faq { max-width: 46rem; margin: 0 auto; }
+.faq .qa { padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
+.faq .qa:first-child { padding-top: 0; }
+.faq h3 { font-size: 1.08rem; letter-spacing: 0.02em; margin-bottom: 0.5rem; }
+.faq p { color: var(--text-soft); margin: 0; }
+/* Final close */
+.close {
         background: var(--ink-deep);
         color: var(--ivory);
         text-align: center;
         padding: 5.5rem 1.5rem 6rem;
       }
-      .close .mark-close { width: 11rem; height: 11rem; margin: 0 auto 2rem; }
-      .close .wordmark { font-size: clamp(1.5rem, 4vw, 2.1rem); color: var(--ivory); }
-      .close .close-line {
+.close .mark-close { width: 11rem; height: 11rem; margin: 0 auto 2rem; }
+.close .wordmark { font-size: clamp(1.5rem, 4vw, 2.1rem); color: var(--ivory); }
+.close .close-line {
         font-family: "Playfair Display", serif;
         font-weight: 500;
         font-size: clamp(1.35rem, 3.6vw, 2rem);
@@ -340,113 +173,99 @@
         max-width: 46rem;
         margin: 2.6rem auto 0;
       }
-      .close .cta { margin-top: 2.6rem; }
-
-      @media (max-width: 56rem) {
-        section.work { padding: 3.6rem 0; }
-        .recognition-grid, .jobs, .fit { grid-template-columns: 1fr; }
-        .recognition-grid { gap: 2rem; }
-        .receive { grid-template-columns: 1fr 1fr; }
-        .control-panel ul { grid-template-columns: 1fr; }
-        .fit .col { padding: 0; }
-        .fit .col:first-child { border-right: none; border-bottom: 2px solid var(--gold); padding-bottom: 2.2rem; margin-bottom: 2.2rem; }
-        .price-row { grid-template-columns: 1fr; gap: 0.4rem; }
-        .tiers { grid-template-columns: 1fr; }
-        .wall-panel, .pricing-panel, .control-panel, .built-on { padding: 2rem 1.4rem; }
-        .band-head { margin-top: -3.6rem; }
+.close .cta { margin-top: 2.6rem; }
+@media (max-width: 56rem) {
+section.work { padding: 3.6rem 0; }
+.recognition-grid { grid-template-columns: 1fr; }
+.recognition-grid { gap: 2rem; }
+.control-panel ul { grid-template-columns: 1fr; }
+.price-row { grid-template-columns: 1fr; gap: 0.4rem; }
+.pricing-panel, .control-panel { padding: 2rem 1.4rem; }
       }
-      @media (max-width: 34rem) {
-        .receive { grid-template-columns: 1fr; }
-        .step { grid-template-columns: 3.6rem 1fr; gap: 1.1rem; }
-        .step .disc { width: 3.4rem; height: 3.4rem; font-size: 1.25rem; }
-        .hero { padding-top: 2.6rem; }
+@media (max-width: 34rem) {
+.step { grid-template-columns: 3.6rem 1fr; gap: 1.1rem; }
+.step .disc { width: 3.4rem; height: 3.4rem; font-size: 1.25rem; }
       }
-      @media (max-width: 640px) {
-        section.work { padding: 5rem 0; }
-        .sec-head { margin-bottom: 3.2rem; }
-        p { margin-bottom: 1.35em; }
-        section.work figure.framed { margin-top: 2.6rem; margin-bottom: 2.6rem; }
-        .step { padding: 2.2rem 0; }
-        .faq .qa { padding: 1.9rem 0; }
-        .divider { padding: 2.8rem 1.5rem; }
-        .divider .mark-grand { width: min(52vw, 30rem); }
+@media (max-width: 640px) {
+section.work { padding: 5rem 0; }
+.sec-head { margin-bottom: 3.2rem; }
+p { margin-bottom: 1.35em; }
+section.work figure.framed { margin-top: 2.6rem; margin-bottom: 2.6rem; }
+.step { padding: 2.2rem 0; }
+.faq .qa { padding: 1.9rem 0; }
+.divider { padding: 2.8rem 1.5rem; }
+.divider .mark-grand { width: min(52vw, 30rem); }
       }
-      @media (prefers-reduced-motion: reduce) {
-        html { scroll-behavior: auto; }
+@media (prefers-reduced-motion: reduce) {
+html { scroll-behavior: auto; }
       }
-          .cta { position: relative; }
-      .cta::after { content: ""; position: absolute; inset: -0.5rem; }
-    .house-links{margin-top:2rem;font-size:.95rem}
+.cta { position: relative; }
+.cta::after { content: ""; position: absolute; inset: -0.5rem; }
+.house-links{margin-top:2rem;font-size:.95rem}
 .house-links a{color:inherit}
-
-      /* ---------- Preview redesign: first screen + theme furniture ---------- */
-      body::before, body::after {
+/* ---------- Preview redesign: first screen + theme furniture ---------- */
+body::before, body::after {
         content: ""; position: fixed; top: 0; bottom: 0; width: 8px; z-index: 60; pointer-events: none;
         background: linear-gradient(180deg, var(--sky-highlight) 0%, var(--sky) 55%, var(--sky-deep) 100%);
       }
-      body::before { left: 0; border-right: 2px solid var(--gold); }
-      body::after { right: 0; border-left: 2px solid var(--gold); }
-
-      .masthead {
+body::before { left: 0; border-right: 2px solid var(--gold); }
+body::after { right: 0; border-left: 2px solid var(--gold); }
+.masthead {
         background: linear-gradient(180deg, var(--sky-highlight) 0%, var(--sky) 60%, var(--sky-deep) 100%);
         border-bottom: 3px solid var(--gold);
         text-align: center;
         padding: 1.1rem 1.5rem 1.3rem;
       }
-      .masthead .brand { display: inline-flex; align-items: center; gap: 0.85rem; text-decoration: none; color: var(--ink); }
-      .masthead .brand img { width: 2.6rem; height: 2.6rem; object-fit: contain; }
-      .masthead .brand-name { font-family: "Playfair Display", serif; font-weight: 700; font-size: 1.55rem; letter-spacing: 0.06em; line-height: 1.2; }
-      .masthead .house-line { margin: 0.5rem 0 0; font-size: 1rem; letter-spacing: 0.04em; color: var(--ink-deep); }
-
-      .lead { padding: 3.2rem 0 0; text-align: center; }
-      .lead h1 { font-size: clamp(2rem, 5.6vw, 3.4rem); letter-spacing: 0.02em; color: var(--ink); }
-      .lead .query {
+.masthead .brand { display: inline-flex; align-items: center; gap: 0.85rem; text-decoration: none; color: var(--ink); }
+.masthead .brand img { width: 2.6rem; height: 2.6rem; object-fit: contain; }
+.masthead .brand-name { font-family: "Playfair Display", serif; font-weight: 700; font-size: 1.55rem; letter-spacing: 0.06em; line-height: 1.2; }
+.masthead .house-line { margin: 0.5rem 0 0; font-size: 1rem; letter-spacing: 0.04em; color: var(--ink-deep); }
+.lead { padding: 3.2rem 0 0; text-align: center; }
+.lead h1 { font-size: clamp(2rem, 5.6vw, 3.4rem); letter-spacing: 0.02em; color: var(--ink); }
+.lead .query {
         font-family: "Playfair Display", serif; font-weight: 500;
         font-size: clamp(1.2rem, 2.8vw, 1.6rem); line-height: 1.45;
         color: var(--ink-deep); max-width: 46rem; margin: 1.4rem auto 0;
       }
-      .lead .promise-lead { font-size: 1.28rem; line-height: 1.55; color: var(--ink); max-width: 44rem; margin: 2.2rem auto 0; }
-      .lead .one-line { max-width: 44rem; margin: 1.5rem auto 0; font-size: 1.125rem; color: var(--ink-deep); }
-      .lead .cta { margin-top: 2.1rem; }
-      .lead .price-line { margin-top: 1.05rem; color: var(--ink); }
-
-      .video-slot { position: relative; }
-      .video-slot .slot-frame { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: var(--sky-tint); }
-      .video-slot img.slot-poster { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-      .video-slot img.slot-poster.contain { object-fit: contain; }
-      .lead-slot { max-width: 62rem; margin: 2.4rem auto 0; }
-      .body-slot { max-width: 52rem; margin: 2.6rem auto; }
-      .answer-slot { max-width: 100%; margin: 1.8rem auto 0.4rem; }
-      .slot-standin {
+.lead .promise-lead { font-size: 1.28rem; line-height: 1.55; color: var(--ink); max-width: 44rem; margin: 2.2rem auto 0; }
+.lead .one-line { max-width: 44rem; margin: 1.5rem auto 0; font-size: 1.125rem; color: var(--ink-deep); }
+.lead .cta { margin-top: 2.1rem; }
+.lead .price-line { margin-top: 1.05rem; color: var(--ink); }
+.video-slot { position: relative; }
+.video-slot .slot-frame { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: var(--sky-tint); }
+.video-slot img.slot-poster { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.video-slot img.slot-poster.contain { object-fit: contain; }
+.lead-slot { max-width: 62rem; margin: 2.4rem auto 0; }
+.body-slot { max-width: 52rem; margin: 2.6rem auto; }
+.answer-slot { max-width: 100%; margin: 1.8rem auto 0.4rem; }
+.slot-standin {
         display: flex; align-items: center; justify-content: center;
         background: linear-gradient(180deg, var(--sky-highlight) 0%, var(--sky) 55%, var(--sky-deep) 100%);
       }
-      .slot-standin .slot-mark { width: min(26%, 8.5rem); height: auto; object-fit: contain; }
-
-      .strip { padding: 3.8rem 0 4.4rem; }
-      .tiles { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.2rem; }
-      .tile { background: var(--card); border: 1px solid var(--line); border-top: 3px solid var(--gold); display: flex; flex-direction: column; }
-      .tile.wide { grid-column: span 2; }
-      .tile .tile-art { aspect-ratio: 16 / 10; overflow: hidden; background: var(--sky-tint); }
-      .tile .tile-art img { width: 100%; height: 100%; object-fit: cover; }
-      .tile .tile-art.empty { background: linear-gradient(135deg, var(--sky-tint), var(--sky-highlight)); border-bottom: 1px solid var(--line); }
-      .tile .tile-body { padding: 1.1rem 1.2rem 1.3rem; }
-      .tile h3 { font-size: 1.12rem; letter-spacing: 0.02em; margin-bottom: 0.45rem; }
-      .tile h3 a { color: var(--ink); text-decoration: none; }
-      .tile h3 a:hover { color: var(--sky-deep); }
-      .tile p { color: var(--text-soft); font-size: 0.97rem; margin: 0; }
-      .tile .gz-rule { display: block; width: 3.2rem; height: 2px; background: linear-gradient(90deg, var(--gold-soft), var(--gold), var(--gold-soft)); margin-top: 0.4rem; }
-
-      @media (max-width: 56rem) {
-        .tiles { grid-template-columns: 1fr 1fr; }
-        .tile.wide { grid-column: span 2; }
+.slot-standin .slot-mark { width: min(26%, 8.5rem); height: auto; object-fit: contain; }
+.strip { padding: 3.8rem 0 4.4rem; }
+.tiles { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.2rem; }
+.tile { background: var(--card); border: 1px solid var(--line); border-top: 3px solid var(--gold); display: flex; flex-direction: column; }
+.tile.wide { grid-column: span 2; }
+.tile .tile-art { aspect-ratio: 16 / 10; overflow: hidden; background: var(--sky-tint); }
+.tile .tile-art img { width: 100%; height: 100%; object-fit: cover; }
+.tile .tile-art.empty { background: linear-gradient(135deg, var(--sky-tint), var(--sky-highlight)); border-bottom: 1px solid var(--line); }
+.tile .tile-body { padding: 1.1rem 1.2rem 1.3rem; }
+.tile h3 { font-size: 1.12rem; letter-spacing: 0.02em; margin-bottom: 0.45rem; }
+.tile h3 a { color: var(--ink); text-decoration: none; }
+.tile h3 a:hover { color: var(--sky-deep); }
+.tile p { color: var(--text-soft); font-size: 0.97rem; margin: 0; }
+.tile .gz-rule { display: block; width: 3.2rem; height: 2px; background: linear-gradient(90deg, var(--gold-soft), var(--gold), var(--gold-soft)); margin-top: 0.4rem; }
+@media (max-width: 56rem) {
+.tiles { grid-template-columns: 1fr 1fr; }
+.tile.wide { grid-column: span 2; }
       }
-      @media (max-width: 34rem) {
-        .tiles { grid-template-columns: 1fr; }
-        .tile.wide { grid-column: span 1; }
-        .lead { padding-top: 2.4rem; }
+@media (max-width: 34rem) {
+.tiles { grid-template-columns: 1fr; }
+.tile.wide { grid-column: span 1; }
+.lead { padding-top: 2.4rem; }
       }
-</style>
+    </style>
   <meta property="og:image" content="https://followyourwill.com/gate-zero/cover-photo.png">
 <meta name="twitter:image" content="https://followyourwill.com/gate-zero/cover-photo.png">
 <meta property="og:title" content="Gate Zero — Product Page">
@@ -557,13 +376,17 @@
         </div>
         <div class="narrow">
           <p>What you get is a team. Not software you install or a tool you operate: a working AI agent team, built for how your business actually runs, that handles the follow-up and office work for you.</p>
-          <p>The team's work, at the front of your business: New inquiries get answered, so a lead hears from your business instead of your voicemail. The quotes and estimates you have sent get followed up until there is an answer. While the work is still fresh, reviews get asked for. And finished work becomes posts, so the work you have already done helps win the next job.</p>
-          <p>Other teams exist for other kinds of work: a Content &amp; Growth Team, and an Ops &amp; Back-Office Team for inbox, scheduling, research, documents and reporting. Any other workflow is quoted as a custom team once your business has been mapped.</p>
-          <p>And the front office is only where most owners start. Your team is composed around your whole company: marketing, sales follow-up, customer care, operations paperwork, books and admin, each seat a job in your business, built from your map, never a fixed roster. Which seats your first team carries is set in your Team Blueprint; more seats join as more of the company is built.</p>
+          <p>The team's work, at the front of your business: New inquiries get answered, so a lead hears from your business instead of your voicemail.</p>
+          <p>The quotes and estimates you have sent get followed up until there is an answer. While the work is still fresh, reviews get asked for. And finished work becomes posts, so the work you have already done helps win the next job.</p>
         </div>
         <figure class="framed" style="margin-top:3rem">
           <img src="/gate-zero/artefact.webp" alt="A Workflow Map page for a sample one-van repair shop, as declared on the page itself: six plain steps, and who does what at the foot — the who-line quoting all eight of the Seat picture&#x27;s seats exactly, operations paperwork included." width="1500" height="1960" />
         </figure>
+        <div class="narrow">
+          <p>Other teams exist for other kinds of work: a Content &amp; Growth Team, and an Ops &amp; Back-Office Team for inbox, scheduling, research, documents and reporting. Any other workflow is quoted as a custom team once your business has been mapped.</p>
+          <p>And the front office is only where most owners start. Your team is composed around your whole company: marketing, sales follow-up, customer care, operations paperwork, books and admin, each seat a job in your business, built from your map, never a fixed roster.</p>
+          <p>Which seats your first team carries is set in your Team Blueprint; more seats join as more of the company is built.</p>
+        </div>
         <figure class="framed" style="margin-top:2.4rem">
           <img src="/gate-zero/seat.webp" alt="A ring of seats at one table, seen from the owner&#x27;s side: all eight filled seats carry plain first names and the business&#x27;s own areas — admin and follow-up, customer care, sales follow-up, social media, operations paperwork, books and paperwork, writer, and digital assets and art — and the near seat stands empty, outlined in gold, labelled You. The picture&#x27;s closing line declares it a sample table, composed for one business." width="1920" height="1080" />
           <figcaption style="padding:0.9rem 0.4rem 0.3rem">One sample table, composed for one business. Yours is composed the same way: seats named for the jobs in your company, starting with the team your map puts first.</figcaption>
@@ -689,7 +512,8 @@
         <div class="narrow" style="margin-top:2.2rem">
           <p><strong>You'll get a seat at the table.</strong> You won't get a dashboard to check on them. You'll talk with your team in one conversation, first names, first person, the same way they talk with each other, and you'll be treated the way they treat each other: as a member of the team, not a user of a tool.</p>
           <p><strong>Your part.</strong> Your part is the decisions, and the approvals at the edges you set. The work itself, the following up, the asking, the posting, the clearing, is the team's.</p>
-          <p><strong>You grow with your team.</strong> Your team teaches as it works: when a concept matters, it's explained on the spot, briefly, in plain words, tied to your business, and the work goes on. The teaching is aimed at your gaps, at what you haven't met yet, and it never re-teaches what you already know. And as part of the run, you'll receive a file of your own, My AI Progress, where you can watch your own command of your team grow: what you've made solid, in your business's terms, and what you could meet next.</p>
+          <p><strong>You grow with your team.</strong> Your team teaches as it works: when a concept matters, it's explained on the spot, briefly, in plain words, tied to your business, and the work goes on.</p>
+          <p>The teaching is aimed at your gaps, at what you haven't met yet, and it never re-teaches what you already know. And as part of the run, you'll receive a file of your own, My AI Progress, where you can watch your own command of your team grow: what you've made solid, in your business's terms, and what you could meet next.</p>
           <p>And the team checks its own work on a set rhythm, and tells you what it finds, better or worse, in your regular summary, including when the answer is 'nothing to flag; we looked.'</p>
         <!-- ANSWER-04 (slate L6, Concept 5): the spoken answer to "What if it gets things wrong?", seated under its written twin, the team-checks paragraph above, in this station.
              16:9 reserved box, poster-first, no payload in this preview. Never a replacement for the written twin.
@@ -734,7 +558,8 @@
           <div class="rule"></div>
         </div>
         <div class="narrow">
-          <p>Two things we'd rather say here than have you find at cancellation. Gate Zero is licensed, never sold: you are licensing a working team, not buying software or files, and what you never receive is the machinery underneath it. All of it is in the agreement, before you pay.</p>
+          <p>Two things we'd rather say here than have you find at cancellation.</p>
+          <p>Gate Zero is licensed, never sold: you are licensing a working team, not buying software or files, and what you never receive is the machinery underneath it. All of it is in the agreement, before you pay.</p>
           <p>You keep your data, your content, your accounts, and all the work delivered to you — permanently; if the subscription stops, the only thing that stops is the team reporting for work.</p>
           <p>The team runs on our side and stays current on our side. You always work with the current version, and you never get files to update, store, or look after.</p>
           <p><strong>Your data.</strong> While your data is with us, we use it to do your work, and only your work. We never use it to train or improve a model, never use it for another client's work, and never sell it.</p>
@@ -805,8 +630,11 @@
           <div class="rule"></div>
         </div>
         <div class="narrow">
-          <p>Gate Zero is for you if you run an owner-operated business where the answering, quoting, chasing and posting all land on you, and the follow-up and office work is landing on you at night, after the real work. You want the work handled, you're glad to approve what goes out, and control matters more to you than novelty.</p>
-          <p>It is not for you if you want to own the files, the software, or the system itself: we license a working team; we do not sell the machinery. It is not for you if you want a tool to install and run yourself: there is nothing to install; that is the point. And we do not build workflows that give health, legal, financial, hiring, or similar regulated advice or decisions.</p>
+          <p>Gate Zero is for you if you run an owner-operated business where the answering, quoting, chasing and posting all land on you, and the follow-up and office work is landing on you at night, after the real work.</p>
+          <p>You want the work handled, you're glad to approve what goes out, and control matters more to you than novelty.</p>
+          <p>It is not for you if you want to own the files, the software, or the system itself: we license a working team; we do not sell the machinery.</p>
+          <p>It is not for you if you want a tool to install and run yourself: there is nothing to install; that is the point.</p>
+          <p>And we do not build workflows that give health, legal, financial, hiring, or similar regulated advice or decisions.</p>
         </div>
       </div>
     </section>
