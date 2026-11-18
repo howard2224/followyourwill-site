@@ -243,6 +243,10 @@ body::after { right: 0; border-left: 2px solid var(--gold); }
         background: linear-gradient(180deg, var(--sky-highlight) 0%, var(--sky) 55%, var(--sky-deep) 100%);
       }
 .slot-standin .slot-mark { width: min(26%, 8.5rem); height: auto; object-fit: contain; }
+.contact-panel { max-width: 52rem; margin: 2.6rem auto 0; }
+.contact-inner { background: linear-gradient(180deg, var(--sky-highlight) 0%, var(--sky) 55%, var(--sky-deep) 100%); padding: 2.4rem 2rem; text-align: center; }
+.contact-inner p { font-size: 1.125rem; color: var(--ink-deep); margin: 0; }
+.contact-inner a { color: var(--ink); font-weight: 700; text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 2px; text-underline-offset: 4px; }
 .strip { padding: 3.8rem 0 4.4rem; }
 .tiles { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.2rem; }
 .tile { background: var(--card); border: 1px solid var(--line); border-top: 3px solid var(--gold); display: flex; flex-direction: column; }
@@ -720,12 +724,12 @@ body::after { right: 0; border-left: 2px solid var(--gold); }
           <div class="rule"></div>
         </div>
       <p class="close-line">The only decision this page asks for is the first step.</p>
-      <!-- ANSWER-02, second placement (slate catch (c)): the know-how answer above the booking CTA.
-           Optional to play and never gating: it does not block, cover, or condition the CTA or the booking in any way;
-           the CTA below stands complete with or without this slot. Same poster rule as ANSWER-02. -->
-      <figure class="framed video-slot body-slot" data-slate="ANSWER-02-booking">
-        <div class="slot-frame slot-standin">
-          <img class="slot-mark" src="/gate-zero/mark.webp" alt="" width="1024" height="1024" />
+      <!-- Booking parked by Will's ruling (2026-11-18, "Replace booking with contact us link for now"):
+           the ANSWER-02-booking slot that stood here is replaced by a Contact Us panel in the same
+           placement, above the closing CTA, until Will reopens booking. The CTA below stands complete either way. -->
+      <figure class="framed contact-panel">
+        <div class="contact-inner">
+          <p>Want to talk it through before you start? <a href="/contact/">Contact us</a>.</p>
         </div>
       </figure>
       <a class="cta on-ink" href="/preview/checkout/">Start with your Workflow Map</a>
