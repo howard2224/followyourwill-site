@@ -416,12 +416,12 @@
           <p>Your order was received. Stripe emails your receipt from its own system.</p>
           <p>Payment reference: <strong id="pay-ref"></strong></p>
           <p>That reference is how we match your payment in Stripe's record. The house checks the payment there before your sitting.</p>
-          <p>Next, book your mapping sitting. Your sitting time is held through the booking step, not by the payment.</p>
-          <!-- BOOKING SLOT: the sitting's Calendly event type does not exist yet.
-               When it does, set BOOKING_URL in the script at the foot of this page
-               and this button activates from that one constant. -->
-          <p style="margin-top:1.6rem"><a id="book-btn" class="cta" href="#" aria-disabled="true" style="opacity:.55;pointer-events:none">Book your sitting</a></p>
-          <p class="preview-note">Booking opens once the sitting calendar is set. Preview only.</p>
+          <p>Next, your mapping sitting. Paying does not set your sitting time. For now, contact us and we will set the time with you.</p>
+          <!-- CONTACT ROUTE: per Will's ruling (2026-11-18), the booking step is
+               replaced by the Contact Us link below for now. Will updates the
+               sitting calendar himself later; until then this link is the route. -->
+          <p style="margin-top:1.6rem"><a id="contact-btn" class="cta" href="/contact/">Contact us to set your sitting</a></p>
+          <p class="preview-note">For now, sittings are set through Contact Us. Preview only.</p>
         </div>
       </div>
     </section>
@@ -511,7 +511,8 @@
     // Arrival state: Stripe's after-payment redirect lands here carrying
     // ?session_id={CHECKOUT_SESSION_ID}. The id is a reference for matching
     // in Stripe's own record, never proof of payment on this page.
-    var BOOKING_URL = ""; // BOOKING SLOT: set to the sitting's Calendly URL when it exists.
+    // No booking constant on this page: the arrival call to action is the
+    // static Contact Us link in the markup above (Will's ruling, 2026-11-18).
     (function () {
       var sid = new URLSearchParams(window.location.search).get("session_id");
       if (!sid) return;
@@ -519,13 +520,6 @@
       document.getElementById("arrival").style.display = "block";
       var pay = document.getElementById("pay-section");
       if (pay) pay.style.display = "none";
-      if (BOOKING_URL) {
-        var btn = document.getElementById("book-btn");
-        btn.setAttribute("href", BOOKING_URL);
-        btn.removeAttribute("aria-disabled");
-        btn.style.opacity = "";
-        btn.style.pointerEvents = "";
-      }
       // ---- Purchase notification to will@ (wired, unfired in preview) ----
       // This arrival state is the canonical confirmation surface: Stripe's
       // success redirect lands here, so the will@ notification ping lives
