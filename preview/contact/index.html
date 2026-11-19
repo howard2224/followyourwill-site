@@ -45,6 +45,7 @@
   form.contact input:focus,form.contact select:focus,form.contact textarea:focus{outline:2px solid var(--sky-deep);outline-offset:1px;border-color:var(--sky-deep)}
   form.contact button{font:inherit;font-weight:600;background:var(--sky-deep);color:var(--ivory);border:none;border-radius:6px;padding:.8rem 1.8rem;min-height:48px;margin-top:1.2rem;cursor:pointer}
   form.contact button:hover{background:var(--ink)}
+  form.contact button:disabled{background:var(--sky-deep);cursor:default}
   .form-error{color:var(--text-soft);font-weight:600;margin-top:1rem}
   #form-ack{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:8px;padding:1.2rem;margin:2rem 0 0}
 .cta {
@@ -117,8 +118,14 @@
 <script>
 (function(){
   var form = document.getElementById('contact-form');
+  var btn = form.querySelector('button[type="submit"]');
+  var btnLabel = btn.textContent;
   form.addEventListener('submit', function(e){
     e.preventDefault();
+    if (form.dataset.sending) { return; }
+    form.dataset.sending = '1';
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
     var data = {
       name: form.elements['name'].value,
       email: form.elements['email'].value,
@@ -139,6 +146,9 @@
       document.getElementById('form-ack').hidden = false;
       if (data.about === 'Start my Workflow Map') { document.getElementById('ack-pair').hidden = true; }
     }).catch(function(){
+      delete form.dataset.sending;
+      btn.disabled = false;
+      btn.textContent = btnLabel;
       document.getElementById('form-error').hidden = false;
     });
   });
