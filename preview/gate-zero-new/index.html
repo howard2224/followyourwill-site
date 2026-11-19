@@ -9,8 +9,8 @@
     <link rel="canonical" href="https://followyourwill.com/gate-zero/">
     <title>Gate Zero: Product Page</title>
     <meta name="description" content="Gate Zero is a working team of AI agents, built for how your business actually runs. Each member holds a defined job, and nothing is sent, published, spent, or deleted without your approval.">
-    <meta property="og:image" content="https://followyourwill.com/gate-zero/cover-photo.png">
-    <meta name="twitter:image" content="https://followyourwill.com/gate-zero/cover-photo.png">
+    <meta property="og:image" content="https://followyourwill.com/gate-zero/gate-zero-share-og-v1.png">
+    <meta name="twitter:image" content="https://followyourwill.com/gate-zero/gate-zero-share-og-v1.png">
     <meta name="twitter:title" content="Gate Zero: Product Page">
     <meta name="twitter:description" content="Gate Zero is a working team of AI agents, built for how your business actually runs. Each member holds a defined job, and nothing is sent, published, spent, or deleted without your approval.">
     <meta property="og:title" content="Gate Zero: Product Page">
@@ -129,6 +129,14 @@ section.movement.alt { background: var(--card); }
 @media (min-width: 56rem) { .beats { grid-template-columns: 1fr 1fr; } }
 .beat { border-top: var(--gauge) solid var(--gold); padding-top: 1.1rem; }
 .beat p { margin: 0; font-size: 1.09rem; }
+.work-seam { text-align: center; font-size: 1.2rem; max-width: 44rem; margin: 0 auto 2.8rem; }
+/* The self-check */
+.self-check { background: var(--ivory); border: 1px solid var(--line); padding: 1.8rem; max-width: 44rem; margin: 2.8rem auto 0; }
+.self-check h3 { font-size: 1.3rem; letter-spacing: 0.02em; margin-bottom: 1.1rem; }
+.sc-row { margin-bottom: 1.1rem; }
+.sc-row label { display: block; margin-bottom: 0.4rem; }
+.sc-row input { width: 100%; box-sizing: border-box; border: 1px solid var(--line); background: var(--ivory); padding: 0.6rem 0.7rem; font: inherit; color: inherit; }
+.sc-out p { margin: 0.9rem 0 0; line-height: 1.6; }
 /* The evening: what gets missed */
 .missed { display: grid; grid-template-columns: 1fr; gap: 1.6rem; margin: 2.6rem auto 0; }
 @media (min-width: 56rem) { .missed { grid-template-columns: 1fr 1fr; } }
@@ -201,6 +209,10 @@ figure.seat-figure { max-width: 52rem; margin-left: auto; margin-right: auto; }
 .close .pair-block { margin-top: 2.6rem; }
 .close .pair-block .price-line { color: var(--ivory); }
 .close .pair-block .sittings-line { color: #DCE9F1; }
+.door-band { text-align: center; padding: 3.2rem 0; }
+.door-band .pair-block { margin-top: 0; }
+.movement .pair-block { text-align: center; }
+.phone-bar { display: none; }
 @media (max-width: 56rem) {
 section.movement { padding: 3.8rem 0; }
 .control-panel ul { grid-template-columns: 1fr; }
@@ -209,10 +221,17 @@ section.movement { padding: 3.8rem 0; }
       }
 @media (max-width: 34rem) {
 .portal-inner { border-left: none; border-right: none; padding: 0 1.25rem 3.6rem; }
+.gate-large { width: 60%; }
 .step { grid-template-columns: 3.4rem 1fr; gap: 1.1rem; }
 .step .num { font-size: 1.7rem; }
 figure.map-frame { max-width: none; width: 100%; margin-left: 0; margin-right: 0; }
 figure.seat-figure { max-width: none; width: 100%; margin-left: 0; margin-right: 0; }
+.phone-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; background: var(--ink); color: var(--ivory); border-top: var(--gauge) solid var(--gold); padding: 0.75rem 1rem; align-items: center; gap: 1rem; }
+.phone-bar.show { display: flex; }
+.phone-bar .bar-text a { color: var(--ivory); font-weight: 700; text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.phone-bar .bar-price { display: block; font-size: 0.95rem; margin-top: 0.15rem; }
+.phone-bar button { margin-left: auto; flex: none; background: none; border: none; color: var(--ivory); font-size: 1.5rem; line-height: 1; padding: 0.35rem 0.55rem; cursor: pointer; }
+.close { padding-bottom: calc(6rem + 5.25rem); }
       }
 @media (prefers-reduced-motion: reduce) {
 html { scroll-behavior: auto; }
@@ -248,6 +267,8 @@ html { scroll-behavior: auto; }
       <div class="wrap">
         <h2 id="team-h"><a href="/team/">Your Gate Zero team</a></h2>
         <p class="team-intro">Gate Zero is a working team of AI agents, built for how your business actually runs. Each member holds a defined job. The team finishes work start to finish, and nothing is sent, published, spent, or deleted without your approval.</p>
+        <p class="team-intro">Your evenings are still the follow-up, the quotes that went quiet, and the inbox.</p>
+        <p>Gate Zero runs our own business, Follow Your Will, every day: Follow Your Will is customer #1.</p>
         <div class="team-grid">
           <article class="team-panel">
             <h3>The team that runs the work</h3>
@@ -307,17 +328,44 @@ html { scroll-behavior: auto; }
       </div>
     </section>
 
+    <section class="door-band">
+      <div class="wrap">
+        <div class="pair-block">
+          <a class="cta" href="/preview/checkout/">Start with your Workflow Map</a>
+          <p class="price-line">One sitting where we map how your business runs, and you keep the Workflow Map either way. $250, credited in full toward any build.</p>
+          <p class="sittings-line">Sittings are set through Contact Us.</p>
+        </div>
+      </div>
+    </section>
+
     <section class="movement alt" aria-labelledby="work-h">
       <div class="wrap">
         <div class="sec-head">
           <h2 id="work-h">The team's work, at the front of your business</h2>
           <div class="rule"></div>
         </div>
+        <p class="work-seam">Here is what that team does on a normal Tuesday night at your business.</p>
         <div class="beats">
           <div class="beat"><p>New inquiries get answered, so a lead hears from your business instead of your voicemail.</p></div>
           <div class="beat"><p>The quotes and estimates you have sent get followed up until there is an answer.</p></div>
           <div class="beat"><p>While the work is still fresh, reviews get asked for.</p></div>
           <div class="beat"><p>And finished work becomes posts, so the work you have already done helps win the next job.</p></div>
+        </div>
+        <div class="self-check">
+          <h3>Count yours.</h3>
+          <div class="sc-row">
+            <label for="sc-inquiries">How many inquiries came in after close?</label>
+            <input id="sc-inquiries" type="number" min="0" inputmode="numeric">
+          </div>
+          <div class="sc-row">
+            <label for="sc-quotes">How many quotes are still waiting on an answer?</label>
+            <input id="sc-quotes" type="number" min="0" inputmode="numeric">
+          </div>
+          <div class="sc-row">
+            <label for="sc-reviews">How many finished jobs never got a review ask?</label>
+            <input id="sc-reviews" type="number" min="0" inputmode="numeric">
+          </div>
+          <div class="sc-out" id="sc-out" aria-live="polite"></div>
         </div>
       </div>
     </section>
@@ -351,8 +399,13 @@ html { scroll-behavior: auto; }
           <div class="rule"></div>
         </div>
         <figure class="framed map-frame">
-          <img src="/gate-zero/artefact-v12.webp" alt="A Workflow Map page for a sample one-van repair shop, as declared on the page itself: six plain steps with the loop drawn back from the last step to the first, the shop&#x27;s constraint and its fix named at the first step, the week&#x27;s figures standing at the steps where they bite, an illustrative label inside the frame, and who does what at the foot, the who-line quoting all eight of the Seat picture&#x27;s seats exactly, operations paperwork included." width="1500" height="9097" loading="lazy" />
+          <img src="/gate-zero/artefact-v12.webp" alt="A Workflow Map page for a sample one-van repair shop, as declared on the page itself: six plain steps with the loop drawn back from the last step to the first, the shop&#x27;s constraint and its fix named at the first step, the week&#x27;s figures standing at the steps where they bite, an illustrative label inside the frame, and who does what at the foot, the who-line naming all eight seats exactly, operations paperwork included." width="1500" height="9097" loading="lazy" />
         </figure>
+        <div class="pair-block">
+          <a class="cta" href="/preview/checkout/">Start with your Workflow Map</a>
+          <p class="price-line">One sitting where we map how your business runs, and you keep the Workflow Map either way. $250, credited in full toward any build.</p>
+          <p class="sittings-line">Sittings are set through Contact Us.</p>
+        </div>
       </div>
     </section>
 
@@ -388,11 +441,6 @@ html { scroll-behavior: auto; }
           <p><strong>No hourly meter. It keeps working toward your goal.</strong></p>
           <p>Gate Zero doesn't sell you a worker. Gate Zero builds you the team.</p>
         </div>
-        <figure class="framed video-slot answer-slot" data-slate="ANSWER-01">
-          <div class="slot-frame slot-standin">
-            <img class="slot-mark" src="/gate-zero/mark.webp" alt="" width="1024" height="1024" />
-          </div>
-        </figure>
       </div>
     </section>
 
@@ -458,6 +506,11 @@ html { scroll-behavior: auto; }
           <p><strong>You approve the boundaries once.</strong> At setup, you set the edges once, what the team handles inside limits you choose, and then it works inside them and tells you what it did. And anything that can't be taken back still stops for your word, always.</p>
         </div>
         <p class="control-line">Nothing is sent, published, spent, or deleted without your approval.</p>
+        <figure class="framed video-slot body-slot" data-slate="PAGE-EMBED-01">
+          <div class="slot-frame slot-standin">
+            <img class="slot-mark" src="/gate-zero/mark.webp" alt="" width="1024" height="1024" />
+          </div>
+        </figure>
         <div class="control-panel">
           <ul>
             <li><strong>Sending</strong><span>Anything your team sends, an email, a message, a quote, a follow-up, appears on your screen first.</span></li>
@@ -477,7 +530,7 @@ html { scroll-behavior: auto; }
         <div class="sub-block">
           <h3>You grow with your team.</h3>
           <p>Your team teaches as it works: when a concept matters, it's explained on the spot, briefly, in plain words, tied to your business, and the work goes on.</p>
-          <p>The teaching is aimed at your gaps, at what you haven't met yet, and it never re-teaches what you already know. And as part of the run, you'll receive a file of your own, My AI Progress, where you can watch your own command of your team grow: what you've made solid, in your business's terms, and what you could meet next.</p>
+          <p>The teaching is aimed at your gaps, at what you haven't met yet, and it never re-teaches what you already know. And as part of the run, you'll receive a file of your own, where you can watch your own command of your team grow: what you've made solid, in your business's terms, and what you could meet next.</p>
           <p>And the team checks its own work on a set rhythm, and tells you what it finds, better or worse, in your regular summary, including when the answer is 'nothing to flag; we looked.'</p>
         </div>
         <figure class="framed video-slot body-slot" data-slate="PAGE-DEMO-02">
@@ -548,6 +601,11 @@ html { scroll-behavior: auto; }
             <p>Every team runs on a monthly subscription. The monthly figure is confirmed in writing before any client is quoted.</p>
           </div>
         </div>
+        <div class="pair-block">
+          <a class="cta" href="/preview/checkout/">Start with your Workflow Map</a>
+          <p class="price-line">One sitting where we map how your business runs, and you keep the Workflow Map either way. $250, credited in full toward any build.</p>
+          <p class="sittings-line">Sittings are set through Contact Us.</p>
+        </div>
       </div>
     </section>
 
@@ -591,6 +649,11 @@ html { scroll-behavior: auto; }
             <h3>Is this software I install?</h3>
             <p>No. There is nothing to install, learn, or maintain. Your team is run on our side; you talk with your team, see its work, and approve what needs approving.</p>
           </div>
+          <figure class="framed video-slot answer-slot" data-slate="ANSWER-01">
+            <div class="slot-frame slot-standin">
+              <img class="slot-mark" src="/gate-zero/mark.webp" alt="" width="1024" height="1024" />
+            </div>
+          </figure>
           <div class="qa">
             <h3>Who decides what gets sent to my customers?</h3>
             <p>You do. The team works inside the edges you set; sending, publishing, spending and deleting wait for your approval.</p>
@@ -638,6 +701,13 @@ html { scroll-behavior: auto; }
         <p class="sittings-line">Sittings are set through Contact Us.</p>
       </div>
     </footer>
+  <div class="phone-bar" id="phone-bar">
+    <div class="bar-text">
+      <a href="/preview/checkout/">Start with your Workflow Map</a>
+      <span class="bar-price">$250 — credited in full toward any build.</span>
+    </div>
+    <button type="button" id="phone-bar-dismiss" aria-label="Dismiss">&times;</button>
+  </div>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -702,5 +772,68 @@ html { scroll-behavior: auto; }
   ]
 }
 </script>
+  <script>
+    (function () {
+      var bar = document.getElementById('phone-bar');
+      var team = document.getElementById('team');
+      if (!bar || !team) { return; }
+      var key = 'gz-bar-dismissed';
+      try { if (sessionStorage.getItem(key)) { return; } } catch (e) {}
+      var teamBottom = team.getBoundingClientRect().bottom + window.scrollY;
+      function onScroll() {
+        if (window.scrollY > teamBottom) {
+          bar.classList.add('show');
+          window.removeEventListener('scroll', onScroll);
+        }
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+      document.getElementById('phone-bar-dismiss').addEventListener('click', function () {
+        bar.classList.remove('show');
+        try { sessionStorage.setItem(key, '1'); } catch (e) {}
+      });
+    })();
+  </script>
+  <script>
+    (function () {
+      var fields = [
+        document.getElementById('sc-inquiries'),
+        document.getElementById('sc-quotes'),
+        document.getElementById('sc-reviews')
+      ];
+      var out = document.getElementById('sc-out');
+      if (!out || fields.indexOf(null) !== -1) { return; }
+      function line(text) {
+        var p = document.createElement('p');
+        p.textContent = text;
+        return p;
+      }
+      function render() {
+        out.textContent = '';
+        var values = [];
+        for (var i = 0; i < fields.length; i++) {
+          if (fields[i].value === '') { return; }
+          var n = Number(fields[i].value);
+          if (!isFinite(n)) { return; }
+          values.push(n);
+        }
+        var total = values[0] + values[1] + values[2];
+        if (total === 0) {
+          out.appendChild(line('If you counted zero, your evenings are already clear, and there is nothing here you need tonight.'));
+          return;
+        }
+        out.appendChild(line(values[0] + ' inquiries after close.'));
+        out.appendChild(line(values[1] + ' quotes still waiting on an answer.'));
+        out.appendChild(line(values[2] + ' finished jobs never got a review ask.'));
+        if (total >= 2) {
+          out.appendChild(line('That is the list still landing on your evenings, and it is the work this team takes off your night.'));
+        }
+      }
+      for (var j = 0; j < fields.length; j++) {
+        fields[j].addEventListener('input', render);
+      }
+      render();
+    })();
+  </script>
   </body>
 </html>
