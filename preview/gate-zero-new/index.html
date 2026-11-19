@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta name="robots" content="noindex">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="robots" content="noindex, nofollow" />
     <meta name="color-scheme" content="light" />
     <link rel="icon" type="image/webp" href="/gate-zero/mark.webp">
     <title>Gate Zero: Product Page</title>
@@ -247,26 +247,7 @@ body::after { right: 0; border-left: 2px solid var(--gold); }
 .contact-inner { background: linear-gradient(180deg, var(--sky-highlight) 0%, var(--sky) 55%, var(--sky-deep) 100%); padding: 2.4rem 2rem; text-align: center; }
 .contact-inner p { font-size: 1.125rem; color: var(--ink-deep); margin: 0; }
 .contact-inner a { color: var(--ink); font-weight: 700; text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 2px; text-underline-offset: 4px; }
-.strip { padding: 3.8rem 0 4.4rem; }
-.tiles { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.2rem; }
-.tile { background: var(--card); border: 1px solid var(--line); border-top: 3px solid var(--gold); display: flex; flex-direction: column; }
-.tile.wide { grid-column: span 2; }
-.tile .tile-art { aspect-ratio: 16 / 10; overflow: hidden; background: var(--sky-tint); }
-.tile .tile-art img { width: 100%; height: 100%; object-fit: cover; }
-.tile .tile-art.empty { background: linear-gradient(135deg, var(--sky-tint), var(--sky-highlight)); border-bottom: 1px solid var(--line); }
-.tile .tile-body { padding: 1.1rem 1.2rem 1.3rem; }
-.tile h3 { font-size: 1.12rem; letter-spacing: 0.02em; margin-bottom: 0.45rem; }
-.tile h3 a { color: var(--ink); text-decoration: none; }
-.tile h3 a:hover { color: var(--sky-deep); }
-.tile p { color: var(--text-soft); font-size: 0.97rem; margin: 0; }
-.tile .gz-rule { display: block; width: 3.2rem; height: 2px; background: linear-gradient(90deg, var(--gold-soft), var(--gold), var(--gold-soft)); margin-top: 0.4rem; }
-@media (max-width: 56rem) {
-.tiles { grid-template-columns: 1fr 1fr; }
-.tile.wide { grid-column: span 2; }
-      }
 @media (max-width: 34rem) {
-.tiles { grid-template-columns: 1fr; }
-.tile.wide { grid-column: span 1; }
 .lead { padding-top: 2.4rem; }
       }
     </style>
@@ -280,9 +261,9 @@ body::after { right: 0; border-left: 2px solid var(--gold); }
     <header class="masthead">
       <a class="brand" href="/">
         <img src="/gate-zero/mark.webp" alt="The Gate Zero mark — a golden ring with a single point of white light at its centre" width="1024" height="1024" />
-        <span class="brand-name">Follow Your Will</span>
+        <span class="brand-name">Gate Zero</span>
       </a>
-      <p class="house-line">One house, many works.</p>
+      <p class="house-line">A working AI agent team</p>
     </header>
 
   <main>
@@ -300,7 +281,7 @@ body::after { right: 0; border-left: 2px solid var(--gold); }
              the outro is the one-line, the CTA and the price line. No VideoObject schema until the film is placed and verified. -->
         <figure class="framed video-slot lead-slot" data-slate="sitting-page-cut">
           <div class="slot-frame">
-            <img class="slot-poster contain" src="/gate-zero/artefact.webp" alt="A Workflow Map page for a sample one-van repair shop, as declared on the page itself: six plain steps, and who does what at the foot — the who-line quoting all eight of the Seat picture&#x27;s seats exactly, operations paperwork included." width="1500" height="1960" />
+            <img class="slot-poster contain" src="/gate-zero/T2-hero.png" alt="Banner: the words Gate Zero is live beside two golden rings around a point of white light on a blue sky" width="1280" height="720" />
           </div>
         </figure>
         <p class="promise-lead">Gate Zero gives an owner-operated business a working AI agent team, built for how that business actually runs, that handles the follow-up and office work the owner is doing himself at night — the owner approves anything that can't be taken back, and there is nothing to install, learn, or maintain.</p>
@@ -310,47 +291,6 @@ body::after { right: 0; border-left: 2px solid var(--gold); }
       </div>
     </section>
 
-    <section class="strip" aria-label="The works of the house">
-      <div class="wrap">
-        <div class="tiles">
-          <article class="tile wide">
-            <div class="tile-art"><img src="/gate-zero/hero.webp" alt="Banner: the words Gate Zero is live beside two golden rings around a point of white light on a blue sky" width="1280" height="720" /></div>
-            <div class="tile-body">
-              <h3><a href="/gate-zero/">Gate Zero<span class="gz-rule"></span></a></h3>
-              <p>AI agent teams for owner-operated businesses: the follow-up and office work you're doing at night, handled by a team built for your business.</p>
-            </div>
-          </article>
-          <article class="tile">
-            <div class="tile-art empty" role="img" aria-label="Art slot for The Store, standing empty until its art is filed"></div>
-            <div class="tile-body">
-              <h3><a href="https://shop.followyourwill.com">The Store</a></h3>
-              <p>Follow Your Will is an online store for beauty, home, and pet items. Product pages in our collections state plainly what an item is and what is in the box.</p>
-            </div>
-          </article>
-          <article class="tile">
-            <div class="tile-art empty" role="img" aria-label="Art slot for Follow Your Will Clips, standing empty until its art is filed"></div>
-            <div class="tile-body">
-              <h3><a href="/clips/">Follow Your Will Clips</a></h3>
-              <p>Short-form clipping, lots of it: channels, campaigns, and edits that cut long videos into short clips far more people actually see.</p>
-            </div>
-          </article>
-          <article class="tile">
-            <div class="tile-art empty" role="img" aria-label="Art slot for Wings of Gnosis, standing empty until its art is filed"></div>
-            <div class="tile-body">
-              <h3><a href="https://wingsofgnosis.com">Wings of Gnosis</a></h3>
-              <p>You fall as an Angel, lose your virtues, and earn them back by defeating the demons born from their distortions. In development.</p>
-            </div>
-          </article>
-          <article class="tile">
-            
-            <div class="tile-body">
-              <h3>My Socials</h3>
-              <p>Will in person: <a href="https://www.facebook.com/howard2224">Facebook</a> · <a href="https://www.instagram.com/the_will_of_god_/">Instagram</a> · <a href="https://www.threads.com/@the_will_of_god_">Threads</a></p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
     <section class="work" aria-labelledby="evening-h">
       <div class="wrap">
         <div class="recognition-grid">
@@ -391,10 +331,6 @@ body::after { right: 0; border-left: 2px solid var(--gold); }
           <p>And the front office is only where most owners start. Your team is composed around your whole company: marketing, sales follow-up, customer care, operations paperwork, books and admin, each seat a job in your business, built from your map, never a fixed roster.</p>
           <p>Which seats your first team carries is set in your Team Blueprint; more seats join as more of the company is built.</p>
         </div>
-        <figure class="framed" style="margin-top:2.4rem">
-          <img src="/gate-zero/seat.webp" alt="A ring of seats at one table, seen from the owner&#x27;s side: all eight filled seats carry plain first names and the business&#x27;s own areas — admin and follow-up, customer care, sales follow-up, social media, operations paperwork, books and paperwork, writer, and digital assets and art — and the near seat stands empty, outlined in gold, labelled You. The picture&#x27;s closing line declares it a sample table, composed for one business." width="1920" height="1080" />
-          <figcaption style="padding:0.9rem 0.4rem 0.3rem">One sample table, composed for one business. Yours is composed the same way: seats named for the jobs in your company, starting with the team your map puts first.</figcaption>
-        </figure>
       </div>
     </section>
 
@@ -542,12 +478,6 @@ body::after { right: 0; border-left: 2px solid var(--gold); }
              content = the roundtable block above (the seat line is this film's landing line);
              caption = the seat visual's caption of record, placed below; outro = the station's close.
              No VideoObject schema until the real video is placed and verified. -->
-        <figure class="framed video-slot body-slot" data-slate="PAGE-DEMO-02">
-          <div class="slot-frame">
-            <img class="slot-poster" src="/gate-zero/seat.webp" alt="A ring of seats at one table, seen from the owner&#x27;s side: all eight filled seats carry plain first names and the business&#x27;s own areas — admin and follow-up, customer care, sales follow-up, social media, operations paperwork, books and paperwork, writer, and digital assets and art — and the near seat stands empty, outlined in gold, labelled You. The picture&#x27;s closing line declares it a sample table, composed for one business." width="1920" height="1080" />
-          </div>
-          <figcaption style="padding:0.9rem 0.4rem 0.3rem">One sample table, composed for one business. Yours is composed the same way: seats named for the jobs in your company, starting with the team your map puts first.</figcaption>
-        </figure>
       </div>
     </section>
 
@@ -578,7 +508,7 @@ body::after { right: 0; border-left: 2px solid var(--gold); }
           <div class="rule"></div>
         </div>
         <div class="proof">
-          <p>Gate Zero is not a concept we are selling on slides. Gate Zero runs our own business, Follow Your Will, every day: Follow Your Will is customer #1. The system was proven on our own operation before it was offered to anyone.</p>
+          <p>Gate Zero is not a concept we are selling on slides. Gate Zero runs our own business, Follow Your Will, every day: Follow Your Will is customer #1.</p>
           <p>There are no client testimonials or outside results on this page, because there are no outside clients yet.</p>
         </div>
       </div>
@@ -636,7 +566,7 @@ body::after { right: 0; border-left: 2px solid var(--gold); }
         </div>
         <div class="narrow">
           <p>Gate Zero is for you if you run an owner-operated business where the answering, quoting, chasing and posting all land on you, and the follow-up and office work is landing on you at night, after the real work.</p>
-          <p>You want the work handled, you're glad to approve what goes out, and control matters more to you than novelty.</p>
+          <p>You want the work handled, and you're glad to approve what goes out.</p>
           <p>It is not for you if you want to own the files, the software, or the system itself: we license a working team; we do not sell the machinery.</p>
           <p>It is not for you if you want a tool to install and run yourself: there is nothing to install; that is the point.</p>
           <p>And we do not build workflows that give health, legal, financial, hiring, or similar regulated advice or decisions.</p>
