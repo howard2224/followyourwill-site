@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="robots" content="noindex">
+    <meta name="color-scheme" content="light" />
+    <meta name="description" content="Gate Zero is a working team of AI agents, built for how your business actually runs. Each member holds a defined job, and nothing is sent, published, spent, or deleted without your approval." />
+    <title>Your Gate Zero Team</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+    <style>
+:root {
+        --sky: #6EC1E8;
+        --sky-highlight: #CDEDF8;
+        --sky-deep: #2E7CB0;
+        --sky-tint: #E4F3FA;
+        --gold: #C6A15B;
+        --gold-soft: #D9BE82;
+        --ink: #173F5F;
+        --ink-deep: #12314B;
+        --ivory: #F7F9FA;
+        --card: #FFFFFF;
+        --line: #D7E5ED;
+        --text-soft: #33566E;
+      }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+        margin: 0;
+        background: var(--ivory);
+        color: var(--ink);
+        font-family: "Inter", system-ui, sans-serif;
+        font-size: 1.0625rem;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+      }
+h1, h2, h3 { font-family: "Playfair Display", serif; font-weight: 600; line-height: 1.25; margin: 0; }
+p { margin: 0 0 1.15em; }
+p:last-child { margin-bottom: 0; }
+.wrap { max-width: 70rem; margin: 0 auto; padding: 0 1.5rem; }
+/* ---------- The one action ---------- */
+.cta {
+        display: inline-block;
+        min-height: 3rem;
+        padding: 0.85rem 2.1rem;
+        background: var(--ink);
+        color: var(--ivory);
+        border: 2px solid var(--gold);
+        font-family: "Inter", sans-serif;
+        font-size: 1.0625rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+        text-align: center;
+      }
+.cta:hover { background: var(--ink-deep); }
+.cta:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+.cta.on-ink { background: var(--ivory); color: var(--ink); }
+.cta.on-ink:hover { background: #FFFFFF; }
+.cta { position: relative; }
+.cta::after { content: ""; position: absolute; inset: -0.5rem; }
+/* ---------- Sections ---------- */
+section.work { padding: 5rem 0; }
+/* Site foot */
+.site-foot {
+        text-align: center;
+        font-size: 0.95rem;
+        color: var(--ink);
+        padding: 1.6rem 1.5rem 2rem;
+      }
+.site-foot a { color: var(--ink); font-weight: 600; }
+/* Page edge rails — the site's theme furniture */
+body::before, body::after {
+        content: ""; position: fixed; top: 0; bottom: 0; width: 8px; z-index: 60; pointer-events: none;
+        background: linear-gradient(180deg, var(--sky-highlight) 0%, var(--sky) 55%, var(--sky-deep) 100%);
+      }
+body::before { left: 0; border-right: 2px solid var(--gold); }
+body::after { right: 0; border-left: 2px solid var(--gold); }
+.masthead {
+        background: linear-gradient(180deg, var(--sky-highlight) 0%, var(--sky) 60%, var(--sky-deep) 100%);
+        border-bottom: 3px solid var(--gold);
+        text-align: center;
+        padding: 1.1rem 1.5rem 1.3rem;
+      }
+.masthead .brand { display: inline-flex; align-items: center; gap: 0.85rem; text-decoration: none; color: var(--ink); }
+.masthead .brand-name { font-family: "Playfair Display", serif; font-weight: 700; font-size: 1.55rem; letter-spacing: 0.06em; line-height: 1.2; }
+.masthead .house-line { margin: 0.5rem 0 0; font-size: 1rem; letter-spacing: 0.04em; color: var(--ink-deep); }
+/* ---------- The team (roster) ---------- */
+.team { background: var(--sky-tint); }
+.team .wrap { max-width: 76rem; }
+.team h1 { font-size: clamp(1.85rem, 4.6vw, 2.9rem); letter-spacing: 0.02em; text-align: center; }
+.team .head-rule { width: 5.5rem; height: 2px; background: var(--gold); margin: 1.1rem auto 0; }
+.team .team-intro { font-size: 1.28rem; line-height: 1.55; max-width: 44rem; margin: 1.4rem auto 0; text-align: center; }
+.team-exit { text-align: center; margin-top: 3rem; }
+.team-exit .pair-line { margin-top: 1.2rem; font-size: 1rem; line-height: 1.55; color: var(--ink); }
+.team-exit .pair-figure { font-weight: 600; }
+.team-grid { display: grid; grid-template-columns: 1fr; gap: 1.6rem; align-items: start; margin-top: 2.8rem; }
+@media (min-width: 56rem) {
+.team-grid { grid-template-columns: repeat(12, 1fr); }
+.team-panel.s12 { grid-column: span 12; }
+.team-panel.s7 { grid-column: span 7; }
+.team-panel.s5 { grid-column: span 5; }
+.team-panel.s8 { grid-column: span 8; }
+.team-panel.s4 { grid-column: span 4; }
+      }
+.team-panel { background: var(--ivory); border: 1px solid var(--line); padding: 1.8rem; }
+.team-panel.movement { padding: 2.2rem; }
+.team-panel.heavy { padding: 2rem; }
+.team-panel.light { padding: 1.6rem; }
+.team-panel h3 { font-size: 1.3rem; letter-spacing: 0.02em; }
+.team-panel .gold-rule { width: 3.5rem; height: 2px; background: var(--gold); margin: 0.7rem 0 1.1rem; }
+.team-panel p { line-height: 1.6; margin-bottom: 0.9em; }
+.team-close { text-align: center; margin-top: 4.5rem; }
+.team-close .gold-rule { width: 5.5rem; height: 2px; background: var(--gold); margin: 0 auto 1.6rem; }
+.team-close p { font-size: 1.28rem; line-height: 1.55; max-width: 44rem; margin: 0 auto; }
+@media (max-width: 56rem) {
+section.work { padding: 3.6rem 0; }
+      }
+@media (max-width: 640px) {
+section.work { padding: 5rem 0; }
+p { margin-bottom: 1.35em; }
+      }
+@media (prefers-reduced-motion: reduce) {
+html { scroll-behavior: auto; }
+      }
+    </style>
+    <meta property="og:title" content="Your Gate Zero Team" />
+    <meta property="og:description" content="Gate Zero is a working team of AI agents, built for how your business actually runs. Each member holds a defined job, and nothing is sent, published, spent, or deleted without your approval." />
+    <meta name="twitter:card" content="summary" />
+    <link rel="canonical" href="https://followyourwill.com/team/" />
+  </head>
+  <body>
+    <header class="masthead">
+      <a class="brand" href="/">
+        <span class="brand-name">Follow Your Will</span>
+      </a>
+      <p class="house-line">Gate Zero</p>
+    </header>
+
+    <main>
+      <section class="work team" aria-labelledby="team-h">
+        <div class="wrap">
+          <h1 id="team-h">Your Gate Zero Team, in Plain Terms</h1>
+          <div class="head-rule"></div>
+          <p class="team-intro">Gate Zero is a working team of AI agents, built for how your business actually runs. Each member holds a defined job. The team finishes work start to finish, and nothing is sent, published, spent, or deleted without your approval.</p>
+          <div class="team-grid">
+            <article class="team-panel s12 movement">
+              <h3>The team that runs the work</h3>
+              <div class="gold-rule"></div>
+              <p><strong>Coordination:</strong> keeps every job moving and every member working from the same picture of your business.</p>
+              <p><strong>Planning and Builds:</strong> turns your goals into a plan and builds what the plan calls for.</p>
+              <p><strong>Research:</strong> studies your market, your customers, and your questions, and brings back answers with their sources.</p>
+              <p><strong>Checking:</strong> every piece of finished work is checked by a member who did not do it, before it counts as done.</p>
+            </article>
+            <article class="team-panel s7">
+              <h3>Content and creative</h3>
+              <div class="gold-rule"></div>
+              <p><strong>Writing and Polish:</strong> your words, written and sharpened, in your voice.</p>
+              <p><strong>Art and Design:</strong> images, graphics, and design work made for your business.</p>
+              <p><strong>Video and Media:</strong> video planned, built, and finished.</p>
+              <p><strong>Brand Care:</strong> one member guards your brand, so everything that goes out looks and sounds like you.</p>
+              <p><strong>Social Content:</strong> posts and visual stories made for your platforms.</p>
+            </article>
+            <article class="team-panel s5">
+              <h3>Growth</h3>
+              <div class="gold-rule"></div>
+              <p><strong>Audience and Growth:</strong> grows the people who follow and buy from you.</p>
+              <p><strong>Platforms:</strong> runs your channels day to day.</p>
+              <p><strong>Ads and Paid Creative:</strong> paid campaigns and the creative inside them.</p>
+              <p><strong>Search and Content:</strong> gets your business found when people search.</p>
+            </article>
+            <article class="team-panel s8 heavy">
+              <h3>Sales and customer care</h3>
+              <div class="gold-rule"></div>
+              <p><strong>Sales and Offers:</strong> builds your offers and runs the pitch.</p>
+              <p><strong>Outreach:</strong> finds new leads and opens the conversation.</p>
+              <p><strong>Email:</strong> your inbox and your email campaigns, handled.</p>
+              <p><strong>Community:</strong> looks after the people gathered around your business.</p>
+              <p><strong>Support and Success:</strong> answers your customers and keeps them happy.</p>
+              <p><strong>Proof:</strong> gathers your reviews, results, and stories, and puts them to work.</p>
+            </article>
+            <article class="team-panel s4 light">
+              <h3>Products and events</h3>
+              <div class="gold-rule"></div>
+              <p><strong>Courses and Digital Products:</strong> builds what you sell online.</p>
+              <p><strong>Books and Author Products:</strong> takes a book from draft to done.</p>
+              <p><strong>Webinars and Events:</strong> stages the events that sell for you.</p>
+            </article>
+            <article class="team-panel s12 movement">
+              <h3>Back office</h3>
+              <div class="gold-rule"></div>
+              <p><strong>Systems and Automation:</strong> connects your tools and takes the repetitive work off your plate.</p>
+              <p><strong>Finance and Admin:</strong> keeps the business paperwork in order.</p>
+              <p><strong>People and Coaching:</strong> hiring help, team support, and coaching.</p>
+              <p><strong>Local Business:</strong> support built for local and trade businesses.</p>
+            </article>
+          </div>
+          <div class="team-close">
+            <div class="gold-rule"></div>
+            <p>One team, one shared memory: what one member learns about your business, the whole team knows. You approve anything that cannot be taken back. There is nothing to install, learn, or maintain.</p>
+          </div>
+          <div class="team-exit">
+            <a class="cta" href="/preview/checkout/">Start with your Workflow Map</a>
+            <p class="pair-line"><span class="pair-figure">$250</span> — credited in full toward any build</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-foot">
+      Follow Your Will · will@followyourwill.com · <a href="/contact/">Contact us</a>
+    </footer>
+  </body>
+</html>
