@@ -200,8 +200,6 @@ html { scroll-behavior: auto; }
       }
 .cta { position: relative; }
 .cta::after { content: ""; position: absolute; inset: -0.5rem; }
-.house-links{margin-top:2rem;font-size:.95rem}
-.house-links a{color:inherit}
 /* ---------- Preview redesign: first screen + theme furniture ---------- */
 body::before, body::after {
         content: ""; position: fixed; top: 0; bottom: 0; width: 8px; z-index: 60; pointer-events: none;
@@ -246,26 +244,9 @@ body::after { right: 0; border-left: 2px solid var(--gold); }
 .contact-inner { background: linear-gradient(180deg, var(--sky-highlight) 0%, var(--sky) 55%, var(--sky-deep) 100%); padding: 2.4rem 2rem; text-align: center; }
 .contact-inner p { font-size: 1.125rem; color: var(--ink-deep); margin: 0; }
 .contact-inner a { color: var(--ink); font-weight: 700; text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 2px; text-underline-offset: 4px; }
-.strip { padding: 3.8rem 0 4.4rem; }
-.tiles { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.2rem; }
-.tile { background: var(--card); border: 1px solid var(--line); border-top: 3px solid var(--gold); display: flex; flex-direction: column; }
-.tile.wide { grid-column: span 2; }
-.tile .tile-art { aspect-ratio: 16 / 10; overflow: hidden; background: var(--sky-tint); }
-.tile .tile-art img { width: 100%; height: 100%; object-fit: cover; }
-.tile .tile-art.empty { background: linear-gradient(135deg, var(--sky-tint), var(--sky-highlight)); border-bottom: 1px solid var(--line); }
-.tile .tile-body { padding: 1.1rem 1.2rem 1.3rem; }
-.tile h3 { font-size: 1.12rem; letter-spacing: 0.02em; margin-bottom: 0.45rem; }
-.tile h3 a { color: var(--ink); text-decoration: none; }
-.tile h3 a:hover { color: var(--sky-deep); }
-.tile p { color: var(--text-soft); font-size: 0.97rem; margin: 0; }
-.tile .gz-rule { display: block; width: 3.2rem; height: 2px; background: linear-gradient(90deg, var(--gold-soft), var(--gold), var(--gold-soft)); margin-top: 0.4rem; }
 @media (max-width: 56rem) {
-.tiles { grid-template-columns: 1fr 1fr; }
-.tile.wide { grid-column: span 2; }
       }
 @media (max-width: 34rem) {
-.tiles { grid-template-columns: 1fr; }
-.tile.wide { grid-column: span 1; }
 .lead { padding-top: 2.4rem; }
       }
     </style>
@@ -309,47 +290,6 @@ body::after { right: 0; border-left: 2px solid var(--gold); }
       </div>
     </section>
 
-    <section class="strip" aria-label="The works of the house">
-      <div class="wrap">
-        <div class="tiles">
-          <article class="tile wide">
-            <div class="tile-art"><img src="/gate-zero/hero.webp" alt="Banner: the words Gate Zero is live beside two golden rings around a point of white light on a blue sky" width="1280" height="720" /></div>
-            <div class="tile-body">
-              <h3><a href="/gate-zero/">Gate Zero<span class="gz-rule"></span></a></h3>
-              <p>AI agent teams for owner-operated businesses: the follow-up and office work you're doing at night, handled by a team built for your business.</p>
-            </div>
-          </article>
-          <article class="tile">
-            <div class="tile-art empty" role="img" aria-label="Art slot for The Store, standing empty until its art is filed"></div>
-            <div class="tile-body">
-              <h3><a href="https://shop.followyourwill.com">The Store</a></h3>
-              <p>Follow Your Will is an online store for beauty, home, and pet items. Product pages in our collections state plainly what an item is and what is in the box.</p>
-            </div>
-          </article>
-          <article class="tile">
-            <div class="tile-art empty" role="img" aria-label="Art slot for Follow Your Will Clips, standing empty until its art is filed"></div>
-            <div class="tile-body">
-              <h3><a href="/clips/">Follow Your Will Clips</a></h3>
-              <p>Short-form clipping, lots of it: channels, campaigns, and edits that cut long videos into short clips far more people actually see.</p>
-            </div>
-          </article>
-          <article class="tile">
-            <div class="tile-art empty" role="img" aria-label="Art slot for Wings of Gnosis, standing empty until its art is filed"></div>
-            <div class="tile-body">
-              <h3><a href="https://wingsofgnosis.com">Wings of Gnosis</a></h3>
-              <p>You fall as an Angel, lose your virtues, and earn them back by defeating the demons born from their distortions. In development.</p>
-            </div>
-          </article>
-          <article class="tile">
-            
-            <div class="tile-body">
-              <h3>My Socials</h3>
-              <p>Will in person: <a href="https://www.facebook.com/howard2224">Facebook</a> · <a href="https://www.instagram.com/the_will_of_god_/">Instagram</a> · <a href="https://www.threads.com/@the_will_of_god_">Threads</a></p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
     <section class="work" aria-labelledby="evening-h">
       <div class="wrap">
         <div class="recognition-grid">
@@ -733,7 +673,6 @@ body::after { right: 0; border-left: 2px solid var(--gold); }
       </figure>
       <a class="cta on-ink" href="/checkout/">Start with your Workflow Map</a>
       <p style="margin-top:1.2rem">$250 — credited in full toward any build.</p>
-      <p class="house-links"><a href="/">Follow Your Will</a> · <a href="/clips/">Clips</a></p>
     </footer>
     <!-- VideoObject schema slot (Guru's rule): schema ships only for a video actually placed on the page and verified against the placed file.
        This preview places no video, so no VideoObject is emitted. og:video is reserved for PAGE-EMBED-01, only when real. -->
