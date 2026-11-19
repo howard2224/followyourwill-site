@@ -13,157 +13,68 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{--sky:#6EC1E8;--sky-deep:#2E7CB0;--sky-pale:#A9D6F0;--ink:#173F5F;--ivory:#F7F9FA;--gold:#C6A15B;--text-soft:#33566E;--line:#D7E5ED;--link:#2C74A6;--black:#0A141C}
+  :root{--sky:#6EC1E8;--sky-deep:#2E7CB0;--ink:#173F5F;--ivory:#F7F9FA;--gold:#C6A15B;--text-soft:#33566E;--line:#D7E5ED;--link:#2C74A6}
   *{margin:0;padding:0;box-sizing:border-box}
-  html,body{overflow-x:clip}
   body{font-family:'Inter',system-ui,sans-serif;background:var(--ivory);color:var(--ink);font-size:1.0625rem;line-height:1.7}
-  body::before,body::after{content:"";position:fixed;top:0;bottom:0;width:14px;z-index:10;background:linear-gradient(90deg,var(--ink) 0 4px,var(--gold) 4px 7px,var(--sky-deep) 7px 11px,var(--gold) 11px 12px,var(--ink) 12px 14px)}
-  body::before{left:0}
-  body::after{right:0}
-  .page{max-width:1060px;margin:0 auto;padding:0 1.25rem}
+  header{background:linear-gradient(160deg,var(--sky) 0%,var(--sky-deep) 100%);color:var(--gold);padding:4.5rem 1.5rem 3.5rem;text-align:center}
+  header h1{font-family:'Cinzel',serif;font-size:clamp(2rem,5.6vw,3.4rem);font-weight:600;line-height:1.25;letter-spacing:.04em;color:#000}
+  header p{max-width:640px;margin:1rem auto 0;font-size:1.08rem;color:#000;opacity:1;-webkit-text-stroke: 0.5px #000;paint-order: stroke fill;}
+  .rule{width:72px;height:3px;background:var(--gold);margin:1.6rem auto 0;border-radius:2px}
+  main{max-width:1020px;margin:0 auto;padding:3rem 1.5rem 4rem}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.4rem}
+  .card{background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:10px;padding:1.8rem;box-shadow:0 2px 10px rgba(23,63,95,.06)}
+  .card h2{font-family:'Cinzel',serif;font-size:1.4rem;font-weight:600;line-height:1.25;margin-bottom:.5rem}
+  .card h2 a{color:var(--ink)}
+  .card h2 a:hover{color:var(--link)}
+  .card p{color:var(--text-soft);font-size:.97rem}
+  .card p a{color:var(--link)}
+  .card .tag{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--sky-deep);margin-bottom:.6rem}
+  footer{border-top:1px solid var(--line);padding:2rem 1.5rem;text-align:center;color:var(--text-soft);font-size:.9rem}
+  footer a{color:var(--link)}
   a{display:inline-block;padding:.6rem .5rem;margin:-.6rem -.5rem}
-  .masthead{padding:1.4rem 0 1rem;text-align:center}
-  .mast-row{display:flex;align-items:center;justify-content:center;gap:.8rem}
-  .mast-mark{width:48px;height:48px;display:block}
-  .masthead h1{font-family:'Cinzel',serif;font-size:clamp(1.7rem,4.2vw,2.4rem);font-weight:600;letter-spacing:.04em;line-height:1.2;color:var(--ink)}
-  .mast-line{margin-top:.45rem;font-size:1.05rem;color:var(--ink)}
-  .rule{width:120px;height:3px;background:var(--gold);margin:1rem auto 0;border-radius:2px}
-  .rule.wide{width:120px;margin:0 auto 1.6rem}
-  /* PORTAL PANEL (site finish, 2026-11-18): the first screen sits inside the Gate Zero
-     portal. Sky field and the point of light are pure CSS furniture around the filed art;
-     no art is redrawn and no ring moves. Gold ring arcs clip at the panel edges as the
-     decorated sides; the picture carries a double gold frame, the outer line reading as
-     the second ring. */
-  .lead{position:relative;overflow:hidden;margin-top:1.6rem;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);border-top:3px solid var(--gold);border-bottom:3px solid var(--gold);background:radial-gradient(ellipse 62% 58% at 50% 42%,rgba(255,255,255,.6),rgba(255,255,255,0) 62%),linear-gradient(180deg,var(--sky-pale) 0%,var(--sky) 46%,var(--sky-deep) 100%)}
-  .lead::before,.lead::after{content:"";position:absolute;top:50%;width:320px;height:320px;border:6px solid var(--gold);border-radius:50%;opacity:.5;z-index:0}
-  .lead::before{left:0;transform:translate(-58%,-50%)}
-  .lead::after{right:0;transform:translate(58%,-50%)}
-  .lead-inner{position:relative;z-index:1;max-width:1060px;margin:0 auto;padding:2.4rem 1.25rem}
-  .lead-frame{max-width:880px;margin:0 auto;border:3px solid var(--gold);outline:1px solid rgba(198,161,91,.7);outline-offset:5px;background:var(--black);box-shadow:0 10px 34px rgba(10,20,28,.35)}
-  .frame-box{position:relative;aspect-ratio:16/9;background:#000;overflow:hidden}
-  .frame-poster,.frame-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-  .frame-video{background:transparent}
-  .pair-zone{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.6rem 1.1rem;padding:.95rem 1rem;background:var(--black);border-top:2px solid var(--gold)}
-  .pair-zone .cta{font-family:'Cinzel',serif;font-weight:600;font-size:1.02rem;color:var(--ivory);text-decoration:none;border:1px solid var(--gold);padding:.55rem 1.1rem;margin:0;border-radius:6px}
-  .pair-zone .cta:hover{background:rgba(198,161,91,.15)}
-  .pair-price{color:var(--ivory);font-size:1rem}
-  .strip{margin-top:2.2rem}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.4rem}
-  .tile{background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:10px;overflow:hidden;box-shadow:0 2px 10px rgba(23,63,95,.06);display:flex;flex-direction:column}
-  .tile-art{aspect-ratio:16/10;background:#000;overflow:hidden}
-  .tile-art img{width:100%;height:100%;object-fit:cover;display:block}
-  .tile-art.slot{background:linear-gradient(160deg,var(--sky) 0%,var(--sky-deep) 100%);box-shadow:inset 0 0 0 1px rgba(198,161,91,.65),inset 0 0 0 10px rgba(247,249,250,.08)}
-  .tile-body{padding:1.3rem 1.5rem 1.6rem}
-  .tile .tag{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--sky-deep);margin-bottom:.6rem}
-  .tile h2{font-family:'Cinzel',serif;font-size:1.35rem;font-weight:600;line-height:1.25;margin-bottom:.5rem}
-  .tile h2 a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:2px;text-underline-offset:5px}
-  .tile h2 a:hover{color:var(--link)}
-  .tile h2.goldbar a{text-decoration:none;border-bottom:3px solid var(--gold);padding-bottom:.18rem}
-  .tile p{color:var(--text-soft);font-size:.97rem}
-  .tile p a,footer a{color:var(--link);text-decoration:underline;text-underline-offset:3px}
-  .below{margin-top:3rem;text-align:center}
-  .banner{display:block;width:100%;max-width:709px;height:auto;margin:0 auto 1.2rem}
-  .house-line{max-width:640px;margin:0 auto;color:var(--ink)}
-  footer{border-top:1px solid var(--line);padding:2rem 1.5rem;margin-top:3.5rem;text-align:center;color:var(--text-soft);font-size:.9rem}
-  @media (max-width:640px){
-    body::before,body::after{width:5px;background:linear-gradient(90deg,var(--ink) 0 1px,var(--gold) 1px 3px,var(--sky-deep) 3px 5px)}
-    .page{padding:0 1rem}
-    .lead::before,.lead::after{display:none}
-    .lead-inner{padding:1.3rem .9rem}
-    .pair-zone .cta{font-size:.95rem}
-  }
+  .card p a,footer a{text-decoration:underline;text-underline-offset:3px}
+  .card h2 a{text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:2px;text-underline-offset:5px}
 </style>
 </head>
 <body>
-<div class="page">
-<header class="masthead">
-  <div class="mast-row">
-    <img class="mast-mark" src="/gate-zero/mark.webp" alt="The Follow Your Will mark: a golden ring with a point of white light at its center." width="48" height="48">
-    <h1>Follow Your Will</h1>
-  </div>
-  <p class="mast-line">One house, many works.</p>
+<header>
+<img src="/cover-photo.webp" alt="Header banner: a hand holding a glowing white key against a deep blue starry background, beside the words 'I can help you find the door.. but You must turn the key.'" style="display:block;width:100%;max-width:709px;height:auto;margin:0 auto 1.5rem">
+  <h1>Follow Your Will</h1>
+  <p>One house, many works.<br>Everything below belongs to one company, Follow Your Will, and we run all of it ourselves.</p>
+<img src="/profile-picture.jpg" alt="Header profile picture: a silhouetted figure sitting cross-legged in meditation, surrounded by swirling blue rings and floating musical notes." style="display:block;width:160px;height:160px;object-fit:cover;border-radius:50%;margin:1.5rem auto 0">
   <div class="rule"></div>
 </header>
 <main>
-  <section class="lead" aria-label="Gate Zero, a team at work">
-    <div class="lead-inner">
-    <figure class="lead-frame">
-      <div class="frame-box">
-        <img class="frame-poster" src="/gate-zero/seat.webp" alt="A sample team table: named seats for the work of a business around one table, with one seat kept empty for you.">
-        <!-- LOOP SLOT: homepage first-screen silent loop, 1920x1080, 16:9, slate entry L1.
-             POSTER OF RECORD: the loop's own first frame, from Da Vinci's directed first-eye
-             frame (the work wall, seat visual on the sun-gate field). No film exists yet, so
-             that poster arrives only when the loop is produced. Until then the seat visual
-             stands in as the poster and the page reads complete with motion off. When the
-             film verifies, poster and source swap in together: the first frame of record
-             becomes the poster and the loop file becomes this element's source, in one pass.
-             No video payload ships in the initial load. -->
-        <video class="frame-video" muted loop playsinline autoplay preload="none" poster="/gate-zero/seat.webp" aria-label="Gate Zero: a team at work (silent loop)"></video>
-      </div>
-      <figcaption class="pair-zone">
-        <a class="cta" href="/gate-zero/">Start with your Workflow Map</a>
-        <span class="pair-price">$250 — credited in full toward any build</span>
-      </figcaption>
-    </figure>
-    </div>
-    <!-- ONE SHORT LINE: copy slot reserved for Thoth, directly under the lead. No copy invented at this desk. -->
-  </section>
-  <section class="strip" aria-label="The works of the house">
-    <div class="grid">
-      <article class="tile">
-        <div class="tile-art"><img src="/gate-zero/hero.webp" alt="The Gate Zero portal: a golden ring on the sky field with a point of white light at its center." loading="eager"></div>
-        <div class="tile-body">
-          <span class="tag">AI Agent Teams</span>
-          <h2 class="goldbar"><a href="/gate-zero/">Gate Zero</a></h2>
-          <p>AI agent teams for owner-operated businesses: the follow-up and office work you’re doing at night, handled by a team built for your business.</p>
-        </div>
-      </article>
-      <article class="tile">
-        <!-- TILE ART GAP: no art is filed for The Store. The framed slot stands until art is filed. -->
-        <div class="tile-art slot" role="img" aria-label="Artwork slot for The Store. No tile art is filed yet."></div>
-        <div class="tile-body">
-          <span class="tag">Store</span>
-          <h2><a href="https://shop.followyourwill.com">The Store</a></h2>
-          <p>Follow Your Will is an online store for beauty, home, and pet items. Product pages in our collections state plainly what an item is and what is in the box.</p>
-        </div>
-      </article>
-      <article class="tile">
-        <!-- TILE ART GAP: no art is filed for Follow Your Will Clips. The framed slot stands until art is filed. -->
-        <div class="tile-art slot" role="img" aria-label="Artwork slot for Follow Your Will Clips. No tile art is filed yet."></div>
-        <div class="tile-body">
-          <span class="tag">Clipping Studio</span>
-          <h2><a href="/clips/">Follow Your Will Clips</a></h2>
-          <p>Short-form clipping, lots of it: channels, campaigns, and edits that cut long videos into short clips far more people actually see.</p>
-        </div>
-      </article>
-      <article class="tile">
-        <!-- TILE ART GAP: no art is filed for Wings of Gnosis. The framed slot stands until art is filed. -->
-        <div class="tile-art slot" role="img" aria-label="Artwork slot for Wings of Gnosis. No tile art is filed yet."></div>
-        <div class="tile-body">
-          <span class="tag">The Game</span>
-          <h2><a href="https://wingsofgnosis.com">Wings of Gnosis</a></h2>
-          <p>You fall as an Angel, lose your virtues, and earn them back by defeating the demons born from their distortions. In development.</p>
-        </div>
-      </article>
-      <article class="tile">
-        <div class="tile-art"><img src="/profile-picture.jpg" alt="Profile picture: a silhouetted figure sitting cross-legged in meditation, surrounded by swirling blue rings and floating musical notes." loading="lazy"></div>
-        <div class="tile-body">
-          <span class="tag">Personal</span>
-          <h2>My Socials</h2>
-          <p>Will in person: <a href="https://www.facebook.com/howard2224">Facebook</a> · <a href="https://www.instagram.com/the_will_of_god_/">Instagram</a> · <a href="https://www.threads.com/@the_will_of_god_">Threads</a></p>
-        </div>
-      </article>
-    </div>
-  </section>
-  <section class="below">
-    <div class="rule wide"></div>
-    <img class="banner" src="/cover-photo.webp" alt="Header banner: a hand holding a glowing white key against a deep blue starry background, beside the words 'I can help you find the door.. but You must turn the key.'" loading="lazy">
-    <p class="house-line">Everything below belongs to one company, Follow Your Will, and we run all of it ourselves.</p>
-  </section>
+  <div class="grid">
+    <section class="card">
+      <span class="tag">AI Agent Teams</span>
+      <h2><a href="/gate-zero/">Gate Zero</a></h2>
+      <p>AI agent teams for owner-operated businesses: the follow-up and office work you're doing at night, handled by a team built for your business.</p>
+    </section>
+    <section class="card">
+      <span class="tag">Store</span>
+      <h2><a href="https://shop.followyourwill.com">The Store</a></h2>
+      <p>Follow Your Will is an online store for beauty, home, and pet items. Product pages in our collections state plainly what an item is and what is in the box.</p>
+    </section>
+    <section class="card">
+      <span class="tag">Clipping Studio</span>
+      <h2><a href="/clips/">Follow Your Will Clips</a></h2>
+      <p>Short-form clipping, lots of it: channels, campaigns, and edits that cut long videos into short clips far more people actually see.</p>
+    </section>
+    <section class="card">
+      <span class="tag">The Game</span>
+      <h2><a href="https://wingsofgnosis.com">Wings of Gnosis</a></h2>
+      <p>You fall as an Angel, lose your virtues, and earn them back by defeating the demons born from their distortions. In development.</p>
+    </section>
+    <section class="card">
+      <span class="tag">Personal</span>
+      <h2>My Socials</h2>
+      <p>Will in person: <a href="https://www.facebook.com/howard2224">Facebook</a> · <a href="https://www.instagram.com/the_will_of_god_/">Instagram</a> · <a href="https://www.threads.com/@the_will_of_god_">Threads</a></p>
+    </section>
+  </div>
 </main>
 <footer>
   Follow Your Will · <a href="/contact/">will@followyourwill.com</a>
 </footer>
-</div>
 </body>
 </html>
