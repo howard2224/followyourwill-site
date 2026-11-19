@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="light" />
+    <meta name="description" content="Gate Zero is a working team of AI agents, built for how your business actually runs. Each member holds a defined job, and nothing is sent, published, spent, or deleted without your approval." />
     <link rel="icon" type="image/webp" href="/gate-zero/mark.webp">
     <title>Gate Zero: Product Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -229,7 +230,8 @@ body::after { right: 0; border-left: 2px solid var(--gold); }
 .lead .promise-lead { font-size: 1.28rem; line-height: 1.55; color: var(--ink); max-width: 44rem; margin: 2.2rem auto 0; }
 .lead .one-line { max-width: 44rem; margin: 1.5rem auto 0; font-size: 1.125rem; color: var(--ink-deep); }
 .lead .cta { margin-top: 2.1rem; }
-.lead .price-line { margin-top: 1.05rem; color: var(--ink); }
+.lead .price-line { margin-top: 1.1rem; color: var(--ink); font-family: "Inter", system-ui, sans-serif; font-size: .95rem; line-height: 1.55; font-style: normal; }
+.lead .price-line .amt { font-weight: 600; }
 .video-slot { position: relative; }
 .video-slot .slot-frame { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: var(--sky-tint); }
 .video-slot img.slot-poster { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
@@ -268,10 +270,27 @@ body::after { right: 0; border-left: 2px solid var(--gold); }
 .tile.wide { grid-column: span 1; }
 .lead { padding-top: 2.4rem; }
       }
+/* ---------- The team (roster) ---------- */
+.team { background: var(--sky-tint); }
+.team h2 { font-size: clamp(1.85rem, 4.6vw, 2.9rem); letter-spacing: 0.02em; text-align: center; }
+.team h2 a { color: inherit; text-decoration: none; }
+.team .team-intro { font-size: 1.28rem; line-height: 1.55; max-width: 44rem; margin: 1.4rem auto 0; text-align: center; }
+.team-grid { display: grid; grid-template-columns: 1fr; gap: 1.6rem; align-items: start; margin-top: 2.8rem; }
+@media (min-width: 56rem) {
+.team-grid { grid-template-columns: 1fr 1fr; }
+      }
+.team-panel { background: var(--ivory); border: 1px solid var(--line); padding: 1.8rem; }
+.team-panel h3 { font-size: 1.3rem; letter-spacing: 0.02em; }
+.team-panel .gold-rule { width: 3.5rem; height: 2px; background: var(--gold); margin: 0.7rem 0 1.1rem; }
+.team-panel p { line-height: 1.6; margin-bottom: 0.9em; }
+.team-close { text-align: center; margin-top: 3rem; }
+.team-close .gold-rule { width: 5.5rem; height: 2px; background: var(--gold); margin: 0 auto 1.6rem; }
+.team-close p { font-size: 1.28rem; line-height: 1.55; max-width: 44rem; margin: 0 auto; }
     </style>
   <meta property="og:image" content="https://followyourwill.com/gate-zero/cover-photo.png">
 <meta name="twitter:image" content="https://followyourwill.com/gate-zero/cover-photo.png">
 <meta property="og:title" content="Gate Zero: Product Page">
+<meta property="og:description" content="Gate Zero is a working team of AI agents, built for how your business actually runs. Each member holds a defined job, and nothing is sent, published, spent, or deleted without your approval.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://followyourwill.com/gate-zero/">
 </head>
@@ -296,60 +315,83 @@ body::after { right: 0; border-left: 2px solid var(--gold); }
              Poster and source swap in together when the film verifies, with no other markup change.
              Search blocks (Guru): an intro paragraph above the embed is a GAP for Thoth (none placed, the picture stays first);
              the caption is a GAP for Thoth (the artefact carries no passed caption); the content block is the promise below;
-             the outro is the one-line, the CTA and the price line. No VideoObject schema until the film is placed and verified. -->
+             the outro is the one-line, the CTA and the price line. No VideoObject schema until the film is placed and verified. Poster stand-in changed to the seat picture on the 2026-11-19 audit ruling (team visual first); the artefact stands at the Workflow Map step and in What you get. -->
         <figure class="framed video-slot lead-slot" data-slate="sitting-page-cut">
           <div class="slot-frame">
-            <img class="slot-poster contain" src="/gate-zero/artefact.webp" alt="A Workflow Map page for a sample one-van repair shop, as declared on the page itself: six plain steps, and who does what at the foot — the who-line quoting all eight of the Seat picture&#x27;s seats exactly, operations paperwork included." width="1500" height="1960" />
+            <img class="slot-poster" src="/gate-zero/seat.webp" alt="A ring of seats at one table, seen from the owner&#x27;s side: all eight filled seats carry plain first names and the business&#x27;s own areas — admin and follow-up, customer care, sales follow-up, social media, operations paperwork, books and paperwork, writer, and digital assets and art — and the near seat stands empty, outlined in gold, labelled You. The picture&#x27;s closing line declares it a sample table, composed for one business." width="1920" height="1080" />
           </div>
         </figure>
         <p class="promise-lead">Gate Zero gives an owner-operated business a working AI agent team, built for how that business actually runs, that handles the follow-up and office work the owner is doing himself at night — the owner approves anything that can't be taken back, and there is nothing to install, learn, or maintain.</p>
-        <p class="one-line">You set the edges once, and the team works inside them. The decisions stay yours.</p>
+        <p class="one-line">You set the edges once, and the team works inside them. The decisions stay yours. The night shift ends.</p>
         <a class="cta" href="/checkout/">Start with your Workflow Map</a>
-        <p class="price-line">One sitting where we map how your business runs, and you keep the Workflow Map either way. $250, credited in full toward any build.</p>
+        <p class="price-line">One sitting where we map how your business runs, and you keep the Workflow Map either way. <span class="amt">$250</span>, credited in full toward any build.</p>
+        <p style="font-size:.95rem;margin-top:1rem"><a href="/contact/">Contact us</a></p>
       </div>
     </section>
 
-    <section class="strip" aria-label="The works of the house">
+    <section class="work team" id="team" aria-labelledby="team-h">
       <div class="wrap">
-        <div class="tiles">
-          <article class="tile wide">
-            <div class="tile-art"><img src="/gate-zero/hero.webp" alt="Banner: the words Gate Zero is live beside two golden rings around a point of white light on a blue sky" width="1280" height="720" /></div>
-            <div class="tile-body">
-              <h3><a href="/gate-zero/">Gate Zero<span class="gz-rule"></span></a></h3>
-              <p>AI agent teams for owner-operated businesses: the follow-up and office work you're doing at night, handled by a team built for your business.</p>
-            </div>
+        <h2 id="team-h"><a href="/team/">Your Gate Zero team</a></h2>
+        <p class="team-intro">Gate Zero is a working team of AI agents, built for how your business actually runs. Each member holds a defined job. The team finishes work start to finish, and nothing is sent, published, spent, or deleted without your approval.</p>
+        <div class="team-grid">
+          <article class="team-panel">
+            <h3>The team that runs the work</h3>
+            <div class="gold-rule"></div>
+            <p><strong>Coordination:</strong> keeps every job moving and every member working from the same picture of your business.</p>
+            <p><strong>Planning and Builds:</strong> turns your goals into a plan and builds what the plan calls for.</p>
+            <p><strong>Research:</strong> studies your market, your customers, and your questions, and brings back answers with their sources.</p>
+            <p><strong>Checking:</strong> every piece of finished work is checked by a member who did not do it, before it counts as done.</p>
           </article>
-          <article class="tile">
-            <div class="tile-art empty" role="img" aria-label="Art slot for The Store, standing empty until its art is filed"></div>
-            <div class="tile-body">
-              <h3><a href="https://shop.followyourwill.com">The Store</a></h3>
-              <p>Follow Your Will is an online store for beauty, home, and pet items. Product pages in our collections state plainly what an item is and what is in the box.</p>
-            </div>
+          <article class="team-panel">
+            <h3>Content and creative</h3>
+            <div class="gold-rule"></div>
+            <p><strong>Writing and Polish:</strong> your words, written and sharpened, in your voice.</p>
+            <p><strong>Art and Design:</strong> images, graphics, and design work made for your business.</p>
+            <p><strong>Video and Media:</strong> video planned, built, and finished.</p>
+            <p><strong>Brand Care:</strong> one member guards your brand, so everything that goes out looks and sounds like you.</p>
+            <p><strong>Social Content:</strong> posts and visual stories made for your platforms.</p>
           </article>
-          <article class="tile">
-            <div class="tile-art empty" role="img" aria-label="Art slot for Follow Your Will Clips, standing empty until its art is filed"></div>
-            <div class="tile-body">
-              <h3><a href="/clips/">Follow Your Will Clips</a></h3>
-              <p>Short-form clipping, lots of it: channels, campaigns, and edits that cut long videos into short clips far more people actually see.</p>
-            </div>
+          <article class="team-panel">
+            <h3>Growth</h3>
+            <div class="gold-rule"></div>
+            <p><strong>Audience and Growth:</strong> grows the people who follow and buy from you.</p>
+            <p><strong>Platforms:</strong> runs your channels day to day.</p>
+            <p><strong>Ads and Paid Creative:</strong> paid campaigns and the creative inside them.</p>
+            <p><strong>Search and Content:</strong> gets your business found when people search.</p>
           </article>
-          <article class="tile">
-            <div class="tile-art empty" role="img" aria-label="Art slot for Wings of Gnosis, standing empty until its art is filed"></div>
-            <div class="tile-body">
-              <h3><a href="https://wingsofgnosis.com">Wings of Gnosis</a></h3>
-              <p>You fall as an Angel, lose your virtues, and earn them back by defeating the demons born from their distortions. In development.</p>
-            </div>
+          <article class="team-panel">
+            <h3>Sales and customer care</h3>
+            <div class="gold-rule"></div>
+            <p><strong>Sales and Offers:</strong> builds your offers and runs the pitch.</p>
+            <p><strong>Outreach:</strong> finds new leads and opens the conversation.</p>
+            <p><strong>Email:</strong> your inbox and your email campaigns, handled.</p>
+            <p><strong>Community:</strong> looks after the people gathered around your business.</p>
+            <p><strong>Support and Success:</strong> answers your customers and keeps them happy.</p>
+            <p><strong>Proof:</strong> gathers your reviews, results, and stories, and puts them to work.</p>
           </article>
-          <article class="tile">
-            
-            <div class="tile-body">
-              <h3>My Socials</h3>
-              <p>Will in person: <a href="https://www.facebook.com/howard2224">Facebook</a> · <a href="https://www.instagram.com/the_will_of_god_/">Instagram</a> · <a href="https://www.threads.com/@the_will_of_god_">Threads</a></p>
-            </div>
+          <article class="team-panel">
+            <h3>Products and events</h3>
+            <div class="gold-rule"></div>
+            <p><strong>Courses and Digital Products:</strong> builds what you sell online.</p>
+            <p><strong>Books and Author Products:</strong> takes a book from draft to done.</p>
+            <p><strong>Webinars and Events:</strong> stages the events that sell for you.</p>
           </article>
+          <article class="team-panel">
+            <h3>Back office</h3>
+            <div class="gold-rule"></div>
+            <p><strong>Systems and Automation:</strong> connects your tools and takes the repetitive work off your plate.</p>
+            <p><strong>Finance and Admin:</strong> keeps the business paperwork in order.</p>
+            <p><strong>People and Coaching:</strong> hiring help, team support, and coaching.</p>
+            <p><strong>Local Business:</strong> support built for local and trade businesses.</p>
+          </article>
+        </div>
+        <div class="team-close">
+          <div class="gold-rule"></div>
+          <p>One team, one shared memory: what one member learns about your business, the whole team knows. You approve anything that cannot be taken back. There is nothing to install, learn, or maintain.</p>
         </div>
       </div>
     </section>
+
     <section class="work" aria-labelledby="evening-h">
       <div class="wrap">
         <div class="recognition-grid">
@@ -358,9 +400,9 @@ body::after { right: 0; border-left: 2px solid var(--gold); }
               <h2 id="evening-h">The evening</h2>
               <div class="rule"></div>
             </div>
-            <p class="lead-in">In an owner-operated business, you are every department: the one who answers, quotes, follows up, does the work, and clears the inbox, all of it yourself, on top of the work itself.</p>
+            <p class="lead-in">In an owner-operated business, you are every department: the one who answers, quotes, follows up, does the work, and clears the inbox. Also the one who makes the coffee. All of it yourself, on top of the work itself.</p>
             <p>So the inquiry that came in while you were working, a call, a message, a form on your website, doesn't get answered until evening. The quote or estimate goes out, and nobody follows up on it. The finished work the customer loved never turns into a review or a post. And the inbox waits for a quieter day that doesn't come.</p>
-            <p>The missed call at 8 p.m.</p><p>The quote that was never sent.</p><p>The invoice that was never chased.</p><p>The customer who was never called back.</p>
+            <p>The missed call at 8 p.m.</p><p>The quote that was never sent.</p><p>The invoice that was never chased.</p><p>The customer who was never called back.</p><p>You did not start your business to become its night shift.</p>
             <p>The problem is not how hard you work. There is one of you, and the office work lands on the same person who does the work it is about.</p>
           </div>
           <figure class="framed">
@@ -386,9 +428,9 @@ body::after { right: 0; border-left: 2px solid var(--gold); }
           <img src="/gate-zero/artefact.webp" alt="A Workflow Map page for a sample one-van repair shop, as declared on the page itself: six plain steps, and who does what at the foot — the who-line quoting all eight of the Seat picture&#x27;s seats exactly, operations paperwork included." width="1500" height="1960" />
         </figure>
         <div class="narrow">
-          <p>Other teams exist for other kinds of work: a Content &amp; Growth Team, and an Ops &amp; Back-Office Team for inbox, scheduling, research, documents and reporting. Any other workflow is quoted as a custom team once your business has been mapped.</p>
-          <p>And the front office is only where most owners start. Your team is composed around your whole company: marketing, sales follow-up, customer care, operations paperwork, books and admin, each seat a job in your business, built from your map, never a fixed roster.</p>
-          <p>Which seats your first team carries is set in your Team Blueprint; more seats join as more of the company is built.</p>
+          <p>Other teams cover other kinds of work. A content and growth team handles your posts and your reach. An ops and back office team handles inbox, scheduling, research, documents, and reporting. Any other workflow is quoted as a custom team once your business has been mapped.</p>
+          <p>And the front office is only where most owners start. Your team is built around your whole company: marketing, sales follow-up, customer care, operations paperwork, books and admin. Each member holds one job in your business, built from your map. There is no fixed roster.</p>
+          <p>Your map decides which members your first team carries; more members join as more of the company is built.</p>
         </div>
         <figure class="framed" style="margin-top:2.4rem">
           <img src="/gate-zero/seat.webp" alt="A ring of seats at one table, seen from the owner&#x27;s side: all eight filled seats carry plain first names and the business&#x27;s own areas — admin and follow-up, customer care, sales follow-up, social media, operations paperwork, books and paperwork, writer, and digital assets and art — and the near seat stands empty, outlined in gold, labelled You. The picture&#x27;s closing line declares it a sample table, composed for one business." width="1920" height="1080" />
@@ -439,6 +481,10 @@ body::after { right: 0; border-left: 2px solid var(--gold); }
             <div>
               <h3>Your Workflow Map</h3>
               <p>We map how your business actually runs: where the work comes in, where it waits, where it gets stuck. That map is your Workflow Map, yours whether or not you build with us. The $250 is credited in full toward any build.</p>
+              <p>Sittings are set through Contact Us.</p>
+              <figure class="framed">
+                <img class="slot-poster contain" src="/gate-zero/artefact.webp" alt="A Workflow Map page for a sample one-van repair shop, as declared on the page itself: six plain steps, and who does what at the foot — the who-line quoting all eight of the Seat picture&#x27;s seats exactly, operations paperwork included." width="1500" height="1960" />
+              </figure>
               <div class="gold-rule"></div>
             </div>
           </div>
@@ -478,6 +524,71 @@ body::after { right: 0; border-left: 2px solid var(--gold); }
       </div>
     </section>
 
+    <section class="work" aria-labelledby="pricing-h">
+      <div class="wrap">
+        <div class="pricing-panel">
+          <div class="sec-head" style="margin-bottom:1.6rem">
+            <h2 id="pricing-h" style="color:var(--ivory)">Pricing</h2>
+            <div class="rule"></div>
+          </div>
+          <p style="text-align:center;margin-bottom:2.2rem">How the money works: the first four prices are one-time payments, to get a team built or to grow one. After that, each team runs on a monthly subscription, and that is the only ongoing charge.</p>
+          <div class="price-rows">
+            <div class="price-row">
+              <div class="figure">$250</div>
+              <div>
+                <p class="what">Your Workflow Map.</p>
+                <p class="detail">One sitting where we map how your business runs, and you keep the map either way. If you go on to build with us, the full $250 is credited in full toward any build.</p>
+              </div>
+            </div>
+            <p style="text-align:center;margin-top:2.2rem">The team you met above is what the rest of this ladder prices: one team, set up once, and more members one at a time when you want more of the work covered.</p>
+            <div class="price-row">
+              <div class="figure">$2,500</div>
+              <div>
+                <p class="what">Setup for your first team.</p>
+                <p class="detail">The standard price to build one team for your business.</p>
+              </div>
+            </div>
+            <div class="price-row">
+              <div class="figure">$1,500</div>
+              <div>
+                <p class="what">A second team.</p>
+                <p class="detail">For a client who already has a team with us and wants another one, for another part of the business. One-time setup, like the first.</p>
+              </div>
+            </div>
+            <div class="price-row">
+              <div class="figure">$497</div>
+              <div>
+                <p class="what">For each additional team member.</p>
+                <p class="detail">A team member is one agent with one job on your team, like the one who follows up your quotes or the one who clears your inbox. Your first team is built with the members your map calls for. If you later want more jobs covered, you can buy more members for the team you already have, at $497 each. One new member is $497, paid once. Three new members are $497 each, $1,491 in all, also paid once. It is a purchase, not a monthly charge, and from then on the new members work as part of your team.</p>
+              </div>
+            </div>
+          </div>
+          <p style="text-align:center;margin-top:2.2rem">On setup, you pay half to begin and half at handover.</p>
+          <p style="text-align:center;margin-top:2.2rem">Every team runs on a monthly subscription. The monthly figure is confirmed in writing before any client is quoted.</p>
+          <div style="text-align:center;margin-top:2.2rem">
+            <a class="cta on-ink" href="/checkout/">Start with your Workflow Map</a>
+            <p style="margin-top:1.2rem">$250 — credited in full toward any build.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="work" aria-labelledby="fit-h">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 id="fit-h">For you / Not for you</h2>
+          <div class="rule"></div>
+        </div>
+        <div class="narrow">
+          <p>Gate Zero is for you if you run an owner-operated business where the answering, quoting, chasing and posting all land on you, and the follow-up and office work is landing on you at night, after the real work.</p>
+          <p>You want the work handled, and you're glad to approve what goes out.</p>
+          <p>It is not for you if you want to own the files, the software, or the system itself: we license a working team; we do not sell the machinery.</p>
+          <p>It is not for you if you want a tool to install and run yourself: there is nothing to install; that is the point.</p>
+          <p>And we do not build workflows that give health, legal, financial, hiring, or similar regulated advice or decisions.</p>
+        </div>
+      </div>
+    </section>
+
     <div class="divider" aria-hidden="true">
       <img class="mark-grand" src="/gate-zero/mark.webp" alt="The Gate Zero mark — a golden ring with a single point of white light at its centre" width="1024" height="1024" />
     </div>
@@ -504,6 +615,7 @@ body::after { right: 0; border-left: 2px solid var(--gold); }
         <div class="narrow" style="margin-top:2.2rem">
           <p><strong>You approve the boundaries once.</strong> At setup, you set the edges once, what the team handles inside limits you choose, and then it works inside them and tells you what it did. And anything that can't be taken back still stops for your word, always.</p>
         </div>
+        <p class="control-lede" style="margin-top:2.2rem">Nothing is sent, published, spent, or deleted without your approval.</p>
         <div class="control-panel narrow" style="max-width:54rem">
           <ul>
               <li><strong>Sending</strong><span>Anything your team sends, an email, a message, a quote, a follow-up, appears on your screen first.</span></li>
@@ -513,11 +625,11 @@ body::after { right: 0; border-left: 2px solid var(--gold); }
           </ul>
         </div>
         <div class="narrow" style="margin-top:2.2rem">
-          <p><strong>You'll get a seat at the table.</strong> You won't get a dashboard to check on them. You'll talk with your team in one conversation, first names, first person, the same way they talk with each other, and you'll be treated the way they treat each other: as a member of the team, not a user of a tool.</p>
+          <p><strong>You talk with your team.</strong> You will not get a dashboard to check on them. You talk with your team in one conversation, first names, first person, the same way they talk with each other, and you are treated as a member of the team, not a user of a tool.</p>
           <p><strong>Your part.</strong> Your part is the decisions, and the approvals at the edges you set. The work itself, the following up, the asking, the posting, the clearing, is the team's.</p>
-          <p><strong>You grow with your team.</strong> Your team teaches as it works: when a concept matters, it's explained on the spot, briefly, in plain words, tied to your business, and the work goes on.</p>
-          <p>The teaching is aimed at your gaps, at what you haven't met yet, and it never re-teaches what you already know. And as part of the run, you'll receive a file of your own, My AI Progress, where you can watch your own command of your team grow: what you've made solid, in your business's terms, and what you could meet next.</p>
-          <p>And the team checks its own work on a set rhythm, and tells you what it finds, better or worse, in your regular summary, including when the answer is 'nothing to flag; we looked.'</p>
+          <p><strong>You grow with your team.</strong> Your team teaches as it works. When a concept matters, it is explained on the spot, briefly, in plain words, tied to your business, and the work goes on. It never re-teaches what you already know.</p>
+          <p>And you receive a file of your own, My AI Progress, where you can watch your own command of your team grow: what you have made solid, in your business's terms, and what you could meet next.</p>
+          <p>And the team checks its own work on a set rhythm, and tells you what it finds, better or worse, in your regular report, including when the answer is 'nothing to flag; we looked.'</p>
         <!-- ANSWER-04 (slate L6, Concept 5): the spoken answer to "What if it gets things wrong?", seated under its written twin, the team-checks paragraph above, in this station.
              16:9 reserved box, poster-first, no payload in this preview. Never a replacement for the written twin.
              Poster: the answer film's first frame of record when it verifies. Poster gap: the slate names no filed poster for this piece,
@@ -579,65 +691,6 @@ body::after { right: 0; border-left: 2px solid var(--gold); }
         <div class="proof">
           <p>Gate Zero is not a concept we are selling on slides. Gate Zero runs our own business, Follow Your Will, every day: Follow Your Will is customer #1. The system was proven on our own operation before it was offered to anyone.</p>
           <p>There are no client testimonials or outside results on this page, because there are no outside clients yet.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="work" aria-labelledby="pricing-h">
-      <div class="wrap">
-        <div class="pricing-panel">
-          <div class="sec-head" style="margin-bottom:1.6rem">
-            <h2 id="pricing-h" style="color:var(--ivory)">Pricing</h2>
-            <div class="rule"></div>
-          </div>
-          <p style="text-align:center;margin-bottom:2.2rem">How the money works: the first four prices are one-time payments, to get a team built or to grow one. After that, each team runs on a monthly subscription, and that is the only ongoing charge.</p>
-          <div class="price-rows">
-            <div class="price-row">
-              <div class="figure">$250</div>
-              <div>
-                <p class="what">Your Workflow Map.</p>
-                <p class="detail">One sitting where we map how your business runs, and you keep the map either way. If you go on to build with us, the full $250 is credited in full toward any build.</p>
-              </div>
-            </div>
-            <div class="price-row">
-              <div class="figure">$2,500</div>
-              <div>
-                <p class="what">Setup for your first team.</p>
-                <p class="detail">The standard price to build one team for your business. A simple team runs $1,500, and a genuinely custom workflow runs up to $3,500. You pay half to begin and half at handover.</p>
-              </div>
-            </div>
-            <div class="price-row">
-              <div class="figure">$1,500</div>
-              <div>
-                <p class="what">A second team.</p>
-                <p class="detail">For a client who already has a team with us and wants another one, for another part of the business. One-time setup, like the first.</p>
-              </div>
-            </div>
-            <div class="price-row">
-              <div class="figure">$497</div>
-              <div>
-                <p class="what">For each additional team member.</p>
-                <p class="detail">A team member is one agent with one job on your team, like the one who follows up your quotes or the one who clears your inbox. Your first team is built with the members your map calls for. If you later want more jobs covered, you can buy more members for the team you already have, at $497 each. One new member is $497, paid once. Three new members are $497 each, $1,491 in all, also paid once. It is a purchase, not a monthly charge, and from then on the new members work as part of your team.</p>
-              </div>
-            </div>
-          </div>
-          <p style="text-align:center;margin-top:2.2rem">Every team runs on a monthly subscription. The monthly figure is confirmed in writing before any client is quoted.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="work" aria-labelledby="fit-h">
-      <div class="wrap">
-        <div class="sec-head">
-          <h2 id="fit-h">For you / Not for you</h2>
-          <div class="rule"></div>
-        </div>
-        <div class="narrow">
-          <p>Gate Zero is for you if you run an owner-operated business where the answering, quoting, chasing and posting all land on you, and the follow-up and office work is landing on you at night, after the real work.</p>
-          <p>You want the work handled, you're glad to approve what goes out, and control matters more to you than novelty.</p>
-          <p>It is not for you if you want to own the files, the software, or the system itself: we license a working team; we do not sell the machinery.</p>
-          <p>It is not for you if you want a tool to install and run yourself: there is nothing to install; that is the point.</p>
-          <p>And we do not build workflows that give health, legal, financial, hiring, or similar regulated advice or decisions.</p>
         </div>
       </div>
     </section>
@@ -733,6 +786,7 @@ body::after { right: 0; border-left: 2px solid var(--gold); }
       </figure>
       <a class="cta on-ink" href="/checkout/">Start with your Workflow Map</a>
       <p style="margin-top:1.2rem">$250 — credited in full toward any build.</p>
+      <p>Sittings are set through Contact Us.</p>
       <p class="house-links"><a href="/">Follow Your Will</a> · <a href="/clips/">Clips</a></p>
     </footer>
     <!-- VideoObject schema slot (Guru's rule): schema ships only for a video actually placed on the page and verified against the placed file.

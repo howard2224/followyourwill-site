@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{--sky:#6EC1E8;--sky-deep:#2E7CB0;--link:#2C74A6;--ink:#173F5F;--ivory:#F7F9FA;--gold:#C6A15B;--text-soft:#33566E;--line:#D7E5ED}
+  :root{--sky:#6EC1E8;--sky-deep:#2E7CB0;--link:#2C74A6;--ink:#173F5F;--ink-deep:#12314B;--ivory:#F7F9FA;--gold:#C6A15B;--text-soft:#33566E;--line:#D7E5ED}
   *{margin:0;padding:0;box-sizing:border-box}
   body{font-family:'Inter',system-ui,sans-serif;background:var(--ivory);color:var(--ink);font-size:1.0625rem;line-height:1.7}
   header{background:linear-gradient(160deg,var(--sky) 0%,var(--sky-deep) 100%);color:var(--ivory);padding:3.5rem 1.5rem 3rem;text-align:center}
@@ -46,6 +46,22 @@
   form.contact button:hover{background:var(--ink)}
   .form-error{color:var(--text-soft);font-weight:600;margin-top:1rem}
   #form-ack{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:8px;padding:1.2rem;margin:2rem 0 0}
+.cta {
+        display: inline-block;
+        min-height: 3rem;
+        padding: 0.85rem 2.1rem;
+        background: var(--ink);
+        color: var(--ivory);
+        border: 2px solid var(--gold);
+        font-family: "Inter", sans-serif;
+        font-size: 1.0625rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+        text-align: center;
+      }
+.cta:hover { background: var(--ink-deep); }
+.cta.on-ink { background: var(--ivory); color: var(--ink); }
 </style>
 </head>
 <body>
@@ -84,7 +100,13 @@
     <p class="form-error" id="form-error" hidden>Your message did not send. Please email will@followyourwill.com instead.</p>
   </form>
   <div id="form-ack" hidden>
-    Got it. Your message is with us, and a person will read it and reply to your email address.
+    <p>Got it. Your message is with us, and a person will read it and reply to your email address.</p>
+    <p>If you wrote about starting, the reply sets your Workflow Map sitting.</p>
+    <p>One sitting where we map how your business runs, and you keep the Workflow Map either way. $250, credited in full toward any build.</p>
+    <div id="ack-pair" style="margin-top:2.2rem">
+      <a class="cta" href="/checkout/">Start with your Workflow Map</a>
+      <p style="margin-top:1.2rem">$250 — credited in full toward any build.</p>
+    </div>
   </div>
 </main>
 <footer>
@@ -114,6 +136,7 @@
       if (!j || !(j.success === true || j.success === 'true')) { throw new Error('send not confirmed'); }
       form.hidden = true;
       document.getElementById('form-ack').hidden = false;
+      if (data.about === 'Start my Workflow Map') { document.getElementById('ack-pair').hidden = true; }
     }).catch(function(){
       document.getElementById('form-error').hidden = false;
     });
