@@ -254,6 +254,22 @@ body::after { right: 0; border-left: 2px solid var(--gold); }
 @media (max-width: 34rem) {
 .lead { padding-top: 2.4rem; }
       }
+/* ---------- The team (roster) ---------- */
+.team { background: var(--sky-tint); }
+.team h2 { font-size: clamp(1.85rem, 4.6vw, 2.9rem); letter-spacing: 0.02em; text-align: center; }
+.team h2 a { color: inherit; text-decoration: none; }
+.team .team-intro { font-size: 1.28rem; line-height: 1.55; max-width: 44rem; margin: 1.4rem auto 0; text-align: center; }
+.team-grid { display: grid; grid-template-columns: 1fr; gap: 1.6rem; align-items: start; margin-top: 2.8rem; }
+@media (min-width: 56rem) {
+.team-grid { grid-template-columns: 1fr 1fr; }
+      }
+.team-panel { background: var(--ivory); border: 1px solid var(--line); padding: 1.8rem; }
+.team-panel h3 { font-size: 1.3rem; letter-spacing: 0.02em; }
+.team-panel .gold-rule { width: 3.5rem; height: 2px; background: var(--gold); margin: 0.7rem 0 1.1rem; }
+.team-panel p { line-height: 1.6; margin-bottom: 0.9em; }
+.team-close { text-align: center; margin-top: 3rem; }
+.team-close .gold-rule { width: 5.5rem; height: 2px; background: var(--gold); margin: 0 auto 1.6rem; }
+.team-close p { font-size: 1.28rem; line-height: 1.55; max-width: 44rem; margin: 0 auto; }
     </style>
   <meta property="og:image" content="https://followyourwill.com/gate-zero/cover-photo.png">
 <meta name="twitter:image" content="https://followyourwill.com/gate-zero/cover-photo.png">
@@ -292,6 +308,69 @@ body::after { right: 0; border-left: 2px solid var(--gold); }
         <p class="one-line">You set the edges once, and the team works inside them. The decisions stay yours.</p>
         <a class="cta" href="/preview/checkout/">Start with your Workflow Map</a>
         <p class="price-line">One sitting where we map how your business runs, and you keep the Workflow Map either way. $250, credited in full toward any build.</p>
+      </div>
+    </section>
+
+    <section class="work team" id="team" aria-labelledby="team-h">
+      <div class="wrap">
+        <h2 id="team-h"><a href="/team/">Your Gate Zero team</a></h2>
+        <p class="team-intro">Gate Zero is a working team of AI agents, built for how your business actually runs. Each member holds a defined job. The team finishes work start to finish, and nothing is sent, published, spent, or deleted without your approval.</p>
+        <div class="team-grid">
+          <article class="team-panel">
+            <h3>The team that runs the work</h3>
+            <div class="gold-rule"></div>
+            <p><strong>Coordination:</strong> keeps every job moving and every member working from the same picture of your business.</p>
+            <p><strong>Planning and Builds:</strong> turns your goals into a plan and builds what the plan calls for.</p>
+            <p><strong>Research:</strong> studies your market, your customers, and your questions, and brings back answers with their sources.</p>
+            <p><strong>Checking:</strong> every piece of finished work is checked by a member who did not do it, before it counts as done.</p>
+          </article>
+          <article class="team-panel">
+            <h3>Content and creative</h3>
+            <div class="gold-rule"></div>
+            <p><strong>Writing and Polish:</strong> your words, written and sharpened, in your voice.</p>
+            <p><strong>Art and Design:</strong> images, graphics, and design work made for your business.</p>
+            <p><strong>Video and Media:</strong> video planned, built, and finished.</p>
+            <p><strong>Brand Care:</strong> one member guards your brand, so everything that goes out looks and sounds like you.</p>
+            <p><strong>Social Content:</strong> posts and visual stories made for your platforms.</p>
+          </article>
+          <article class="team-panel">
+            <h3>Growth</h3>
+            <div class="gold-rule"></div>
+            <p><strong>Audience and Growth:</strong> grows the people who follow and buy from you.</p>
+            <p><strong>Platforms:</strong> runs your channels day to day.</p>
+            <p><strong>Ads and Paid Creative:</strong> paid campaigns and the creative inside them.</p>
+            <p><strong>Search and Content:</strong> gets your business found when people search.</p>
+          </article>
+          <article class="team-panel">
+            <h3>Sales and customer care</h3>
+            <div class="gold-rule"></div>
+            <p><strong>Sales and Offers:</strong> builds your offers and runs the pitch.</p>
+            <p><strong>Outreach:</strong> finds new leads and opens the conversation.</p>
+            <p><strong>Email:</strong> your inbox and your email campaigns, handled.</p>
+            <p><strong>Community:</strong> looks after the people gathered around your business.</p>
+            <p><strong>Support and Success:</strong> answers your customers and keeps them happy.</p>
+            <p><strong>Proof:</strong> gathers your reviews, results, and stories, and puts them to work.</p>
+          </article>
+          <article class="team-panel">
+            <h3>Products and events</h3>
+            <div class="gold-rule"></div>
+            <p><strong>Courses and Digital Products:</strong> builds what you sell online.</p>
+            <p><strong>Books and Author Products:</strong> takes a book from draft to done.</p>
+            <p><strong>Webinars and Events:</strong> stages the events that sell for you.</p>
+          </article>
+          <article class="team-panel">
+            <h3>Back office</h3>
+            <div class="gold-rule"></div>
+            <p><strong>Systems and Automation:</strong> connects your tools and takes the repetitive work off your plate.</p>
+            <p><strong>Finance and Admin:</strong> keeps the business paperwork in order.</p>
+            <p><strong>People and Coaching:</strong> hiring help, team support, and coaching.</p>
+            <p><strong>Local Business:</strong> support built for local and trade businesses.</p>
+          </article>
+        </div>
+        <div class="team-close">
+          <div class="gold-rule"></div>
+          <p>One team, one shared memory: what one member learns about your business, the whole team knows. You approve anything that cannot be taken back. There is nothing to install, learn, or maintain.</p>
+        </div>
       </div>
     </section>
 
