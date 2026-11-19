@@ -5,17 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="light" />
     <link rel="icon" type="image/webp" href="/gate-zero/mark.webp">
-    <link rel="canonical" href="https://followyourwill.com/gate-zero/">
     <title>Gate Zero: Product Page</title>
-    <meta name="description" content="Gate Zero is a working team of AI agents, built for how your business actually runs. Each member holds a defined job, and nothing is sent, published, spent, or deleted without your approval.">
-    <meta property="og:image" content="https://followyourwill.com/gate-zero/gate-zero-share-og-v1.png">
-    <meta name="twitter:image" content="https://followyourwill.com/gate-zero/gate-zero-share-og-v1.png">
-    <meta name="twitter:title" content="Gate Zero: Product Page">
-    <meta name="twitter:description" content="Gate Zero is a working team of AI agents, built for how your business actually runs. Each member holds a defined job, and nothing is sent, published, spent, or deleted without your approval.">
-    <meta property="og:title" content="Gate Zero: Product Page">
-    <meta property="og:description" content="Gate Zero is a working team of AI agents, built for how your business actually runs. Each member holds a defined job, and nothing is sent, published, spent, or deleted without your approval.">
-    <meta property="og:url" content="https://followyourwill.com/gate-zero/">
-    <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
@@ -33,7 +23,6 @@
         --card: #FFFFFF;
         --line: #D7E5ED;
         --text-soft: #33566E;
-        --gauge: 2px;
       }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -52,7 +41,7 @@ p { margin: 0 0 1.15em; }
 p:last-child { margin-bottom: 0; }
 ul { margin: 0; padding: 0; list-style: none; }
 .wrap { max-width: 70rem; margin: 0 auto; padding: 0 1.5rem; }
-.narrow { max-width: 44rem; margin: 0 auto; }
+.narrow { max-width: 46rem; margin: 0 auto; }
 /* ---------- The one action ---------- */
 .cta {
         display: inline-block;
@@ -60,7 +49,7 @@ ul { margin: 0; padding: 0; list-style: none; }
         padding: 0.85rem 2.1rem;
         background: var(--ink);
         color: var(--ivory);
-        border: var(--gauge) solid var(--gold);
+        border: 2px solid var(--gold);
         font-family: "Inter", sans-serif;
         font-size: 1.0625rem;
         font-weight: 600;
@@ -72,203 +61,257 @@ ul { margin: 0; padding: 0; list-style: none; }
 .cta:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
 .cta.on-ink { background: var(--ivory); color: var(--ink); }
 .cta.on-ink:hover { background: #FFFFFF; }
-/* ---------- The opening screen: the portal ---------- */
-.portal { background: var(--sky-tint); }
-.portal-inner {
-        max-width: 72rem;
-        margin: 0 auto;
-        background: linear-gradient(180deg, var(--sky-highlight) 0%, var(--sky) 55%, var(--sky-deep) 100%);
-        border-left: var(--gauge) solid var(--gold);
-        border-right: var(--gauge) solid var(--gold);
-        padding: 0 1.5rem 4.6rem;
-        text-align: center;
+/* ---------- Wordmark lockup ---------- */
+.lockup { display: inline-block; text-align: center; }
+.wordmark {
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-indent: 0.1em; /* optically re-centres the tracked wordmark */
+        line-height: 1.2;
       }
-.masthead { padding: 1.5rem 0 0; }
-.masthead .brand { display: inline-flex; align-items: center; gap: 0.85rem; text-decoration: none; color: var(--ink); }
-.masthead .brand img { width: 3rem; height: 3rem; object-fit: contain; }
-.masthead .brand-name { font-family: "Playfair Display", serif; font-weight: 700; font-size: 1.7rem; letter-spacing: 0.06em; line-height: 1.2; }
-.masthead .house-line { margin: 0.55rem 0 0; font-size: 1rem; letter-spacing: 0.04em; color: var(--ink-deep); }
-.portal h1 { font-size: clamp(2.1rem, 6vw, 3.6rem); letter-spacing: 0.02em; color: var(--ink); margin-top: 2.6rem; }
-.gold-bar { height: var(--gauge); background: var(--gold); max-width: 62rem; margin: 1.5rem auto 0; }
-.portal .query {
-        font-family: "Playfair Display", serif; font-weight: 500;
-        font-size: clamp(1.2rem, 2.8vw, 1.6rem); line-height: 1.45;
-        color: var(--ink-deep); max-width: 44rem; margin: 1.6rem auto 0;
+.lockup .rule { height: 2px; background: linear-gradient(90deg, var(--gold-soft), var(--gold), var(--gold-soft)); margin-top: 0.55rem; }
+/* Gold-framed photographic panels */
+figure.framed {
+        background: linear-gradient(135deg, var(--gold-soft), var(--gold) 55%, var(--gold-soft));
+        padding: 6px;
       }
-.gate-large { width: min(70vw, 32rem); height: auto; margin: 2.8rem auto 0; }
-.portal .promise-lead { font-size: 1.28rem; line-height: 1.55; color: var(--ink); max-width: 44rem; margin: 2.8rem auto 0; }
-.portal .one-line { max-width: 44rem; margin: 1.5rem auto 0; font-size: 1.125rem; color: var(--ink-deep); }
-.pair-block { margin-top: 2.2rem; }
-.pair-block .price-line { margin-top: 1.05rem; color: var(--ink); }
-.pair-block .sittings-line { margin-top: 0.55rem; color: var(--ink-deep); font-size: 1rem; }
-/* ---------- Movements ---------- */
-section.movement { padding: 5.5rem 0; }
-section.movement.alt { background: var(--card); }
+figure.framed img { width: 100%; height: 100%; object-fit: cover; }
+figure.map-frame { max-width: 42rem; margin-left: auto; margin-right: auto; }
+figure.map-frame img { height: auto; }
+/* ---------- Sections ---------- */
+section.work { padding: 5rem 0; }
 .sec-head { text-align: center; margin-bottom: 2.8rem; }
 .sec-head h2 { font-size: clamp(1.85rem, 4.6vw, 2.9rem); letter-spacing: 0.02em; }
-.sec-head .rule { width: 5.5rem; height: var(--gauge); background: var(--gold); margin: 1.1rem auto 0; }
+.sec-head .rule { width: 5.5rem; height: 2px; background: var(--gold); margin: 1.1rem auto 0; }
 .sec-head.left { text-align: left; }
 .sec-head.left .rule { margin-left: 0; }
-/* The team (roster), carried as passed */
-.team { background: var(--sky-tint); }
-.team h2 { font-size: clamp(1.85rem, 4.6vw, 2.9rem); letter-spacing: 0.02em; text-align: center; }
-.team h2 a { color: inherit; text-decoration: none; }
-.team .team-intro { font-size: 1.28rem; line-height: 1.55; max-width: 44rem; margin: 1.4rem auto 0; text-align: center; }
-.team .proof-token { font-family: "Inter", system-ui, sans-serif; font-style: normal; font-size: 1.0625rem; line-height: 1.7; color: var(--ink); }
-.team-grid { display: grid; grid-template-columns: 1fr; gap: 1.6rem; align-items: start; margin-top: 2.8rem; }
-@media (min-width: 56rem) { .team-grid { grid-template-columns: 1fr 1fr; } }
-.team-panel { background: var(--ivory); border: 1px solid var(--line); padding: 1.8rem; }
-.team-panel h3 { font-size: 1.3rem; letter-spacing: 0.02em; }
-.team-panel .gold-rule { width: 3.5rem; height: var(--gauge); background: var(--gold); margin: 0.7rem 0 1.1rem; }
-.team-panel p { line-height: 1.6; margin-bottom: 0.9em; }
-.team-close { text-align: center; margin-top: 3rem; }
-.team-close .gold-rule { width: 5.5rem; height: var(--gauge); background: var(--gold); margin: 0 auto 1.6rem; }
-.team-close p { font-size: 1.28rem; line-height: 1.55; max-width: 44rem; margin: 0 auto; }
-/* The work: four beats */
-.beats { display: grid; grid-template-columns: 1fr; gap: 1.6rem; margin: 0 auto; }
-@media (min-width: 56rem) { .beats { grid-template-columns: 1fr 1fr; } }
-.beat { border-top: var(--gauge) solid var(--gold); padding-top: 1.1rem; }
-.beat p { margin: 0; font-size: 1.09rem; }
-.work-seam { text-align: center; font-size: 1.2rem; max-width: 44rem; margin: 0 auto 2.8rem; }
-/* The self-check */
-.self-check { background: var(--ivory); border: 1px solid var(--line); padding: 1.8rem; max-width: 44rem; margin: 2.8rem auto 0; }
-.self-check h3 { font-size: 1.3rem; letter-spacing: 0.02em; margin-bottom: 1.1rem; }
-.sc-row { margin-bottom: 1.1rem; }
-.sc-row label { display: block; margin-bottom: 0.4rem; }
-.sc-row input { width: 100%; box-sizing: border-box; border: 1px solid var(--line); background: var(--ivory); padding: 0.6rem 0.7rem; font: inherit; color: inherit; }
-.sc-out p { margin: 0.9rem 0 0; line-height: 1.6; }
-/* The evening: what gets missed */
-.missed { display: grid; grid-template-columns: 1fr; gap: 1.6rem; margin: 2.6rem auto 0; }
-@media (min-width: 56rem) { .missed { grid-template-columns: 1fr 1fr; } }
-.missed li { border-top: var(--gauge) solid var(--gold); padding-top: 0.9rem; font-family: "Playfair Display", serif; font-size: 1.18rem; font-weight: 500; letter-spacing: 0.01em; }
-/* Framed pieces */
-figure.framed { background: var(--card); border: var(--gauge) solid var(--gold); padding: 6px; margin: 0; }
-figure.framed img { width: 100%; height: auto; }
-figure.framed figcaption { padding: 0.9rem 0.4rem 0.3rem; text-align: center; color: var(--text-soft); }
-figure.map-frame { max-width: 42rem; margin-left: auto; margin-right: auto; }
-figure.seat-figure { max-width: 52rem; margin-left: auto; margin-right: auto; }
-/* Held slots */
-.video-slot { position: relative; }
-.video-slot .slot-frame { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: var(--sky-tint); }
-.slot-standin { display: flex; align-items: center; justify-content: center; background: linear-gradient(180deg, var(--sky-highlight) 0%, var(--sky) 55%, var(--sky-deep) 100%); }
-.slot-standin .slot-mark { width: min(26%, 8.5rem); height: auto; object-fit: contain; }
-.body-slot { max-width: 52rem; margin: 2.6rem auto 0; }
-.answer-slot { max-width: 44rem; margin: 2.4rem auto 0; }
+/* Recognition */
+.recognition-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+.recognition-grid figure.framed img { aspect-ratio: 3 / 2; }
+.recognition-grid .lead-in { font-size: 1.125rem; }
+/* Sky-field divider — the monumental gate */
+.divider {
+        background: linear-gradient(180deg, var(--sky-highlight) 0%, var(--sky) 55%, var(--sky-deep) 100%);
+        padding: 4.5rem 1.5rem;
+        text-align: center;
+      }
+.divider .mark-grand { width: min(68vw, 30rem); height: auto; margin: 0 auto; }
 /* How it works */
-.steps { margin: 0 auto; }
-.step { display: grid; grid-template-columns: 4.5rem 1fr; gap: 1.6rem; padding: 1.9rem 0; border-bottom: 1px solid var(--line); }
+.steps { counter-reset: step; }
+.step { display: grid; grid-template-columns: 4.6rem 1fr; gap: 1.6rem; padding: 1.7rem 0; border-bottom: 1px solid var(--line); }
 .step:last-child { border-bottom: none; }
-.step .num { font-family: "Playfair Display", serif; font-size: 2.1rem; font-weight: 600; line-height: 1.1; color: var(--ink); }
-.step h3 { font-size: 1.25rem; letter-spacing: 0.02em; margin-bottom: 0.4rem; }
+.step .disc {
+        width: 4.2rem; height: 4.2rem; border-radius: 50%;
+        background: var(--ink);
+        border: 2px solid var(--gold);
+        color: var(--ivory);
+        font-family: "Playfair Display", serif;
+        font-size: 1.55rem; font-weight: 600;
+        display: flex; align-items: center; justify-content: center;
+      }
+.step h3 { font-size: 1.2rem; letter-spacing: 0.02em; margin-bottom: 0.4rem; padding-top: 0.4rem; }
 .step p { color: var(--text-soft); margin: 0; }
-.step .gold-rule { width: 3.5rem; height: var(--gauge); background: var(--gold); margin-top: 0.9rem; }
-/* Control */
-.control-lede { text-align: center; font-size: 1.2rem; max-width: 44rem; margin: 0 auto; }
-.control-line { text-align: center; font-family: "Playfair Display", serif; font-weight: 500; font-size: 1.3rem; letter-spacing: 0.02em; max-width: 44rem; margin: 2.6rem auto 0; }
-.control-panel { background: var(--ink); color: var(--ivory); border: var(--gauge) solid var(--gold); padding: 2.6rem 2.8rem; margin-top: 2.4rem; }
+.step .gold-rule { width: 3.5rem; height: 2px; background: var(--gold); margin-top: 0.9rem; }
+/* You stay in control */
+.control-panel {
+        background: var(--ink);
+        color: var(--ivory);
+        border: 2px solid var(--gold);
+        padding: 2.6rem 2.8rem;
+        margin-top: 2.4rem;
+      }
 .control-panel ul { display: grid; grid-template-columns: 1fr 1fr; gap: 1.3rem 2.4rem; }
 .control-panel li { border-top: 1px solid rgba(247, 249, 250, 0.25); padding-top: 1rem; }
-.control-panel li strong { display: block; font-family: "Playfair Display", serif; font-weight: 600; letter-spacing: 0.02em; font-size: 1.05rem; margin-bottom: 0.3rem; }
+.control-panel li strong {
+        display: block;
+        font-family: "Playfair Display", serif;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        font-size: 1.05rem;
+        margin-bottom: 0.3rem;
+      }
 .control-panel li span { color: #DCE9F1; }
-.sub-block { max-width: 44rem; margin: 3rem auto 0; }
-.sub-block h3 { font-size: 1.3rem; letter-spacing: 0.02em; margin-bottom: 0.6rem; }
-.sub-block p { color: var(--text-soft); }
-/* Pricing */
-.pricing-panel { background: var(--ink); color: var(--ivory); border: var(--gauge) solid var(--gold); padding: 3rem 3.2rem; }
+.control-lede { text-align: center; font-size: 1.2rem; max-width: 42rem; margin: 0 auto; }
+.control-lede strong { font-family: "Playfair Display", serif; font-weight: 500; letter-spacing: 0.04em; }
+/* Proof — kept at its scoped size */
+.proof { max-width: 44rem; margin: 0 auto; text-align: center; }
+.proof p { color: var(--text-soft); }
+/* Pricing — Gate Ink panel */
+.pricing-panel {
+        background: var(--ink);
+        color: var(--ivory);
+        border: 2px solid var(--gold);
+        padding: 3rem 3.2rem;
+      }
 .pricing-panel .sec-head h2 { color: var(--ivory); }
-.pricing-intro { max-width: 44rem; margin: 0 auto 2.4rem; text-align: center; color: #DCE9F1; }
 .price-rows { border-top: 1px solid rgba(247, 249, 250, 0.25); }
 .price-row { display: grid; grid-template-columns: 1fr 1.4fr; gap: 1rem 2.5rem; padding: 1.5rem 0; border-bottom: 1px solid rgba(247, 249, 250, 0.25); }
 .price-row .figure { font-family: "Playfair Display", serif; font-size: 1.45rem; font-weight: 600; letter-spacing: 0.04em; }
 .price-row .what { font-weight: 600; margin-bottom: 0.25rem; }
 .price-row .detail { color: #DCE9F1; font-size: 1rem; }
-.pricing-foot { text-align: center; margin-top: 2.2rem; }
-.pricing-foot p { margin-bottom: 0.6em; }
-/* Proof */
-.proof { max-width: 44rem; margin: 0 auto; text-align: center; }
-.proof p { color: var(--text-soft); }
-.proof p:first-of-type { color: var(--ink); font-size: 1.13rem; }
 /* FAQ */
-.faq { max-width: 44rem; margin: 0 auto; }
+.faq { max-width: 46rem; margin: 0 auto; }
 .faq .qa { padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
 .faq .qa:first-child { padding-top: 0; }
 .faq h3 { font-size: 1.08rem; letter-spacing: 0.02em; margin-bottom: 0.5rem; }
 .faq p { color: var(--text-soft); margin: 0; }
 /* Final close */
-.close { background: var(--ink-deep); color: var(--ivory); text-align: center; padding: 5.5rem 1.5rem 6rem; }
-.close .mark-close { width: 11rem; height: 11rem; margin: 0 auto 2rem; object-fit: contain; }
-.lockup { display: inline-block; text-align: center; }
-.wordmark { font-family: "Playfair Display", serif; font-weight: 700; letter-spacing: 0.1em; text-indent: 0.1em; line-height: 1.2; }
-.lockup .rule { height: var(--gauge); background: linear-gradient(90deg, var(--gold-soft), var(--gold), var(--gold-soft)); margin-top: 0.55rem; }
+.close {
+        background: var(--ink-deep);
+        color: var(--ivory);
+        text-align: center;
+        padding: 5.5rem 1.5rem 6rem;
+      }
+.close .mark-close { width: 11rem; height: 11rem; margin: 0 auto 2rem; }
 .close .wordmark { font-size: clamp(1.5rem, 4vw, 2.1rem); color: var(--ivory); }
-.close .close-line { font-family: "Playfair Display", serif; font-weight: 500; font-size: clamp(1.35rem, 3.6vw, 2rem); letter-spacing: 0.05em; line-height: 1.5; max-width: 46rem; margin: 2.6rem auto 0; }
-.contact-panel { max-width: 52rem; margin: 2.6rem auto 0; text-align: center; }
-.contact-inner { background: linear-gradient(180deg, var(--sky-highlight) 0%, var(--sky) 55%, var(--sky-deep) 100%); padding: 2.4rem 2rem; text-align: center; }
-.contact-inner p { font-size: 1.125rem; color: var(--ink-deep); margin: 0; }
-.contact-inner a { color: var(--ink); font-weight: 700; text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 2px; text-underline-offset: 4px; }
-.close .pair-block { margin-top: 2.6rem; }
-.close .pair-block .price-line { color: var(--ivory); }
-.close .pair-block .sittings-line { color: #DCE9F1; }
-.door-band { text-align: center; padding: 3.2rem 0; }
-.door-band .pair-block { margin-top: 0; }
-.movement .pair-block { text-align: center; }
-.phone-bar { display: none; }
+.close .close-line {
+        font-family: "Playfair Display", serif;
+        font-weight: 500;
+        font-size: clamp(1.35rem, 3.6vw, 2rem);
+        letter-spacing: 0.05em;
+        line-height: 1.5;
+        max-width: 46rem;
+        margin: 2.6rem auto 0;
+      }
+.close .cta { margin-top: 2.6rem; }
 @media (max-width: 56rem) {
-section.movement { padding: 3.8rem 0; }
+section.work { padding: 3.6rem 0; }
+.recognition-grid { grid-template-columns: 1fr; }
+.recognition-grid { gap: 2rem; }
 .control-panel ul { grid-template-columns: 1fr; }
 .price-row { grid-template-columns: 1fr; gap: 0.4rem; }
 .pricing-panel, .control-panel { padding: 2rem 1.4rem; }
       }
 @media (max-width: 34rem) {
-.portal-inner { border-left: none; border-right: none; padding: 0 1.25rem 3.6rem; }
-.gate-large { width: 60%; }
-.step { grid-template-columns: 3.4rem 1fr; gap: 1.1rem; }
-.step .num { font-size: 1.7rem; }
-figure.map-frame { max-width: none; width: 100%; margin-left: 0; margin-right: 0; }
-figure.seat-figure { max-width: none; width: 100%; margin-left: 0; margin-right: 0; }
-.phone-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; background: var(--ink); color: var(--ivory); border-top: var(--gauge) solid var(--gold); padding: 0.75rem 1rem; align-items: center; gap: 1rem; }
-.phone-bar.show { display: flex; }
-.phone-bar .bar-text a { color: var(--ivory); font-weight: 700; text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 2px; text-underline-offset: 4px; }
-.phone-bar .bar-price { display: block; font-size: 0.95rem; margin-top: 0.15rem; }
-.phone-bar button { margin-left: auto; flex: none; background: none; border: none; color: var(--ivory); font-size: 1.5rem; line-height: 1; padding: 0.35rem 0.55rem; cursor: pointer; }
-.close { padding-bottom: calc(6rem + 5.25rem); }
+.step { grid-template-columns: 3.6rem 1fr; gap: 1.1rem; }
+.step .disc { width: 3.4rem; height: 3.4rem; font-size: 1.25rem; }
+.step figure.map-frame { width: calc(100% + 4.7rem); margin-left: -4.7rem; margin-right: 0; }
+.seat-figure { width: 100%; margin-left: 0; margin-right: 0; }
+      }
+@media (max-width: 640px) {
+section.work { padding: 5rem 0; }
+.sec-head { margin-bottom: 3.2rem; }
+p { margin-bottom: 1.35em; }
+section.work figure.framed { margin-top: 2.6rem; margin-bottom: 2.6rem; }
+.step { padding: 2.2rem 0; }
+.faq .qa { padding: 1.9rem 0; }
+.divider { padding: 2.8rem 1.5rem; }
+.divider .mark-grand { width: min(52vw, 30rem); }
       }
 @media (prefers-reduced-motion: reduce) {
 html { scroll-behavior: auto; }
       }
+.cta { position: relative; }
+.cta::after { content: ""; position: absolute; inset: -0.5rem; }
+/* ---------- Preview redesign: first screen + theme furniture ---------- */
+body::before, body::after {
+        content: ""; position: fixed; top: 0; bottom: 0; width: 8px; z-index: 60; pointer-events: none;
+        background: linear-gradient(180deg, var(--sky-highlight) 0%, var(--sky) 55%, var(--sky-deep) 100%);
+      }
+body::before { left: 0; border-right: 2px solid var(--gold); }
+body::after { right: 0; border-left: 2px solid var(--gold); }
+.masthead {
+        background: linear-gradient(180deg, var(--sky-highlight) 0%, var(--sky) 60%, var(--sky-deep) 100%);
+        border-bottom: 3px solid var(--gold);
+        text-align: center;
+        padding: 1.1rem 1.5rem 1.3rem;
+      }
+.masthead .brand { display: inline-flex; align-items: center; gap: 0.85rem; text-decoration: none; color: var(--ink); }
+.masthead .brand img { width: 2.6rem; height: 2.6rem; object-fit: contain; }
+.masthead .brand-name { font-family: "Playfair Display", serif; font-weight: 700; font-size: 1.55rem; letter-spacing: 0.06em; line-height: 1.2; }
+.masthead .house-line { margin: 0.5rem 0 0; font-size: 1rem; letter-spacing: 0.04em; color: var(--ink-deep); }
+.lead { padding: 3.2rem 0 0; text-align: center; }
+.lead h1 { font-size: clamp(2rem, 5.6vw, 3.4rem); letter-spacing: 0.02em; color: var(--ink); }
+.lead .query {
+        font-family: "Playfair Display", serif; font-weight: 500;
+        font-size: clamp(1.2rem, 2.8vw, 1.6rem); line-height: 1.45;
+        color: var(--ink-deep); max-width: 46rem; margin: 1.4rem auto 0;
+      }
+.lead .promise-lead { font-size: 1.28rem; line-height: 1.55; color: var(--ink); max-width: 44rem; margin: 2.2rem auto 0; }
+.lead .one-line { max-width: 44rem; margin: 1.5rem auto 0; font-size: 1.125rem; color: var(--ink-deep); }
+.lead .cta { margin-top: 2.1rem; }
+.lead .price-line { margin-top: 1.05rem; color: var(--ink); }
+.video-slot { position: relative; }
+.video-slot .slot-frame { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: var(--sky-tint); }
+.video-slot img.slot-poster { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.video-slot img.slot-poster.contain { object-fit: contain; }
+.lead-slot { max-width: 62rem; margin: 2.4rem auto 0; }
+.body-slot { max-width: 52rem; margin: 2.6rem auto; }
+.answer-slot { max-width: 100%; margin: 1.8rem auto 0.4rem; }
+.slot-standin {
+        display: flex; align-items: center; justify-content: center;
+        background: linear-gradient(180deg, var(--sky-highlight) 0%, var(--sky) 55%, var(--sky-deep) 100%);
+      }
+.slot-standin .slot-mark { width: min(26%, 8.5rem); height: auto; object-fit: contain; }
+.contact-panel { max-width: 52rem; margin: 2.6rem auto 0; }
+.contact-inner { background: linear-gradient(180deg, var(--sky-highlight) 0%, var(--sky) 55%, var(--sky-deep) 100%); padding: 2.4rem 2rem; text-align: center; }
+.contact-inner p { font-size: 1.125rem; color: var(--ink-deep); margin: 0; }
+.contact-inner a { color: var(--ink); font-weight: 700; text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+@media (max-width: 34rem) {
+.lead { padding-top: 2.4rem; }
+      }
+/* ---------- The team (roster) ---------- */
+.team { background: var(--sky-tint); }
+.team h2 { font-size: clamp(1.85rem, 4.6vw, 2.9rem); letter-spacing: 0.02em; text-align: center; }
+.team h2 a { color: inherit; text-decoration: none; }
+.team .team-intro { font-size: 1.28rem; line-height: 1.55; max-width: 44rem; margin: 1.4rem auto 0; text-align: center; }
+.team-grid { display: grid; grid-template-columns: 1fr; gap: 1.6rem; align-items: start; margin-top: 2.8rem; }
+@media (min-width: 56rem) {
+.team-grid { grid-template-columns: 1fr 1fr; }
+      }
+.team-panel { background: var(--ivory); border: 1px solid var(--line); padding: 1.8rem; }
+.team-panel h3 { font-size: 1.3rem; letter-spacing: 0.02em; }
+.team-panel .gold-rule { width: 3.5rem; height: 2px; background: var(--gold); margin: 0.7rem 0 1.1rem; }
+.team-panel p { line-height: 1.6; margin-bottom: 0.9em; }
+.team-close { text-align: center; margin-top: 3rem; }
+.team-close .gold-rule { width: 5.5rem; height: 2px; background: var(--gold); margin: 0 auto 1.6rem; }
+.team-close p { font-size: 1.28rem; line-height: 1.55; max-width: 44rem; margin: 0 auto; }
     </style>
-  </head>
-  <body>
+  <meta property="og:image" content="https://followyourwill.com/gate-zero/cover-photo.png">
+<meta name="twitter:image" content="https://followyourwill.com/gate-zero/cover-photo.png">
+<meta property="og:title" content="Gate Zero: Product Page">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://followyourwill.com/gate-zero/">
+</head>
+<body>
+    <header class="masthead">
+      <a class="brand" href="/">
+        <img src="/gate-zero/mark.webp" alt="The Gate Zero mark, a golden ring with a single point of white light at its centre" width="1024" height="1024" />
+        <span class="brand-name">Gate Zero</span>
+      </a>
+      <p class="house-line">A working AI agent team</p>
+    </header>
+
   <main>
-    <section class="portal" aria-labelledby="lead-h">
-      <div class="portal-inner">
-        <header class="masthead">
-          <a class="brand" href="/gate-zero/">
-            <img src="/gate-zero/mark.webp" alt="The Gate Zero mark, a golden ring with a single point of white light at its centre" width="1024" height="1024" />
-            <span class="brand-name">Gate Zero</span>
-          </a>
-          <p class="house-line">A working AI agent team</p>
-        </header>
+    <section class="lead" aria-labelledby="lead-h">
+      <div class="wrap">
         <h1 id="lead-h">A working AI agent team</h1>
-        <div class="gold-bar" aria-hidden="true"></div>
-        <p class="query">Still doing the office work at night, the follow-up that didn't go out, the quote that went quiet, the inbox still sitting there, on top of the work itself?</p>
-        <img class="gate-large" src="/gate-zero/mark.webp" alt="The Gate Zero mark, a golden ring with a single point of white light at its centre" width="1024" height="1024" />
+        <h2 class="query">Still doing the office work at night, the follow-up that didn't go out, the quote that went quiet, the inbox still sitting there, on top of the work itself?</h2>
+        <!-- LEAD SLOT (slate L3): the sitting, page cut. 16:9, poster-first, facade only, no video payload in this preview.
+             The piece stands as a PROPOSAL on the slate (script filed, marked proposal at its source); this slot reserves its page position.
+             Poster: the film's first frame of record when it verifies. Standing in is the piece's named proof exhibit,
+             the Workflow Map artefact, held still and readable per the slate's visuals law.
+             Poster and source swap in together when the film verifies, with no other markup change.
+             Search blocks (Guru): an intro paragraph above the embed is a GAP for Thoth (none placed, the picture stays first);
+             the caption is a GAP for Thoth (the artefact carries no passed caption); the content block is the promise below;
+             the outro is the one-line, the CTA and the price line. No VideoObject schema until the film is placed and verified. -->
+        <figure class="framed video-slot lead-slot" data-slate="sitting-page-cut">
+          <div class="slot-frame">
+            <img class="slot-poster contain" src="/gate-zero/T2-hero.png" alt="Banner: the words Gate Zero is live beside two golden rings around a point of white light on a blue sky" width="1280" height="720" />
+          </div>
+        </figure>
         <p class="promise-lead">Gate Zero gives an owner-operated business a working AI agent team, built for how that business actually runs, that handles the follow-up and office work the owner is doing himself at night — the owner approves anything that can't be taken back, and there is nothing to install, learn, or maintain.</p>
         <p class="one-line">You set the edges once, and the team works inside them. The decisions stay yours.</p>
-        <div class="pair-block">
-          <a class="cta" href="/checkout/">Start with your Workflow Map</a>
-          <p class="price-line">One sitting where we map how your business runs, and you keep the Workflow Map either way. $250, credited in full toward any build.</p>
-          <p class="sittings-line">Sittings are set through Contact Us.</p>
-        </div>
+        <a class="cta" href="/checkout/">Start with your Workflow Map</a>
+        <p class="price-line">One sitting where we map how your business runs, and you keep the Workflow Map either way. $250, credited in full toward any build.</p>
       </div>
     </section>
 
-    <section class="movement team" id="team" aria-labelledby="team-h">
+    <section class="work team" id="team" aria-labelledby="team-h">
       <div class="wrap">
         <h2 id="team-h"><a href="/team/">Your Gate Zero team</a></h2>
         <p class="team-intro">Gate Zero is a working team of AI agents, built for how your business actually runs. Each member holds a defined job. The team finishes work start to finish, and nothing is sent, published, spent, or deleted without your approval.</p>
-        <p class="team-intro">Your evenings are still the follow-up, the quotes that went quiet, and the inbox.</p>
-        <p class="proof-token">Gate Zero runs our own business, Follow Your Will, every day: Follow Your Will is customer #1.</p>
         <div class="team-grid">
           <article class="team-panel">
             <h3>The team that runs the work</h3>
@@ -328,88 +371,28 @@ html { scroll-behavior: auto; }
       </div>
     </section>
 
-    <section class="door-band">
+    <section class="work" aria-labelledby="evening-h">
       <div class="wrap">
-        <div class="pair-block">
-          <a class="cta" href="/checkout/">Start with your Workflow Map</a>
-          <p class="price-line">One sitting where we map how your business runs, and you keep the Workflow Map either way. $250, credited in full toward any build.</p>
-          <p class="sittings-line">Sittings are set through Contact Us.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="movement alt" aria-labelledby="work-h">
-      <div class="wrap">
-        <div class="sec-head">
-          <h2 id="work-h">The team's work, at the front of your business</h2>
-          <div class="rule"></div>
-        </div>
-        <p class="work-seam">Here is what that team does on a normal Tuesday night at your business.</p>
-        <div class="beats">
-          <div class="beat"><p>New inquiries get answered, so a lead hears from your business instead of your voicemail.</p></div>
-          <div class="beat"><p>The quotes and estimates you have sent get followed up until there is an answer.</p></div>
-          <div class="beat"><p>While the work is still fresh, reviews get asked for.</p></div>
-          <div class="beat"><p>And finished work becomes posts, so the work you have already done helps win the next job.</p></div>
-        </div>
-        <div class="self-check">
-          <h3>Count yours.</h3>
-          <div class="sc-row">
-            <label for="sc-inquiries">How many inquiries came in after close?</label>
-            <input id="sc-inquiries" type="number" min="0" inputmode="numeric">
+        <div class="recognition-grid">
+          <div>
+            <div class="sec-head left">
+              <h2 id="evening-h">The evening</h2>
+              <div class="rule"></div>
+            </div>
+            <p class="lead-in">In an owner-operated business, you are every department: the one who answers, quotes, follows up, does the work, and clears the inbox, all of it yourself, on top of the work itself.</p>
+            <p>So the inquiry that came in while you were working, a call, a message, a form on your website, doesn't get answered until evening. The quote or estimate goes out, and nobody follows up on it. The finished work the customer loved never turns into a review or a post. And the inbox waits for a quieter day that doesn't come.</p>
+            <p>The missed call at 8 p.m.</p><p>The quote that was never sent.</p><p>The invoice that was never chased.</p><p>The customer who was never called back.</p>
+            <p>The problem is not how hard you work. There is one of you, and the office work lands on the same person who does the work it is about.</p>
           </div>
-          <div class="sc-row">
-            <label for="sc-quotes">How many quotes are still waiting on an answer?</label>
-            <input id="sc-quotes" type="number" min="0" inputmode="numeric">
-          </div>
-          <div class="sc-row">
-            <label for="sc-reviews">How many finished jobs never got a review ask?</label>
-            <input id="sc-reviews" type="number" min="0" inputmode="numeric">
-          </div>
-          <div class="sc-out" id="sc-out" aria-live="polite"></div>
+          <figure class="framed">
+            <img src="/gate-zero/recognition.jpg" alt="Illustration for the Recognition section of the Gate Zero page — the owner's picked art for this slot" width="1200" height="600" />
+            <figcaption style="padding:0.9rem 0.4rem 0.3rem">Illustration: an owner's desk in the evening, cleared, one chair pulled out and waiting under the lamp.</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <section class="movement" aria-labelledby="evening-h">
-      <div class="wrap">
-        <div class="sec-head">
-          <h2 id="evening-h">The evening</h2>
-          <div class="rule"></div>
-        </div>
-        <div class="narrow">
-          <p>In an owner-operated business, you are every department: the one who answers, quotes, follows up, does the work, and clears the inbox, all of it yourself, on top of the work itself.</p>
-          <p>So the inquiry that came in while you were working, a call, a message, a form on your website, doesn't get answered until evening. The quote or estimate goes out, and nobody follows up on it. The finished work the customer loved never turns into a review or a post. And the inbox waits for a quieter day that doesn't come.</p>
-        </div>
-        <ul class="missed">
-          <li>The missed call at 8 p.m.</li>
-          <li>The quote that was never sent.</li>
-          <li>The invoice that was never chased.</li>
-          <li>The customer who was never called back.</li>
-        </ul>
-        <div class="narrow" style="margin-top:2.6rem">
-          <p>The problem is not how hard you work. There is one of you, and the office work lands on the same person who does the work it is about.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="movement alt" aria-labelledby="map-h">
-      <div class="wrap">
-        <div class="sec-head">
-          <h2 id="map-h">Your Workflow Map</h2>
-          <div class="rule"></div>
-        </div>
-        <figure class="framed map-frame">
-          <img src="/gate-zero/artefact-v12.webp" alt="A Workflow Map page for a sample one-van repair shop, as declared on the page itself: six plain steps with the loop drawn back from the last step to the first, the shop&#x27;s constraint and its fix named at the first step, the week&#x27;s figures standing at the steps where they bite, an illustrative label inside the frame, and who does what at the foot, the who-line naming all eight seats exactly, operations paperwork included." width="1500" height="9097" loading="lazy" />
-        </figure>
-        <div class="pair-block">
-          <a class="cta" href="/checkout/">Start with your Workflow Map</a>
-          <p class="price-line">One sitting where we map how your business runs, and you keep the Workflow Map either way. $250, credited in full toward any build.</p>
-          <p class="sittings-line">Sittings are set through Contact Us.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="movement" aria-labelledby="get-h">
+    <section class="work" aria-labelledby="get-h">
       <div class="wrap">
         <div class="sec-head">
           <h2 id="get-h">What you get: the team is the product</h2>
@@ -417,18 +400,27 @@ html { scroll-behavior: auto; }
         </div>
         <div class="narrow">
           <p>What you get is a team. Not software you install or a tool you operate: a working AI agent team, built for how your business actually runs, that handles the follow-up and office work for you.</p>
+          <p>The team's work, at the front of your business: New inquiries get answered, so a lead hears from your business instead of your voicemail.</p>
+          <p>The quotes and estimates you have sent get followed up until there is an answer. While the work is still fresh, reviews get asked for. And finished work becomes posts, so the work you have already done helps win the next job.</p>
+        </div>
+        <figure class="framed map-frame" style="margin-top:3rem">
+          <div class="slot-frame slot-standin">
+            <img class="slot-mark" src="/gate-zero/mark.webp" alt="" width="1024" height="1024" />
+          </div>
+        </figure>
+        <div class="narrow">
           <p>Other teams exist for other kinds of work: a Content &amp; Growth Team, and an Ops &amp; Back-Office Team for inbox, scheduling, research, documents and reporting. Any other workflow is quoted as a custom team once your business has been mapped.</p>
           <p>And the front office is only where most owners start. Your team is composed around your whole company: marketing, sales follow-up, customer care, operations paperwork, books and admin, each seat a job in your business, built from your map, never a fixed roster.</p>
           <p>Which seats your first team carries is set in your Team Blueprint; more seats join as more of the company is built.</p>
         </div>
-        <figure class="framed seat-figure" style="margin-top:2.6rem">
-          <img src="/gate-zero/seat-table-replacement.webp" alt="A typed sample table for one bakery, Rosa&#x27;s Bakery: seven seats named for the jobs in that shop, the phones and inbox, the order book, the till and the books, the regulars, the window and the feed, the wholesale accounts, and the owner&#x27;s ear, each seat with a plain line saying what it does." width="1500" height="1743" loading="lazy" />
-          <figcaption>One sample table, composed for one bakery. Yours is composed for your business, seat by seat.</figcaption>
+        <figure class="framed seat-figure" style="margin-top:2.4rem">
+          <img src="/gate-zero/seat-table-replacement.webp" alt="A typed sample table for one bakery, Rosa&#x27;s Bakery: seven seats named for the jobs in that shop, the phones and inbox, the order book, the till and the books, the regulars, the window and the feed, the wholesale accounts, and the owner&#x27;s ear, each seat with a plain line saying what it does." width="1500" height="1743" />
+          <figcaption style="padding:0.9rem 0.4rem 0.3rem">One sample table, composed for one bakery. Yours is composed for your business, seat by seat.</figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="movement alt" aria-labelledby="worker-h">
+    <section class="work" aria-labelledby="worker-h">
       <div class="wrap">
         <div class="sec-head">
           <h2 id="worker-h">Worker or agent?</h2>
@@ -440,19 +432,33 @@ html { scroll-behavior: auto; }
           <p>Remembers what the others learned. No one on the team starts from zero.</p>
           <p><strong>No hourly meter. It keeps working toward your goal.</strong></p>
           <p>Gate Zero doesn't sell you a worker. Gate Zero builds you the team.</p>
+        <!-- ANSWER-01 (slate L6, Concept 5): the spoken answer to "Is this a chatbot?", seated under its written twin, the Worker or agent station above.
+             16:9 reserved box, poster-first, no payload in this preview. Never a replacement for the written twin.
+             Poster: the answer film's first frame of record when it verifies. Poster gap: the slate names no filed poster for this piece,
+             so the mark stands in on the brand field. Poster and source swap in together when the film verifies.
+             Search blocks (Guru): the written twin above is the text block; caption = GAP for Thoth, none placed. -->
+        <figure class="framed video-slot answer-slot" data-slate="ANSWER-01">
+          <div class="slot-frame slot-standin">
+            <img class="slot-mark" src="/gate-zero/mark.webp" alt="" width="1024" height="1024" />
+          </div>
+        </figure>
         </div>
       </div>
     </section>
 
-    <section class="movement" aria-labelledby="how-h">
+    <div class="divider" aria-hidden="true">
+      <img class="mark-grand" src="/gate-zero/mark.webp" alt="The Gate Zero mark, a golden ring with a single point of white light at its centre" width="1024" height="1024" />
+    </div>
+
+    <section class="work" aria-labelledby="how-h">
       <div class="wrap">
         <div class="sec-head">
           <h2 id="how-h">How it works</h2>
           <div class="rule"></div>
         </div>
-        <div class="steps">
+        <div class="steps narrow" style="max-width:52rem">
           <div class="step">
-            <div class="num" aria-hidden="true">1</div>
+            <div class="disc" aria-hidden="true">1</div>
             <div>
               <h3>Your Workflow Map</h3>
               <p>We map how your business actually runs: where the work comes in, where it waits, where it gets stuck. That map is your Workflow Map, yours whether or not you build with us. The $250 is credited in full toward any build.</p>
@@ -460,7 +466,7 @@ html { scroll-behavior: auto; }
             </div>
           </div>
           <div class="step">
-            <div class="num" aria-hidden="true">2</div>
+            <div class="disc" aria-hidden="true">2</div>
             <div>
               <h3>Team Blueprint</h3>
               <p>Your team is designed around that map: who does what, built around your own processes, and what you will still approve.</p>
@@ -468,7 +474,7 @@ html { scroll-behavior: auto; }
             </div>
           </div>
           <div class="step">
-            <div class="num" aria-hidden="true">3</div>
+            <div class="disc" aria-hidden="true">3</div>
             <div>
               <h3>Build and quality test</h3>
               <p>Your team is built for your business, connected to your own tools, and quality-tested before your team launches.</p>
@@ -476,7 +482,7 @@ html { scroll-behavior: auto; }
             </div>
           </div>
           <div class="step">
-            <div class="num" aria-hidden="true">4</div>
+            <div class="disc" aria-hidden="true">4</div>
             <div>
               <h3>Handover</h3>
               <p>You meet your team, and you're walked through your own part of it: how approvals reach you, and what your word does. That is the whole of the training. Then the team starts.</p>
@@ -484,7 +490,7 @@ html { scroll-behavior: auto; }
             </div>
           </div>
           <div class="step">
-            <div class="num" aria-hidden="true">5</div>
+            <div class="disc" aria-hidden="true">5</div>
             <div>
               <h3>The team works; you approve</h3>
               <p>The work goes out into your business under the edges you set. What can't be taken back waits for your word. And each month, your regular report shows you what the team has done.</p>
@@ -495,53 +501,83 @@ html { scroll-behavior: auto; }
       </div>
     </section>
 
-    <section class="movement alt" aria-labelledby="control-h">
+    <div class="divider" aria-hidden="true">
+      <img class="mark-grand" src="/gate-zero/mark.webp" alt="The Gate Zero mark, a golden ring with a single point of white light at its centre" width="1024" height="1024" />
+    </div>
+
+    <section class="work" aria-labelledby="control-h">
       <div class="wrap">
         <div class="sec-head">
           <h2 id="control-h">Your control</h2>
           <div class="rule"></div>
         </div>
         <p class="control-lede">Your supervision isn't a limitation of this product. It is the product.</p>
-        <div class="narrow" style="margin-top:2.2rem">
-          <p><strong>You approve the boundaries once.</strong> At setup, you set the edges once, what the team handles inside limits you choose, and then it works inside them and tells you what it did. And anything that can't be taken back still stops for your word, always.</p>
-        </div>
-        <p class="control-line">Nothing is sent, published, spent, or deleted without your approval.</p>
+        <!-- PAGE-EMBED-01 (slate A3): the ad's landing cut, stem gz_ad_landing_16x9_v##. 16:9, poster-first, no payload in this preview.
+             Position per the slot record: in the control station, after the "Your control" heading.
+             Poster: the landing cut's first frame of record. No film exists yet, so the poster slot stands in:
+             the mark on the brand field. Poster and source swap in together when the film verifies, no other markup change.
+             Search blocks (Guru): intro = the control lede above; caption = GAP for Thoth, none placed;
+             content = the approve-boundaries block below; outro = the control panel and the station's closing copy.
+             No VideoObject schema until the real video is placed and verified. -->
         <figure class="framed video-slot body-slot" data-slate="PAGE-EMBED-01">
           <div class="slot-frame slot-standin">
             <img class="slot-mark" src="/gate-zero/mark.webp" alt="" width="1024" height="1024" />
           </div>
         </figure>
-        <div class="control-panel">
+        <div class="narrow" style="margin-top:2.2rem">
+          <p><strong>You approve the boundaries once.</strong> At setup, you set the edges once, what the team handles inside limits you choose, and then it works inside them and tells you what it did. And anything that can't be taken back still stops for your word, always.</p>
+        </div>
+        <div class="control-panel narrow" style="max-width:54rem">
           <ul>
-            <li><strong>Sending</strong><span>Anything your team sends, an email, a message, a quote, a follow-up, appears on your screen first.</span></li>
-            <li><strong>Publishing</strong><span>Posts and review responses appear when you say so.</span></li>
-            <li><strong>Spending</strong><span>Any purchase, subscription, or payment waits for your yes.</span></li>
-            <li><strong>Deleting</strong><span>Nothing is deleted without your approval, ever.</span></li>
+              <li><strong>Sending</strong><span>Anything your team sends, an email, a message, a quote, a follow-up, appears on your screen first.</span></li>
+              <li><strong>Publishing</strong><span>Posts and review responses appear when you say so.</span></li>
+              <li><strong>Spending</strong><span>Any purchase, subscription, or payment waits for your yes.</span></li>
+              <li><strong>Deleting</strong><span>Nothing is deleted without your approval, ever.</span></li>
           </ul>
         </div>
-        <div class="sub-block">
-          <h3>You'll get a seat at the table.</h3>
-          <p>You won't get a dashboard to check on them. You'll talk with your team in one conversation, first names, first person, the same way they talk with each other, and you'll be treated the way they treat each other: as a member of the team, not a user of a tool.</p>
-        </div>
-        <div class="sub-block">
-          <h3>Your part.</h3>
-          <p>Your part is the decisions, and the approvals at the edges you set. The work itself, the following up, the asking, the posting, the clearing, is the team's.</p>
-        </div>
-        <div class="sub-block">
-          <h3>You grow with your team.</h3>
-          <p>Your team teaches as it works: when a concept matters, it's explained on the spot, briefly, in plain words, tied to your business, and the work goes on.</p>
-          <p>The teaching is aimed at your gaps, at what you haven't met yet, and it never re-teaches what you already know. And as part of the run, you'll receive a file of your own, where you can watch your own command of your team grow: what you've made solid, in your business's terms, and what you could meet next.</p>
+        <div class="narrow" style="margin-top:2.2rem">
+          <p><strong>You'll get a seat at the table.</strong> You won't get a dashboard to check on them. You'll talk with your team in one conversation, first names, first person, the same way they talk with each other, and you'll be treated the way they treat each other: as a member of the team, not a user of a tool.</p>
+          <p><strong>Your part.</strong> Your part is the decisions, and the approvals at the edges you set. The work itself, the following up, the asking, the posting, the clearing, is the team's.</p>
+          <p><strong>You grow with your team.</strong> Your team teaches as it works: when a concept matters, it's explained on the spot, briefly, in plain words, tied to your business, and the work goes on.</p>
+          <p>The teaching is aimed at your gaps, at what you haven't met yet, and it never re-teaches what you already know. And as part of the run, you'll receive a file of your own, My AI Progress, where you can watch your own command of your team grow: what you've made solid, in your business's terms, and what you could meet next.</p>
           <p>And the team checks its own work on a set rhythm, and tells you what it finds, better or worse, in your regular summary, including when the answer is 'nothing to flag; we looked.'</p>
-        </div>
-        <figure class="framed video-slot body-slot" data-slate="PAGE-DEMO-02">
+        <!-- ANSWER-04 (slate L6, Concept 5): the spoken answer to "What if it gets things wrong?", seated under its written twin, the team-checks paragraph above, in this station.
+             16:9 reserved box, poster-first, no payload in this preview. Never a replacement for the written twin.
+             Poster: the answer film's first frame of record when it verifies. Poster gap: the slate names no filed poster for this piece,
+             so the mark stands in on the brand field. Poster and source swap in together when the film verifies.
+             Search blocks (Guru): the written twin above is the text block; caption = GAP for Thoth, none placed. -->
+        <figure class="framed video-slot answer-slot" data-slate="ANSWER-04">
           <div class="slot-frame slot-standin">
             <img class="slot-mark" src="/gate-zero/mark.webp" alt="" width="1024" height="1024" />
           </div>
         </figure>
+        </div>
+        <!-- PAGE-DEMO-02 (slate L2): the demonstration film "Meet your team at the table", stem gz_demo_table_16x9_v##.
+             16:9, about 75 seconds inside the ruled 60 to 90, poster-first, no payload in this preview.
+             Position per the slot record: inside the control station, after the roundtable section (the seat-at-the-table block above).
+             Poster: the film's first frame of record when it verifies. Standing in is the seat visual, per Da Vinci's direction
+             for wherever the table appears, with its caption of record placed below it.
+             Poster and source swap in together when the film verifies, with no other markup change.
+             Production condition (Rama): the film is built from real captures of the team's own work,
+             frames read against the customer-surface rules. SHOW OURS only.
+             Search blocks (Guru): intro = the approve-boundaries block and the control panel above;
+             content = the roundtable block above (the seat line is this film's landing line);
+             caption = the seat visual's caption of record, placed below; outro = the station's close.
+             No VideoObject schema until the real video is placed and verified. -->
+        <figure class="framed video-slot body-slot" data-slate="PAGE-DEMO-02">
+          <div class="slot-frame">
+            <img class="slot-poster contain" src="/gate-zero/seat-table-replacement.webp" alt="A typed sample table for one bakery, Rosa&#x27;s Bakery: seven seats named for the jobs in that shop, the phones and inbox, the order book, the till and the books, the regulars, the window and the feed, the wholesale accounts, and the owner&#x27;s ear, each seat with a plain line saying what it does." width="1500" height="1743" />
+          </div>
+          <figcaption style="padding:0.9rem 0.4rem 0.3rem">One sample table, composed for one bakery. Yours is composed for your business, seat by seat.</figcaption>
+        </figure>
       </div>
     </section>
 
-    <section class="movement" aria-labelledby="honesty-h">
+    <div class="divider" aria-hidden="true">
+      <img class="mark-grand" src="/gate-zero/mark.webp" alt="The Gate Zero mark, a golden ring with a single point of white light at its centre" width="1024" height="1024" />
+    </div>
+
+    <section class="work" aria-labelledby="honesty-h">
       <div class="wrap">
         <div class="sec-head">
           <h2 id="honesty-h">Honesty</h2>
@@ -552,20 +588,32 @@ html { scroll-behavior: auto; }
           <p>Gate Zero is licensed, never sold: you are licensing a working team, not buying software or files, and what you never receive is the machinery underneath it. All of it is in the agreement, before you pay.</p>
           <p>You keep your data, your content, your accounts, and all the work delivered to you — permanently; if the subscription stops, the only thing that stops is the team reporting for work.</p>
           <p>The team runs on our side and stays current on our side. You always work with the current version, and you never get files to update, store, or look after.</p>
-          <h3 style="font-size:1.3rem;letter-spacing:0.02em;margin:2.2rem 0 0.6rem">Your data.</h3>
-          <p>While your data is with us, we use it to do your work, and only your work. We never use it to train or improve a model, never use it for another client's work, and never sell it.</p>
+          <p><strong>Your data.</strong> While your data is with us, we use it to do your work, and only your work. We never use it to train or improve a model, never use it for another client's work, and never sell it.</p>
         </div>
       </div>
     </section>
 
-    <section class="movement" aria-labelledby="pricing-h" style="padding-top:0">
+    <section class="work" aria-labelledby="proof-h">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 id="proof-h">Proof without pretending</h2>
+          <div class="rule"></div>
+        </div>
+        <div class="proof">
+          <p>Gate Zero is not a concept we are selling on slides. Gate Zero runs our own business, Follow Your Will, every day: Follow Your Will is customer #1.</p>
+          <p>There are no client testimonials or outside results on this page, because there are no outside clients yet.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="work" aria-labelledby="pricing-h">
       <div class="wrap">
         <div class="pricing-panel">
-          <div class="sec-head">
-            <h2 id="pricing-h">Pricing</h2>
+          <div class="sec-head" style="margin-bottom:1.6rem">
+            <h2 id="pricing-h" style="color:var(--ivory)">Pricing</h2>
             <div class="rule"></div>
           </div>
-          <p class="pricing-intro">How the money works: the first four prices are one-time payments, to get a team built or to grow one. After that, each team runs on a monthly subscription, and that is the only ongoing charge.</p>
+          <p style="text-align:center;margin-bottom:2.2rem">How the money works: the first four prices are one-time payments, to get a team built or to grow one. After that, each team runs on a monthly subscription, and that is the only ongoing charge.</p>
           <div class="price-rows">
             <div class="price-row">
               <div class="figure">$250</div>
@@ -596,33 +644,13 @@ html { scroll-behavior: auto; }
               </div>
             </div>
           </div>
-          <div class="pricing-foot">
-            <p>On setup, you pay half to begin and half at handover.</p>
-            <p>Every team runs on a monthly subscription. The monthly figure is confirmed in writing before any client is quoted.</p>
-          </div>
-        </div>
-        <div class="pair-block">
-          <a class="cta" href="/checkout/">Start with your Workflow Map</a>
-          <p class="price-line">One sitting where we map how your business runs, and you keep the Workflow Map either way. $250, credited in full toward any build.</p>
-          <p class="sittings-line">Sittings are set through Contact Us.</p>
+          <p style="text-align:center;margin-top:2.2rem">On setup, you pay half to begin and half at handover.</p>
+          <p style="text-align:center;margin-top:2.2rem">Every team runs on a monthly subscription. The monthly figure is confirmed in writing before any client is quoted.</p>
         </div>
       </div>
     </section>
 
-    <section class="movement alt" aria-labelledby="proof-h">
-      <div class="wrap">
-        <div class="sec-head">
-          <h2 id="proof-h">Proof without pretending</h2>
-          <div class="rule"></div>
-        </div>
-        <div class="proof">
-          <p>Gate Zero is not a concept we are selling on slides. Gate Zero runs our own business, Follow Your Will, every day: Follow Your Will is customer #1.</p>
-          <p>There are no client testimonials or outside results on this page, because there are no outside clients yet.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="movement" aria-labelledby="fit-h">
+    <section class="work" aria-labelledby="fit-h">
       <div class="wrap">
         <div class="sec-head">
           <h2 id="fit-h">For you / Not for you</h2>
@@ -638,7 +666,11 @@ html { scroll-behavior: auto; }
       </div>
     </section>
 
-    <section class="movement alt" aria-labelledby="faq-h">
+    <div class="divider" aria-hidden="true">
+      <img class="mark-grand" src="/gate-zero/mark.webp" alt="The Gate Zero mark, a golden ring with a single point of white light at its centre" width="1024" height="1024" />
+    </div>
+
+    <section class="work" aria-labelledby="faq-h">
       <div class="wrap">
         <div class="sec-head">
           <h2 id="faq-h">Questions</h2>
@@ -649,7 +681,12 @@ html { scroll-behavior: auto; }
             <h3>Is this software I install?</h3>
             <p>No. There is nothing to install, learn, or maintain. Your team is run on our side; you talk with your team, see its work, and approve what needs approving.</p>
           </div>
-          <figure class="framed video-slot answer-slot" data-slate="ANSWER-01">
+          <!-- ANSWER-02 (slate L6, Concept 5): the spoken answer to "Do I have to install anything, or learn a new system?", seated under its written twin, the FAQ answer above.
+               16:9 reserved box, poster-first, no payload in this preview. Never a replacement for the written twin.
+               Poster: the answer film's first frame of record when it verifies. Poster gap: the slate names no filed poster for this piece,
+               so the mark stands in on the brand field. Poster and source swap in together when the film verifies.
+               Search blocks (Guru): the written twin above is the text block; caption = GAP for Thoth, none placed. -->
+          <figure class="framed video-slot answer-slot" data-slate="ANSWER-02">
             <div class="slot-frame slot-standin">
               <img class="slot-mark" src="/gate-zero/mark.webp" alt="" width="1024" height="1024" />
             </div>
@@ -658,6 +695,16 @@ html { scroll-behavior: auto; }
             <h3>Who decides what gets sent to my customers?</h3>
             <p>You do. The team works inside the edges you set; sending, publishing, spending and deleting wait for your approval.</p>
           </div>
+          <!-- ANSWER-03 (slate L6, Concept 5): the spoken answer to "Who approves what's sent in my name?", seated under its written twin, the FAQ answer above.
+               16:9 reserved box, poster-first, no payload in this preview. Never a replacement for the written twin.
+               Poster: the answer film's first frame of record when it verifies. Poster gap: the slate names no filed poster for this piece,
+               so the mark stands in on the brand field. Poster and source swap in together when the film verifies.
+               Search blocks (Guru): the written twin above is the text block; caption = GAP for Thoth, none placed. -->
+          <figure class="framed video-slot answer-slot" data-slate="ANSWER-03">
+            <div class="slot-frame slot-standin">
+              <img class="slot-mark" src="/gate-zero/mark.webp" alt="" width="1024" height="1024" />
+            </div>
+          </figure>
           <div class="qa">
             <h3>Do I own the team?</h3>
             <p>You license it. Your business accounts, data, content, and everything the team produces for you are yours, and they leave with you if you leave.</p>
@@ -670,6 +717,16 @@ html { scroll-behavior: auto; }
             <h3>What happens if I cancel?</h3>
             <p>You keep your data, your content, your accounts, and all the work delivered to you — permanently; if the subscription stops, the only thing that stops is the team reporting for work. Your data, content, accounts and work product are exported to you in the window the agreement sets out. We say it before you pay, not after.</p>
           </div>
+          <!-- ANSWER-05 (slate L6, Concept 5): the spoken answer to "What happens if I cancel?", seated under its written twin, the FAQ answer above.
+               16:9 reserved box, poster-first, no payload in this preview. Never a replacement for the written twin.
+               Poster: the answer film's first frame of record when it verifies. Poster gap: the slate names no filed poster for this piece,
+               so the mark stands in on the brand field. Poster and source swap in together when the film verifies.
+               Search blocks (Guru): the written twin above is the text block; caption = GAP for Thoth, none placed. -->
+          <figure class="framed video-slot answer-slot" data-slate="ANSWER-05">
+            <div class="slot-frame slot-standin">
+              <img class="slot-mark" src="/gate-zero/mark.webp" alt="" width="1024" height="1024" />
+            </div>
+          </figure>
           <div class="qa">
             <h3>How good is the team I'll get?</h3>
             <p>It depends on the AI underneath it, and we say so in writing: which AI your team runs on, and the level it is certified for, is named in your agreement. Gate Zero runs on the AI you already use — and before we say it runs on a new one, we prove it there first.</p>
@@ -684,30 +741,25 @@ html { scroll-behavior: auto; }
   </main>
 
   <footer class="close">
-      <img class="mark-close" src="/gate-zero/mark.webp" alt="The Gate Zero mark, a golden ring with a single point of white light at its centre" width="1024" height="1024" />
+      <img class="mark-close" src="/gate-zero/mark.webp" alt="The Gate Zero mark, a golden ring with a single point of white light at its centre" width="1024" height="1024" style="object-fit: contain" />
       <div class="lockup">
           <div class="wordmark">Gate Zero</div>
           <div class="rule"></div>
         </div>
       <p class="close-line">The only decision this page asks for is the first step.</p>
+      <!-- Booking parked by Will's ruling (2026-11-18, "Replace booking with contact us link for now"):
+           the ANSWER-02-booking slot that stood here is replaced by a Contact Us panel in the same
+           placement, above the closing CTA, until Will reopens booking. The CTA below stands complete either way. -->
       <figure class="framed contact-panel">
         <div class="contact-inner">
           <p>Want to talk it through before you start? <a href="/contact/">Contact us</a>.</p>
         </div>
       </figure>
-      <div class="pair-block">
-        <a class="cta on-ink" href="/checkout/">Start with your Workflow Map</a>
-        <p class="price-line" style="margin-top:1.2rem">$250 — credited in full toward any build.</p>
-        <p class="sittings-line">Sittings are set through Contact Us.</p>
-      </div>
+      <a class="cta on-ink" href="/checkout/">Start with your Workflow Map</a>
+      <p style="margin-top:1.2rem">$250 — credited in full toward any build.</p>
     </footer>
-  <div class="phone-bar" id="phone-bar">
-    <div class="bar-text">
-      <a href="/checkout/">Start with your Workflow Map</a>
-      <span class="bar-price">$250 — credited in full toward any build.</span>
-    </div>
-    <button type="button" id="phone-bar-dismiss" aria-label="Dismiss">&times;</button>
-  </div>
+    <!-- VideoObject schema slot (Guru's rule): schema ships only for a video actually placed on the page and verified against the placed file.
+       This preview places no video, so no VideoObject is emitted. og:video is reserved for PAGE-EMBED-01, only when real. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -772,68 +824,5 @@ html { scroll-behavior: auto; }
   ]
 }
 </script>
-  <script>
-    (function () {
-      var bar = document.getElementById('phone-bar');
-      var team = document.getElementById('team');
-      if (!bar || !team) { return; }
-      var key = 'gz-bar-dismissed';
-      try { if (sessionStorage.getItem(key)) { return; } } catch (e) {}
-      var teamBottom = team.getBoundingClientRect().bottom + window.scrollY;
-      function onScroll() {
-        if (window.scrollY > teamBottom) {
-          bar.classList.add('show');
-          window.removeEventListener('scroll', onScroll);
-        }
-      }
-      window.addEventListener('scroll', onScroll, { passive: true });
-      onScroll();
-      document.getElementById('phone-bar-dismiss').addEventListener('click', function () {
-        bar.classList.remove('show');
-        try { sessionStorage.setItem(key, '1'); } catch (e) {}
-      });
-    })();
-  </script>
-  <script>
-    (function () {
-      var fields = [
-        document.getElementById('sc-inquiries'),
-        document.getElementById('sc-quotes'),
-        document.getElementById('sc-reviews')
-      ];
-      var out = document.getElementById('sc-out');
-      if (!out || fields.indexOf(null) !== -1) { return; }
-      function line(text) {
-        var p = document.createElement('p');
-        p.textContent = text;
-        return p;
-      }
-      function render() {
-        out.textContent = '';
-        var values = [];
-        for (var i = 0; i < fields.length; i++) {
-          if (fields[i].value === '') { return; }
-          var n = Number(fields[i].value);
-          if (!isFinite(n)) { return; }
-          values.push(n);
-        }
-        var total = values[0] + values[1] + values[2];
-        if (total === 0) {
-          out.appendChild(line('If you counted zero, your evenings are already clear, and there is nothing here you need tonight.'));
-          return;
-        }
-        out.appendChild(line(values[0] + ' inquiries after close.'));
-        out.appendChild(line(values[1] + ' quotes still waiting on an answer.'));
-        out.appendChild(line(values[2] + ' finished jobs never got a review ask.'));
-        if (total >= 2) {
-          out.appendChild(line('That is the list still landing on your evenings, and it is the work this team takes off your night.'));
-        }
-      }
-      for (var j = 0; j < fields.length; j++) {
-        fields[j].addEventListener('input', render);
-      }
-      render();
-    })();
-  </script>
-  </body>
+</body>
 </html>
