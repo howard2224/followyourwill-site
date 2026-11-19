@@ -78,6 +78,8 @@ figure.framed {
         padding: 6px;
       }
 figure.framed img { width: 100%; height: 100%; object-fit: cover; }
+figure.map-frame { max-width: 42rem; margin-left: auto; margin-right: auto; }
+figure.map-frame img { height: auto; }
 /* ---------- Sections ---------- */
 section.work { padding: 5rem 0; }
 .sec-head { text-align: center; margin-bottom: 2.8rem; }
@@ -185,6 +187,8 @@ section.work { padding: 3.6rem 0; }
 @media (max-width: 34rem) {
 .step { grid-template-columns: 3.6rem 1fr; gap: 1.1rem; }
 .step .disc { width: 3.4rem; height: 3.4rem; font-size: 1.25rem; }
+.step figure.map-frame { width: calc(100% + 4.7rem); margin-left: -4.7rem; margin-right: 0; }
+.seat-figure { width: 100%; margin-left: 0; margin-right: 0; }
       }
 @media (max-width: 640px) {
 section.work { padding: 5rem 0; }
@@ -323,14 +327,18 @@ body::after { right: 0; border-left: 2px solid var(--gold); }
           <p>The team's work, at the front of your business: New inquiries get answered, so a lead hears from your business instead of your voicemail.</p>
           <p>The quotes and estimates you have sent get followed up until there is an answer. While the work is still fresh, reviews get asked for. And finished work becomes posts, so the work you have already done helps win the next job.</p>
         </div>
-        <figure class="framed" style="margin-top:3rem">
-          <img src="/gate-zero/artefact.webp" alt="A Workflow Map page for a sample one-van repair shop, as declared on the page itself: six plain steps, and who does what at the foot — the who-line quoting all eight of the Seat picture&#x27;s seats exactly, operations paperwork included." width="1500" height="1960" />
+        <figure class="framed map-frame" style="margin-top:3rem">
+          <img src="/gate-zero/artefact-v11.webp" alt="A Workflow Map page for a sample one-van repair shop, as declared on the page itself: six plain steps, and who does what at the foot — the who-line quoting all eight of the Seat picture&#x27;s seats exactly, operations paperwork included." width="1500" height="3688" />
         </figure>
         <div class="narrow">
           <p>Other teams exist for other kinds of work: a Content &amp; Growth Team, and an Ops &amp; Back-Office Team for inbox, scheduling, research, documents and reporting. Any other workflow is quoted as a custom team once your business has been mapped.</p>
           <p>And the front office is only where most owners start. Your team is composed around your whole company: marketing, sales follow-up, customer care, operations paperwork, books and admin, each seat a job in your business, built from your map, never a fixed roster.</p>
           <p>Which seats your first team carries is set in your Team Blueprint; more seats join as more of the company is built.</p>
         </div>
+        <figure class="framed seat-figure" style="margin-top:2.4rem">
+          <img src="/gate-zero/seat-table-replacement.webp" alt="A typed sample table for one bakery, Rosa&#x27;s Bakery: seven seats named for the jobs in that shop — the phones and inbox, the order book, the till and the books, the regulars, the window and the feed, the wholesale accounts, and the owner&#x27;s ear — each seat with a plain line saying what it does." width="1500" height="1743" />
+          <figcaption style="padding:0.9rem 0.4rem 0.3rem">One sample table, composed for one bakery. Yours is composed for your business, seat by seat.</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -478,6 +486,12 @@ body::after { right: 0; border-left: 2px solid var(--gold); }
              content = the roundtable block above (the seat line is this film's landing line);
              caption = the seat visual's caption of record, placed below; outro = the station's close.
              No VideoObject schema until the real video is placed and verified. -->
+        <figure class="framed video-slot body-slot" data-slate="PAGE-DEMO-02">
+          <div class="slot-frame">
+            <img class="slot-poster contain" src="/gate-zero/seat-table-replacement.webp" alt="A typed sample table for one bakery, Rosa&#x27;s Bakery: seven seats named for the jobs in that shop — the phones and inbox, the order book, the till and the books, the regulars, the window and the feed, the wholesale accounts, and the owner&#x27;s ear — each seat with a plain line saying what it does." width="1500" height="1743" />
+          </div>
+          <figcaption style="padding:0.9rem 0.4rem 0.3rem">One sample table, composed for one bakery. Yours is composed for your business, seat by seat.</figcaption>
+        </figure>
       </div>
     </section>
 
