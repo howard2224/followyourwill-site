@@ -416,9 +416,6 @@
           <p>Payment reference: <strong id="pay-ref"></strong></p>
           <p>That reference is how we match your payment in Stripe's record. The house checks the payment there before your sitting.</p>
           <p>Next, your mapping sitting. Paying does not set the time. Contact us and we will set it with you.</p>
-          <!-- CONTACT ROUTE: per Will's ruling (2026-11-18), the booking step is
-               replaced by the Contact Us link below for now. Will updates the
-               sitting calendar himself later; until then this link is the route. -->
           <p style="margin-top:1.6rem"><a id="contact-btn" class="cta" href="/contact/">Contact us to set your sitting</a></p>
           <p class="preview-note">For now, sittings are set through Contact Us.</p>
         </div>
@@ -457,29 +454,9 @@
           <h2 id="pay-h">Payment</h2>
           <div class="rule"></div>
         </div>
-        <!-- ============================================================
-             RAILS, as built in the rails spec (test mode), presentation
-             per Rama's options ruling: the visible choices are the
-             choices as the buyer experiences them. There is ONE visible
-             choice today: pay by card, processed by Stripe, carrying
-             the one Stripe TEST Payment Link. The hosted page offers
-             the card form and Link together; there is no separate
-             visible Stripe choice and no separate visible card choice.
-             GO-LIVE SWAP: the test link appears exactly once on this
-             page. Replace it with the live Payment Link URL in one edit.
-               data-rail="card" : Stripe test Payment Link
-               SLOT_PAYPAL_URL  : PayPal slot, named placeholder only,
-                                  no URL. The PayPal choice is added to
-                                  the visible page only when this slot
-                                  holds a real link.
-             ============================================================ -->
         <div class="narrow" style="text-align:center">
-          <!-- Interim form, Will's order 2026-11-19: the card button returns when the live Stripe rail exists. Token form preserved in work/checkout-live-preinterim.html -->
           <p style="margin-top:1.4rem"><a class="cta" href="/contact/">Contact us to set your sitting</a></p>
         </div>
-        <!-- SLOT_PAYPAL_URL: PayPal slot, named placeholder only, no URL.
-             No PayPal choice is rendered on this page. It is added to the
-             visible choices only when this slot holds a real link. -->
       </div>
     </section>
 
