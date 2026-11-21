@@ -77,12 +77,12 @@
     <li><strong>Ask a question first.</strong><span>Ask in your own words: how it works, what it costs, whether it fits a business like yours. We answer in ours.</span></li>
     <li><strong>Already a customer, and something is stuck?</strong><span>Write to the same address and say what is stuck. We will sort it out with you by email.</span></li>
   </ul>
-  <h2>When you write</h2>
-  <p class="lede">A person reads your message and replies by email. We have not set a reply time, so we will not promise one here.</p>
-  <p class="lede">Prefer a form? Use this one. It goes to the same inbox as the address above.</p>
+  <h2>Or use the form</h2>
+  <p class="lede">It goes to the same inbox as the address above.</p>
   <form class="contact" id="contact-form" action="https://formsubmit.co/will@followyourwill.com" method="POST">
     <input type="hidden" name="_next" value="https://followyourwill.com/contact/">
     <input type="hidden" name="_subject" value="Website contact form">
+    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
     <label for="cf-name">Your name</label>
     <input type="text" id="cf-name" name="name" required>
     <label for="cf-email">Your email address</label>
@@ -95,18 +95,12 @@
     </select>
     <label for="cf-message">Your message</label>
     <textarea id="cf-message" name="message" required></textarea>
-    <p>A person reads every message sent from this page and answers by email. No reply time is promised, because none has been set.</p>
     <button type="submit">Send</button>
     <p class="form-error" id="form-error" hidden>Your message did not send. Please email will@followyourwill.com instead.</p>
   </form>
   <div id="form-ack" hidden>
     <p>Got it. Your message is with us, and a person will read it and reply to your email address.</p>
     <p>If you wrote about starting, the reply sets your Workflow Map sitting.</p>
-    <p>One sitting where we map how your business runs, and you keep the Workflow Map either way. $250, credited in full toward any build.</p>
-    <div id="ack-pair" style="margin-top:2.2rem">
-      <a class="cta" href="/checkout/">Start with your Workflow Map</a>
-      <p style="margin-top:1.2rem">$250 — credited in full toward any build.</p>
-    </div>
   </div>
 </main>
 <footer>
@@ -123,7 +117,8 @@
       email: form.elements['email'].value,
       about: form.elements['about'].value,
       message: form.elements['message'].value,
-      _subject: 'Website contact form'
+      _subject: 'Website contact form',
+      _honey: form.elements['_honey'].value
     };
     fetch('https://formsubmit.co/ajax/will@followyourwill.com', {
       method: 'POST',
@@ -136,7 +131,6 @@
       if (!j || !(j.success === true || j.success === 'true')) { throw new Error('send not confirmed'); }
       form.hidden = true;
       document.getElementById('form-ack').hidden = false;
-      if (data.about === 'Start my Workflow Map') { document.getElementById('ack-pair').hidden = true; }
     }).catch(function(){
       document.getElementById('form-error').hidden = false;
     });
