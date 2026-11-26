@@ -1,0 +1,134 @@
+/* INTERNAL ONLY - PROTOTYPE BUILD FILE - Gate Zero landing + funnel set, 2026-11-13.
+   Not for publication. No backend, no payments, no live forms.
+   Tokens: Brand Reference v1.1 - Gate Sky #6EC1E8 (Highlight #CDEDF8, Deep #2E7CB0),
+   Gate Ink #173F5F, Gate Ivory #F7F9FA, Gate Gold #C6A15B trim only (<=10%, never body text).
+   Type: Playfair Display (headlines/wordmark) / Inter (body/UI) only. */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@400;500;600&display=swap');
+
+:root{
+  --sky:#6EC1E8; --sky-hi:#CDEDF8; --sky-deep:#2E7CB0;
+  --ink:#173F5F; --ivory:#F7F9FA; --gold:#C6A15B;
+  --max:68rem;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Inter',sans-serif;color:var(--ink);background:var(--ivory);line-height:1.65;font-size:1rem}
+h1,h2,h3,.wordmark{font-family:'Playfair Display',serif;text-transform:uppercase;letter-spacing:.08em;font-weight:500;line-height:1.25}
+h1{font-size:clamp(1.7rem,5.2vw,3rem)}
+h2{font-size:clamp(1.3rem,3.4vw,2rem);margin-top:0}
+h3{font-size:1.02rem}
+a{color:var(--ink)}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.25rem}
+
+/* Internal build-state banner (build marker, NOT a public design element) */
+.internal-banner{background:var(--ink);color:var(--ivory);font-size:.78rem;letter-spacing:.04em;padding:.5rem 1rem;text-align:center}
+.internal-banner a{color:var(--sky-hi)}
+.review-nav{background:var(--ivory);border-bottom:1px solid var(--gold);font-size:.8rem;padding:.45rem 1rem;text-align:center}
+.review-nav a{margin:0 .45rem}
+
+.wordmark{font-size:1.15rem;letter-spacing:.32em;text-align:center;margin:0}
+.wordmark-rule{border:0;border-top:2px solid var(--gold);width:12.5rem;margin:.45rem auto 0}
+.wordmark-left{text-align:left}
+.wordmark-left + .wordmark-rule{margin-left:0}
+
+/* Neutral mark slot - artwork NOT filled. Per Maya funnel ruling 2026-11-13 s0/s5.8:
+   slots stay neutral tokens until the Brand Reference v1.2 filing lands (treatment D, from the
+   sun-gate art Will picked and settled; Maya brand-passed - Choices of Record, 2026-11-13). */
+.mark-slot{border:1.5px dashed var(--gold);color:var(--ink);display:flex;align-items:center;justify-content:center;
+  text-align:center;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;padding:.5rem;margin:0 auto;
+  background:rgba(247,249,250,.55)}
+.mark-slot.hero-mark{width:72px;height:72px;border-radius:50%}
+.mark-slot.close-mark{width:120px;height:120px;border-radius:50%}
+.mark-slot.header-mark{width:64px;height:64px;border-radius:50%;margin:0}
+
+/* Hero - mobile-first DOM/CSS order: wordmark, mark slot (under headline weight),
+   headline, one line, CTA, THEN hero image panel. Promise + CTA land before the panel. */
+.hero{background:linear-gradient(180deg,var(--sky-hi),var(--sky) 55%,var(--sky-deep));padding:2.25rem 0 3rem;text-align:center}
+.hero h1{margin:1.1rem auto .8rem;max-width:46rem}
+.hero .sub{max-width:40rem;margin:0 auto 1.4rem;font-size:1.05rem}
+.hero-panel{margin:2rem auto 0;max-width:44rem;border:3px solid var(--gold);background:rgba(247,249,250,.35);
+  min-height:11rem;display:flex;align-items:center;justify-content:center;padding:1rem;
+  font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
+
+.cta{display:inline-block;background:var(--ink);color:var(--ivory);text-decoration:none;
+  font-weight:600;letter-spacing:.03em;padding:.95rem 1.7rem;border:2px solid var(--gold);border-radius:2px;min-height:48px}
+.cta[aria-disabled="true"]{cursor:default}
+
+section{padding:2.75rem 0}
+.band-sky{background:linear-gradient(180deg,var(--sky-hi),var(--sky));border-top:1px solid var(--gold);border-bottom:1px solid var(--gold)}
+.panel-ink{background:var(--ink);color:var(--ivory)}
+.panel-ink h2,.panel-ink h3{color:var(--ivory)}
+.cards{display:grid;gap:1rem;grid-template-columns:1fr}
+.card{background:#fff;border:1px solid var(--sky);border-top:3px solid var(--gold);padding:1.1rem 1.2rem}
+.steps{counter-reset:step;list-style:none;padding:0}
+.steps li{margin:0 0 1.1rem;padding-left:.25rem}
+.price-slot{display:block;border:1.5px dashed var(--gold);padding:.8rem 1rem;margin:.55rem 0;background:rgba(110,193,232,.12);
+  font-size:.85rem;letter-spacing:.05em;text-transform:uppercase}
+.slot-note{font-size:.85rem;font-style:italic}
+.two-col{display:grid;gap:1.5rem;grid-template-columns:1fr}
+.faq dt{font-family:'Playfair Display',serif;text-transform:uppercase;letter-spacing:.06em;margin-top:1.3rem;font-size:.98rem}
+.faq dd{margin:.35rem 0 0}
+.close{background:var(--ink);color:var(--ivory);text-align:center;padding:3rem 0}
+.close h2{color:var(--ivory)}
+footer{padding:1.5rem 0;text-align:center;font-size:.85rem}
+
+/* Forms - utility register, ornament near zero (Maya funnel ruling s1) */
+.form-page{padding:2rem 0 3rem}
+.form-head{padding:1.5rem 0 1rem}
+form{max-width:36rem}
+label{display:block;font-weight:600;margin:1.1rem 0 .35rem}
+label .optional{font-weight:400;font-size:.85rem}
+input,textarea{width:100%;padding:.75rem;border:1px solid var(--ink);border-radius:2px;font:inherit;background:#fff;color:var(--ink);min-height:48px}
+textarea{min-height:6rem}
+.consent{font-size:.88rem;max-width:36rem;margin-top:1rem}
+.honesty{font-size:.92rem;border-left:3px solid var(--gold);padding:.4rem 0 .4rem .9rem;max-width:36rem;margin:1.4rem 0}
+button.submit{margin-top:1.2rem;background:var(--ink);color:var(--ivory);font:inherit;font-weight:600;
+  padding:.9rem 1.6rem;border:2px solid var(--gold);border-radius:2px;min-height:48px;cursor:default;width:100%}
+.utility{max-width:44rem}
+
+@media (min-width:720px){
+  .cards{grid-template-columns:1fr 1fr}
+  .two-col{grid-template-columns:1fr 1fr}
+  button.submit{width:auto}
+}
+
+/* - Polish re-lay additions (2026-11-13) - */
+.mark-img{display:block}
+.mark-img.hero-mark{width:72px;height:72px;margin:0 auto}
+.mark-img.close-mark{width:120px;height:120px;margin:0 auto}
+.mark-img.header-mark{width:64px;height:64px}
+.hero-panel.filled{display:block;padding:0;min-height:0;background:none}
+.hero-panel img,.framed-panel img{display:block;width:100%;height:auto}
+.framed-panel{border:3px solid var(--gold);padding:0;margin:1.5rem 0 0}
+figcaption{font-size:.82rem;color:var(--ink);margin-top:.5rem;text-align:left}
+.beat{border:1px solid var(--gold);border-top:3px solid var(--gold);padding:1.4rem 1.5rem;margin:2rem 0;background:#fff}
+.beat .lede{font-size:1.15rem;font-weight:600}
+.beat-grid{display:grid;gap:1.25rem;grid-template-columns:1fr;margin:1rem 0}
+@media (min-width:720px){.beat-grid{grid-template-columns:1fr 1fr}}
+.beat-col{border-top:3px solid var(--gold);padding-top:.6rem}
+.beat-col h3{margin:.2rem 0 .5rem}
+.beat-col ul{margin:0;padding-left:1.15rem}
+.video-token{border:2px dashed var(--gold);padding:1.8rem 1.2rem;text-align:center;font-size:.85rem;letter-spacing:.05em;margin:2rem 0;background:rgba(110,193,232,.10)}
+.gap-token{border:1.5px dashed #b0572f;color:#8a4525;padding:.7rem 1rem;font-size:.82rem;margin:1rem 0;max-width:36rem}
+.seq-line{border-left:4px solid var(--gold);padding:.6rem 1rem;background:#fff;font-size:1.05rem;max-width:40rem}
+.capture-zone{border-top:3px solid var(--gold);padding:2.5rem 0 3rem}
+.capture-zone h2{text-transform:none;letter-spacing:.02em}
+.price-adjacent{display:inline-block;margin-left:1rem}
+.seats{border:1px solid var(--gold);background:#fff;padding:1.2rem 1.4rem;margin:1.6rem 0}
+.seats ul{list-style:none;margin:.4rem 0;padding:0;display:flex;flex-wrap:wrap;gap:.6rem 1.4rem}
+.seats li{border-top:3px solid var(--gold);padding-top:.35rem}
+.seats .sample-note{font-size:.82rem;font-style:italic;margin:.4rem 0 0}
+
+/* First screen cure, 2026-11-26: spacing only. Tightens the space above the pay
+   button so its top edge stands on the first screen at phone and desktop widths.
+   No element removed, no words moved, no font size changed. */
+.form-page{padding-top:.5rem}
+.form-head{padding:.4rem 0 .2rem}
+.wordmark{margin-top:.3rem !important}
+.wordmark-rule{margin-top:.2rem}
+.form-page h1{margin:.3rem 0 .5rem}
+.form-page .card{padding:.75rem 1.2rem}
+.form-page .card h3{margin:.3rem 0 .5rem}
+.form-page p:not(.wordmark){margin-top:.6rem;margin-bottom:.6rem}
+.form-page .card ul{margin:.4rem 0}
+.form-page h2{margin-top:.9rem !important}
